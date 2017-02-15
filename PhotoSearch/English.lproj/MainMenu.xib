@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="579" id="580"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <window title="PhotoSearch" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="21" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="128" y="598" width="668" height="484"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="500" height="200"/>
+            <view key="contentView" autoresizesSubviews="NO" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="668" height="484"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView autoresizesSubviews="NO" translatesAutoresizingMaskIntoConstraints="NO" id="487" userLabel="Bottom Path View" customClass="NSPathControl">
+                        <rect key="frame" x="0.0" y="0.0" width="668" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="KoC-ky-DHx"/>
+                        </constraints>
+                        <animations/>
+                    </customView>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="503">
+                        <rect key="frame" x="0.0" y="380" width="668" height="76"/>
+                        <clipView key="contentView" id="enw-gG-PLl">
+                            <rect key="frame" x="1" y="1" width="666" height="74"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <predicateEditor verticalHuggingPriority="750" nestingMode="compound" rowHeight="22" id="506">
+                                    <rect key="frame" x="0.0" y="0.0" width="666" height="66"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <rowTemplates>
+                                        <predicateEditorRowTemplate rowType="compound" id="507">
+                                            <popUpMenus>
+                                                <menu id="510">
+                                                    <items>
+                                                        <menuItem title="All" id="512">
+                                                            <integer key="representedObject" value="1"/>
+                                                        </menuItem>
+                                                        <menuItem title="Any" state="on" id="511">
+                                                            <integer key="representedObject" value="2"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                                <menu id="513">
+                                                    <items>
+                                                        <menuItem title="of the following are true" state="on" id="514"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpMenus>
+                                        </predicateEditorRowTemplate>
+                                        <predicateEditorRowTemplate rowType="simple" id="508" customClass="CaseInsensitivePredicateTemplate">
+                                            <array key="leftExpressionObject">
+                                                <expression type="keyPath">
+                                                    <string key="keyPath">kMDItemFSName</string>
+                                                </expression>
+                                            </array>
+                                            <integer key="rightExpressionObject" value="700"/>
+                                            <popUpMenus>
+                                                <menu id="563">
+                                                    <items>
+                                                        <menuItem title="Name" state="on" id="564">
+                                                            <expression key="representedObject" type="keyPath">
+                                                                <string key="keyPath">kMDItemFSName</string>
+                                                            </expression>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                                <menu id="565">
+                                                    <items>
+                                                        <menuItem title="contains" id="566">
+                                                            <integer key="representedObject" value="10"/>
+                                                        </menuItem>
+                                                        <menuItem title="is" state="on" id="567">
+                                                            <integer key="representedObject" value="4"/>
+                                                        </menuItem>
+                                                        <menuItem title="begins with" id="568">
+                                                            <integer key="representedObject" value="8"/>
+                                                        </menuItem>
+                                                        <menuItem title="ends with" id="569">
+                                                            <integer key="representedObject" value="9"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                            </popUpMenus>
+                                        </predicateEditorRowTemplate>
+                                        <predicateEditorRowTemplate rowType="simple" id="509">
+                                            <array key="leftExpressionObject">
+                                                <expression type="keyPath">
+                                                    <string key="keyPath">kMDItemContentTypeTree</string>
+                                                </expression>
+                                            </array>
+                                            <array key="rightExpressionObject">
+                                                <expression type="constant">
+                                                    <string key="constantValue">public.jpeg</string>
+                                                </expression>
+                                                <expression type="constant">
+                                                    <string key="constantValue">public.png</string>
+                                                </expression>
+                                                <expression type="constant">
+                                                    <string key="constantValue">public.gif</string>
+                                                </expression>
+                                            </array>
+                                            <popUpMenus>
+                                                <menu id="521">
+                                                    <items>
+                                                        <menuItem title="Kind" state="on" id="522">
+                                                            <expression key="representedObject" type="keyPath">
+                                                                <string key="keyPath">kMDItemContentTypeTree</string>
+                                                            </expression>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                                <menu id="523">
+                                                    <items>
+                                                        <menuItem title="is" state="on" id="524">
+                                                            <integer key="representedObject" value="4"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                                <menu id="525">
+                                                    <items>
+                                                        <menuItem title="JPEG" state="on" id="526">
+                                                            <expression key="representedObject" type="constant">
+                                                                <string key="constantValue">public.jpeg</string>
+                                                            </expression>
+                                                        </menuItem>
+                                                        <menuItem title="PNG" id="527">
+                                                            <expression key="representedObject" type="constant">
+                                                                <string key="constantValue">public.png</string>
+                                                            </expression>
+                                                        </menuItem>
+                                                        <menuItem title="GIF" id="528">
+                                                            <expression key="representedObject" type="constant">
+                                                                <string key="constantValue">public.gif</string>
+                                                            </expression>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                            </popUpMenus>
+                                        </predicateEditorRowTemplate>
+                                    </rowTemplates>
+                                    <connections>
+                                        <action selector="predicateEditorChanged:" target="215" id="546"/>
+                                    </connections>
+                                </predicateEditor>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" red="0.89800000000000002" green="0.92549998" blue="0.97250002999999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </clipView>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="AxU-Jz-DD0"/>
+                        </constraints>
+                        <animations/>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="505">
+                            <rect key="frame" x="-100" y="-100" width="360" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="504">
+                            <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </scroller>
+                    </scrollView>
+                    <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="581">
+                        <rect key="frame" x="106" y="459" width="125" height="22"/>
+                        <animations/>
+                        <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="582">
+                            <font key="font" metaFont="smallSystem"/>
+                            <url key="url" string="file://localhost/Applications/"/>
+                            <color key="backgroundColor" red="0.82723335600000003" green="0.82723335600000003" blue="0.82723335600000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchLocationChanged:" target="215" id="586"/>
+                            </connections>
+                        </pathCell>
+                        <connections>
+                            <outlet property="delegate" destination="215" id="585"/>
+                        </connections>
+                    </pathControl>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="583">
+                        <rect key="frame" x="9" y="463" width="94" height="14"/>
+                        <animations/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Search Location:" id="584">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNG-O5-kak">
+                        <rect key="frame" x="0.0" y="24" width="668" height="357"/>
+                        <clipView key="contentView" id="zsk-en-8ko">
+                            <rect key="frame" x="1" y="17" width="666" height="339"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" rowSizeStyle="automatic" headerView="DWZ-Wd-ju8" viewBased="YES" indentationPerLevel="16" outlineTableColumn="NFC-vv-4uD" id="d3n-yj-zoB">
+                                    <rect key="frame" x="0.0" y="0.0" width="666" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn identifier="ImageID" width="280" minWidth="40" maxWidth="1000" id="NFC-vv-4uD" userLabel="Photo Column">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Photo">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="qOn-px-WLY">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView identifier="SearchGroup" id="hEN-yo-2yz" userLabel="Group View">
+                                                    <rect key="frame" x="1" y="1" width="280" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3c-hm-iG5">
+                                                            <rect key="frame" x="6" y="0.0" width="274" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="XrA-8k-UwW">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                    </subviews>
+                                                    <connections>
+                                                        <outlet property="textField" destination="A3c-hm-iG5" id="6Ox-jl-G21"/>
+                                                    </connections>
+                                                </tableCellView>
+                                                <tableCellView id="gDi-tl-JZ4" userLabel="Photo View">
+                                                    <rect key="frame" x="1" y="20" width="280" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pSG-Fv-4w2" userLabel="Title">
+                                                            <rect key="frame" x="45" y="18" width="97" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="h4O-n7-3ys"/>
+                                                            </constraints>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="R92-fv-ZUs">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e5C-iR-9yy" userLabel="Image">
+                                                            <rect key="frame" x="4" y="0.0" width="35" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="tMq-bJ-sFk"/>
+                                                            </constraints>
+                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="snz-6g-bub"/>
+                                                        </imageView>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ni1-fY-jja" userLabel="Subtitle">
+                                                            <rect key="frame" x="45" y="2" width="84" height="14"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="6Dl-6e-17t"/>
+                                                            </constraints>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="eIK-Ih-vpk">
+                                                                <font key="font" size="11" name=".HelveticaNeueDeskInterface-Regular"/>
+                                                                <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <button wantsLayer="YES" verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="swP-tV-hWy" userLabel="Info Button">
+                                                            <rect key="frame" x="148" y="18" width="13" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="13" id="KIs-7X-wEO"/>
+                                                                <constraint firstAttribute="height" constant="15" id="mSb-Ed-dQs"/>
+                                                            </constraints>
+                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="info-normal" imagePosition="overlaps" alignment="center" alternateImage="info-normal-mouse" imageScaling="proportionallyDown" inset="2" id="fqj-Id-w7V">
+                                                                <behavior key="behavior" lightByContents="YES"/>
+                                                                <font key="font" metaFont="system"/>
+                                                            </buttonCell>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Ni1-fY-jja" firstAttribute="leading" secondItem="e5C-iR-9yy" secondAttribute="trailing" constant="8" id="0bd-kA-3Y2"/>
+                                                        <constraint firstItem="pSG-Fv-4w2" firstAttribute="leading" secondItem="e5C-iR-9yy" secondAttribute="trailing" constant="8" id="4lR-PY-C1H"/>
+                                                        <constraint firstItem="swP-tV-hWy" firstAttribute="top" secondItem="gDi-tl-JZ4" secondAttribute="top" constant="2" id="FyJ-DY-Dcc"/>
+                                                        <constraint firstItem="e5C-iR-9yy" firstAttribute="leading" secondItem="gDi-tl-JZ4" secondAttribute="leading" constant="4" id="HgD-Kx-TVH"/>
+                                                        <constraint firstItem="Ni1-fY-jja" firstAttribute="top" secondItem="pSG-Fv-4w2" secondAttribute="bottom" constant="2" id="Laj-h5-f8D"/>
+                                                        <constraint firstItem="e5C-iR-9yy" firstAttribute="top" secondItem="gDi-tl-JZ4" secondAttribute="top" id="PLY-KT-Aaa"/>
+                                                        <constraint firstItem="pSG-Fv-4w2" firstAttribute="top" secondItem="gDi-tl-JZ4" secondAttribute="top" id="YDQ-bO-yNM"/>
+                                                        <constraint firstItem="swP-tV-hWy" firstAttribute="leading" secondItem="pSG-Fv-4w2" secondAttribute="trailing" constant="8" id="aix-fE-88f"/>
+                                                        <constraint firstAttribute="bottom" secondItem="e5C-iR-9yy" secondAttribute="bottom" id="eYL-5l-DHV"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="e5C-iR-9yy" id="3cn-un-JZH"/>
+                                                        <outlet property="textField" destination="pSG-Fv-4w2" id="c4y-tV-Byc"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
+                                        </tableColumn>
+                                        <tableColumn identifier="CameraModelID" width="151" minWidth="40" maxWidth="1000" id="dfs-bQ-ZW9" userLabel="Camera Model Column">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Camera Model">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="uuc-oW-c9y">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="eNv-DR-yyy" userLabel="Camera Model View">
+                                                    <rect key="frame" x="284" y="1" width="151" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="glr-8p-lEE" userLabel="Camera Model Field">
+                                                            <rect key="frame" x="0.0" y="0.0" width="544" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="540" id="9SG-ra-aCR"/>
+                                                            </constraints>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="aJX-Tg-hZo">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="glr-8p-lEE" firstAttribute="centerY" secondItem="eNv-DR-yyy" secondAttribute="centerY" id="Wml-DB-zFp"/>
+                                                        <constraint firstItem="glr-8p-lEE" firstAttribute="leading" secondItem="eNv-DR-yyy" secondAttribute="leading" constant="2" id="aCE-jP-Oqp"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="textField" destination="glr-8p-lEE" id="Bud-u2-iDf"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
+                                        </tableColumn>
+                                        <tableColumn identifier="LastModifiedID" width="226" minWidth="10" maxWidth="3.4028234663852886e+38" id="jPa-3A-00A" userLabel="Last Modified Column">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Last Modified">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="8fL-or-HuA">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="i8T-HK-IBw" userLabel="Last Modified View">
+                                                    <rect key="frame" x="438" y="1" width="226" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="u8u-g1-lcU" userLabel="Date Modified Field">
+                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="bRY-IA-Stj">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="u8u-g1-lcU" firstAttribute="centerX" secondItem="i8T-HK-IBw" secondAttribute="centerX" id="7xa-jn-vLN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="u8u-g1-lcU" secondAttribute="trailing" constant="3" id="9kI-rI-fiO"/>
+                                                        <constraint firstItem="u8u-g1-lcU" firstAttribute="centerY" secondItem="i8T-HK-IBw" secondAttribute="centerY" id="M2f-aK-9wc"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="textField" destination="u8u-g1-lcU" id="haZ-Gs-pJw"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="215" id="ljH-uQ-GAO"/>
+                                        <outlet property="delegate" destination="215" id="L7P-bH-W9i"/>
+                                    </connections>
+                                </outlineView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="HWI-uU-pD7">
+                            <rect key="frame" x="1" y="340" width="666" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="NaX-hF-cL0">
+                            <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="DWZ-Wd-ju8">
+                            <rect key="frame" x="0.0" y="0.0" width="666" height="17"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableHeaderView>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="487" secondAttribute="bottom" id="8hr-9P-9yc"/>
+                    <constraint firstItem="503" firstAttribute="top" secondItem="581" secondAttribute="bottom" constant="7" id="BdO-Zo-eCt"/>
+                    <constraint firstAttribute="trailing" secondItem="BNG-O5-kak" secondAttribute="trailing" id="DeB-5P-R3u"/>
+                    <constraint firstItem="581" firstAttribute="leading" secondItem="583" secondAttribute="trailing" constant="8" id="Tek-JD-Xx3"/>
+                    <constraint firstAttribute="trailing" secondItem="503" secondAttribute="trailing" id="XW9-Wh-TgU"/>
+                    <constraint firstItem="BNG-O5-kak" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="aMe-Op-Zuq"/>
+                    <constraint firstItem="583" firstAttribute="top" secondItem="2" secondAttribute="top" constant="7" id="gfV-VA-K1l"/>
+                    <constraint firstItem="BNG-O5-kak" firstAttribute="top" secondItem="503" secondAttribute="bottom" constant="-1" id="ilB-JK-HEp"/>
+                    <constraint firstItem="503" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="jKC-1M-i6v"/>
+                    <constraint firstItem="487" firstAttribute="top" secondItem="BNG-O5-kak" secondAttribute="bottom" constant="-1" id="ld7-v0-EWb"/>
+                    <constraint firstItem="581" firstAttribute="top" secondItem="2" secondAttribute="top" constant="4" id="lwm-DU-4NU"/>
+                    <constraint firstItem="583" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="11" id="ojq-Z8-Tc1"/>
+                    <constraint firstItem="487" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="sOO-y9-f20"/>
+                    <constraint firstAttribute="trailing" secondItem="487" secondAttribute="trailing" id="z0X-aa-6Yo"/>
+                </constraints>
+                <animations/>
+            </view>
+            <connections>
+                <outlet property="initialFirstResponder" destination="506" id="570"/>
+            </connections>
+            <point key="canvasLocation" x="390" y="393"/>
+        </window>
+        <menu title="MainMenu" systemMenu="main" id="29" userLabel="MainMenu">
+            <items>
+                <menuItem title="PhotoSearch" id="56">
+                    <menu key="submenu" title="PhotoSearch" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About PhotoSearch" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="196">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129" userLabel="Menu Item - Preferences"/>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide PhotoSearch" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-2" id="152"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-2" id="146"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-2" id="153"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit PhotoSearch" keyEquivalent="q" id="136" userLabel="Menu Item - Quit">
+                                <connections>
+                                    <action selector="terminate:" target="-2" id="N0l-WG-o3d"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="83">
+                    <menu key="submenu" title="File" id="81">
+                        <items>
+                            <menuItem title="New" keyEquivalent="n" id="82" userLabel="9"/>
+                            <menuItem title="Open..." keyEquivalent="o" id="72"/>
+                            <menuItem title="Open Recent" id="124">
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="125">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="126">
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="127"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="79" userLabel="7">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Close" keyEquivalent="w" id="73" userLabel="1">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="193"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save" keyEquivalent="s" id="75" userLabel="3"/>
+                            <menuItem title="Save As…" keyEquivalent="S" id="80" userLabel="8"/>
+                            <menuItem title="Revert" id="112" userLabel="10">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="74" userLabel="2">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Page Setup…" keyEquivalent="P" id="77" userLabel="5">
+                                <connections>
+                                    <action selector="runPageLayout:" target="-1" id="87"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Print…" keyEquivalent="p" id="78" userLabel="6">
+                                <connections>
+                                    <action selector="print:" target="-1" id="86"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="163">
+                    <menu key="submenu" title="Edit" id="169">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="158">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="180"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="173">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="178"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="156">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Cut" keyEquivalent="x" id="160">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="175"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="157">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="181"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="171">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="176"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste and Match Style" keyEquivalent="V" id="204">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="pasteAsPlainText:" target="-1" id="205"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="164">
+                                <connections>
+                                    <action selector="delete:" target="-1" id="195"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="172">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="179"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="174">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Find" id="168">
+                                <menu key="submenu" title="Find" id="159">
+                                    <items>
+                                        <menuItem title="Find…" tag="1" keyEquivalent="f" id="154">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="199"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Next" tag="2" keyEquivalent="g" id="167">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="200"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Previous" tag="3" keyEquivalent="G" id="162">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="201"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Use Selection for Find" tag="7" keyEquivalent="e" id="161">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="202"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Jump to Selection" keyEquivalent="j" id="155">
+                                            <connections>
+                                                <action selector="centerSelectionInVisibleArea:" target="-1" id="203"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Spelling" id="184">
+                                <menu key="submenu" title="Spelling" id="185">
+                                    <items>
+                                        <menuItem title="Spelling…" keyEquivalent=":" id="187">
+                                            <connections>
+                                                <action selector="showGuessPanel:" target="-1" id="188"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Spelling" keyEquivalent=";" id="189">
+                                            <connections>
+                                                <action selector="checkSpelling:" target="-1" id="190"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Spelling as You Type" id="191">
+                                            <connections>
+                                                <action selector="toggleContinuousSpellChecking:" target="-1" id="192"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="37"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="197">
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="198"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="103" userLabel="1">
+                    <menu key="submenu" title="Help" id="106" userLabel="2">
+                        <items>
+                            <menuItem title="PhotoSearch Help" keyEquivalent="?" id="111">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="122"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="215" userLabel="MainWindowController" customClass="MainWindowController">
+            <connections>
+                <outlet property="heightConstraint" destination="AxU-Jz-DD0" id="JYf-k1-Izh"/>
+                <outlet property="pathControl" destination="487" id="499"/>
+                <outlet property="predicateEditor" destination="506" id="545"/>
+                <outlet property="resultsOutlineView" destination="d3n-yj-zoB" id="Mfg-d7-sRM"/>
+                <outlet property="searchLocationPathControl" destination="581" id="587"/>
+                <outlet property="window" destination="21" id="544"/>
+            </connections>
+        </customObject>
+        <customObject id="579" customClass="AppDelegate"/>
+    </objects>
+    <resources>
+        <image name="info-normal" width="13" height="13"/>
+        <image name="info-normal-mouse" width="13" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A0CF12F1BBBD8D600121A6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CF12E1BBBD8D600121A6C /* AppDelegate.m */; };
+		5A0CF1311BBBD8D600121A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CF1301BBBD8D600121A6C /* main.m */; };
+		5A0CF1331BBBD8D600121A6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0CF1321BBBD8D600121A6C /* Images.xcassets */; };
+		5A0CF1361BBBD8D600121A6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0CF1341BBBD8D600121A6C /* MainMenu.xib */; };
+		5A0CF1421BBBD8D700121A6C /* ComboboxTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CF1411BBBD8D700121A6C /* ComboboxTextTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A0CF13C1BBBD8D700121A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0CF1201BBBD8D600121A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0CF1271BBBD8D600121A6C;
+			remoteInfo = ComboboxText;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A0CF1281BBBD8D600121A6C /* ComboboxText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComboboxText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0CF12C1BBBD8D600121A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0CF12D1BBBD8D600121A6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A0CF12E1BBBD8D600121A6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A0CF1301BBBD8D600121A6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A0CF1321BBBD8D600121A6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A0CF1351BBBD8D600121A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5A0CF13B1BBBD8D700121A6C /* ComboboxTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComboboxTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0CF1401BBBD8D700121A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0CF1411BBBD8D700121A6C /* ComboboxTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComboboxTextTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A0CF1251BBBD8D600121A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0CF1381BBBD8D700121A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A0CF11F1BBBD8D600121A6C = {
+			isa = PBXGroup;
+			children = (
+				5A0CF12A1BBBD8D600121A6C /* ComboboxText */,
+				5A0CF13E1BBBD8D700121A6C /* ComboboxTextTests */,
+				5A0CF1291BBBD8D600121A6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A0CF1291BBBD8D600121A6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CF1281BBBD8D600121A6C /* ComboboxText.app */,
+				5A0CF13B1BBBD8D700121A6C /* ComboboxTextTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A0CF12A1BBBD8D600121A6C /* ComboboxText */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CF12D1BBBD8D600121A6C /* AppDelegate.h */,
+				5A0CF12E1BBBD8D600121A6C /* AppDelegate.m */,
+				5A0CF1321BBBD8D600121A6C /* Images.xcassets */,
+				5A0CF1341BBBD8D600121A6C /* MainMenu.xib */,
+				5A0CF12B1BBBD8D600121A6C /* Supporting Files */,
+			);
+			path = ComboboxText;
+			sourceTree = "<group>";
+		};
+		5A0CF12B1BBBD8D600121A6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CF12C1BBBD8D600121A6C /* Info.plist */,
+				5A0CF1301BBBD8D600121A6C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A0CF13E1BBBD8D700121A6C /* ComboboxTextTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CF1411BBBD8D700121A6C /* ComboboxTextTests.m */,
+				5A0CF13F1BBBD8D700121A6C /* Supporting Files */,
+			);
+			path = ComboboxTextTests;
+			sourceTree = "<group>";
+		};
+		5A0CF13F1BBBD8D700121A6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CF1401BBBD8D700121A6C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A0CF1271BBBD8D600121A6C /* ComboboxText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0CF1451BBBD8D700121A6C /* Build configuration list for PBXNativeTarget "ComboboxText" */;
+			buildPhases = (
+				5A0CF1241BBBD8D600121A6C /* Sources */,
+				5A0CF1251BBBD8D600121A6C /* Frameworks */,
+				5A0CF1261BBBD8D600121A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComboboxText;
+			productName = ComboboxText;
+			productReference = 5A0CF1281BBBD8D600121A6C /* ComboboxText.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A0CF13A1BBBD8D700121A6C /* ComboboxTextTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0CF1481BBBD8D700121A6C /* Build configuration list for PBXNativeTarget "ComboboxTextTests" */;
+			buildPhases = (
+				5A0CF1371BBBD8D700121A6C /* Sources */,
+				5A0CF1381BBBD8D700121A6C /* Frameworks */,
+				5A0CF1391BBBD8D700121A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0CF13D1BBBD8D700121A6C /* PBXTargetDependency */,
+			);
+			name = ComboboxTextTests;
+			productName = ComboboxTextTests;
+			productReference = 5A0CF13B1BBBD8D700121A6C /* ComboboxTextTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A0CF1201BBBD8D600121A6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = smk.private;
+				TargetAttributes = {
+					5A0CF1271BBBD8D600121A6C = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					5A0CF13A1BBBD8D700121A6C = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 5A0CF1271BBBD8D600121A6C;
+					};
+				};
+			};
+			buildConfigurationList = 5A0CF1231BBBD8D600121A6C /* Build configuration list for PBXProject "ComboboxText" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A0CF11F1BBBD8D600121A6C;
+			productRefGroup = 5A0CF1291BBBD8D600121A6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A0CF1271BBBD8D600121A6C /* ComboboxText */,
+				5A0CF13A1BBBD8D700121A6C /* ComboboxTextTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A0CF1261BBBD8D600121A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0CF1331BBBD8D600121A6C /* Images.xcassets in Resources */,
+				5A0CF1361BBBD8D600121A6C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0CF1391BBBD8D700121A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A0CF1241BBBD8D600121A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0CF1311BBBD8D600121A6C /* main.m in Sources */,
+				5A0CF12F1BBBD8D600121A6C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0CF1371BBBD8D700121A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0CF1421BBBD8D700121A6C /* ComboboxTextTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A0CF13D1BBBD8D700121A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0CF1271BBBD8D600121A6C /* ComboboxText */;
+			targetProxy = 5A0CF13C1BBBD8D700121A6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A0CF1341BBBD8D600121A6C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0CF1351BBBD8D600121A6C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A0CF1431BBBD8D700121A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5A0CF1441BBBD8D700121A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5A0CF1461BBBD8D700121A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ComboboxText/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5A0CF1471BBBD8D700121A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ComboboxText/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5A0CF1491BBBD8D700121A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ComboboxTextTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComboboxText.app/Contents/MacOS/ComboboxText";
+			};
+			name = Debug;
+		};
+		5A0CF14A1BBBD8D700121A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ComboboxTextTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComboboxText.app/Contents/MacOS/ComboboxText";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A0CF1231BBBD8D600121A6C /* Build configuration list for PBXProject "ComboboxText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0CF1431BBBD8D700121A6C /* Debug */,
+				5A0CF1441BBBD8D700121A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0CF1451BBBD8D700121A6C /* Build configuration list for PBXNativeTarget "ComboboxText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0CF1461BBBD8D700121A6C /* Debug */,
+				5A0CF1471BBBD8D700121A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A0CF1481BBBD8D700121A6C /* Build configuration list for PBXNativeTarget "ComboboxTextTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0CF1491BBBD8D700121A6C /* Debug */,
+				5A0CF14A1BBBD8D700121A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A0CF1201BBBD8D600121A6C /* Project object */;
+}

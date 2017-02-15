@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AC3E27E1C6496A200CF5586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC3E27D1C6496A200CF5586 /* AppDelegate.m */; };
+		5AC3E2801C6496A200CF5586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC3E27F1C6496A200CF5586 /* main.m */; };
+		5AC3E2821C6496A200CF5586 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC3E2811C6496A200CF5586 /* Images.xcassets */; };
+		5AC3E2851C6496A200CF5586 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC3E2831C6496A200CF5586 /* MainMenu.xib */; };
+		5AC3E2911C6496A200CF5586 /* NSComboBoxCell_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC3E2901C6496A200CF5586 /* NSComboBoxCell_TestTests.m */; };
+		5AC3E29C1C64970E00CF5586 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC3E29B1C64970E00CF5586 /* MyView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AC3E28B1C6496A200CF5586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AC3E26F1C6496A200CF5586 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AC3E2761C6496A200CF5586;
+			remoteInfo = NSComboBoxCell_Test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5AC3E2771C6496A200CF5586 /* NSComboBoxCell_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSComboBoxCell_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC3E27B1C6496A200CF5586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AC3E27C1C6496A200CF5586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5AC3E27D1C6496A200CF5586 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5AC3E27F1C6496A200CF5586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AC3E2811C6496A200CF5586 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5AC3E2841C6496A200CF5586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5AC3E28A1C6496A200CF5586 /* NSComboBoxCell_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSComboBoxCell_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC3E28F1C6496A200CF5586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AC3E2901C6496A200CF5586 /* NSComboBoxCell_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSComboBoxCell_TestTests.m; sourceTree = "<group>"; };
+		5AC3E29A1C64970E00CF5586 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		5AC3E29B1C64970E00CF5586 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AC3E2741C6496A200CF5586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AC3E2871C6496A200CF5586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AC3E26E1C6496A200CF5586 = {
+			isa = PBXGroup;
+			children = (
+				5AC3E2791C6496A200CF5586 /* NSComboBoxCell_Test */,
+				5AC3E28D1C6496A200CF5586 /* NSComboBoxCell_TestTests */,
+				5AC3E2781C6496A200CF5586 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AC3E2781C6496A200CF5586 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AC3E2771C6496A200CF5586 /* NSComboBoxCell_Test.app */,
+				5AC3E28A1C6496A200CF5586 /* NSComboBoxCell_TestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AC3E2791C6496A200CF5586 /* NSComboBoxCell_Test */ = {
+			isa = PBXGroup;
+			children = (
+				5AC3E27C1C6496A200CF5586 /* AppDelegate.h */,
+				5AC3E27D1C6496A200CF5586 /* AppDelegate.m */,
+				5AC3E2811C6496A200CF5586 /* Images.xcassets */,
+				5AC3E2831C6496A200CF5586 /* MainMenu.xib */,
+				5AC3E27A1C6496A200CF5586 /* Supporting Files */,
+				5AC3E29A1C64970E00CF5586 /* MyView.h */,
+				5AC3E29B1C64970E00CF5586 /* MyView.m */,
+			);
+			path = NSComboBoxCell_Test;
+			sourceTree = "<group>";
+		};
+		5AC3E27A1C6496A200CF5586 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AC3E27B1C6496A200CF5586 /* Info.plist */,
+				5AC3E27F1C6496A200CF5586 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AC3E28D1C6496A200CF5586 /* NSComboBoxCell_TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AC3E2901C6496A200CF5586 /* NSComboBoxCell_TestTests.m */,
+				5AC3E28E1C6496A200CF5586 /* Supporting Files */,
+			);
+			path = NSComboBoxCell_TestTests;
+			sourceTree = "<group>";
+		};
+		5AC3E28E1C6496A200CF5586 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AC3E28F1C6496A200CF5586 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AC3E2761C6496A200CF5586 /* NSComboBoxCell_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AC3E2941C6496A200CF5586 /* Build configuration list for PBXNativeTarget "NSComboBoxCell_Test" */;
+			buildPhases = (
+				5AC3E2731C6496A200CF5586 /* Sources */,
+				5AC3E2741C6496A200CF5586 /* Frameworks */,
+				5AC3E2751C6496A200CF5586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSComboBoxCell_Test;
+			productName = NSComboBoxCell_Test;
+			productReference = 5AC3E2771C6496A200CF5586 /* NSComboBoxCell_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AC3E2891C6496A200CF5586 /* NSComboBoxCell_TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AC3E2971C6496A200CF5586 /* Build configuration list for PBXNativeTarget "NSComboBoxCell_TestTests" */;
+			buildPhases = (
+				5AC3E2861C6496A200CF5586 /* Sources */,
+				5AC3E2871C6496A200CF5586 /* Frameworks */,
+				5AC3E2881C6496A200CF5586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AC3E28C1C6496A200CF5586 /* PBXTargetDependency */,
+			);
+			name = NSComboBoxCell_TestTests;
+			productName = NSComboBoxCell_TestTests;
+			productReference = 5AC3E28A1C6496A200CF5586 /* NSComboBoxCell_TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AC3E26F1C6496A200CF5586 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = smk.private;
+				TargetAttributes = {
+					5AC3E2761C6496A200CF5586 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					5AC3E2891C6496A200CF5586 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 5AC3E2761C6496A200CF5586;
+					};
+				};
+			};
+			buildConfigurationList = 5AC3E2721C6496A200CF5586 /* Build configuration list for PBXProject "NSComboBoxCell_Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AC3E26E1C6496A200CF5586;
+			productRefGroup = 5AC3E2781C6496A200CF5586 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AC3E2761C6496A200CF5586 /* NSComboBoxCell_Test */,
+				5AC3E2891C6496A200CF5586 /* NSComboBoxCell_TestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AC3E2751C6496A200CF5586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC3E2821C6496A200CF5586 /* Images.xcassets in Resources */,
+				5AC3E2851C6496A200CF5586 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AC3E2881C6496A200CF5586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AC3E2731C6496A200CF5586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC3E2801C6496A200CF5586 /* main.m in Sources */,
+				5AC3E27E1C6496A200CF5586 /* AppDelegate.m in Sources */,
+				5AC3E29C1C64970E00CF5586 /* MyView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AC3E2861C6496A200CF5586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC3E2911C6496A200CF5586 /* NSComboBoxCell_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AC3E28C1C6496A200CF5586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AC3E2761C6496A200CF5586 /* NSComboBoxCell_Test */;
+			targetProxy = 5AC3E28B1C6496A200CF5586 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5AC3E2831C6496A200CF5586 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AC3E2841C6496A200CF5586 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AC3E2921C6496A200CF5586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AC3E2931C6496A200CF5586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AC3E2951C6496A200CF5586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSComboBoxCell_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5AC3E2961C6496A200CF5586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NSComboBoxCell_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5AC3E2981C6496A200CF5586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NSComboBoxCell_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSComboBoxCell_Test.app/Contents/MacOS/NSComboBoxCell_Test";
+			};
+			name = Debug;
+		};
+		5AC3E2991C6496A200CF5586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NSComboBoxCell_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSComboBoxCell_Test.app/Contents/MacOS/NSComboBoxCell_Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AC3E2721C6496A200CF5586 /* Build configuration list for PBXProject "NSComboBoxCell_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AC3E2921C6496A200CF5586 /* Debug */,
+				5AC3E2931C6496A200CF5586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AC3E2941C6496A200CF5586 /* Build configuration list for PBXNativeTarget "NSComboBoxCell_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AC3E2951C6496A200CF5586 /* Debug */,
+				5AC3E2961C6496A200CF5586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5AC3E2971C6496A200CF5586 /* Build configuration list for PBXNativeTarget "NSComboBoxCell_TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AC3E2981C6496A200CF5586 /* Debug */,
+				5AC3E2991C6496A200CF5586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AC3E26F1C6496A200CF5586 /* Project object */;
+}
