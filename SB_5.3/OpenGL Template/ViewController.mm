@@ -21,24 +21,14 @@ CVReturn DisplayCallback(
 GLuint CompileShader(const GLchar *source, GLenum type);
 GLboolean LinkProgram(GLuint program);
 
-struct VertexData
-{
-    // Position
-    GLfloat x;
-    GLfloat y;
-    GLfloat z;
-    
-    // Color
-    GLfloat r;
-    GLfloat g;
-    GLfloat b;
-};
-
 @implementation ViewController
 {
-    GLuint _vertexArrayObject;
-    id _monitor;
-    GLuint _VBO, _VAO, _EBO;
+    id      	_monitor;
+    GLuint      _VBO, _VAO;
+    GLint       mv_location;
+    GLint       proj_location;
+    float       aspect;
+    vmath::mat4 proj_matrix;
 }
 
 - (void)dealloc
@@ -61,7 +51,6 @@ struct VertexData
     
     glDeleteVertexArrays(1, &_VAO);
     glDeleteBuffers(1, &_VBO);
-    glDeleteBuffers(1, &_EBO);
 }
 
 - (void)viewDidAppear
@@ -98,6 +87,7 @@ struct VertexData
         NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersion3_2Core,
         NSOpenGLPFAColorSize    , 24                           ,
         NSOpenGLPFAAlphaSize    , 8                            ,
+        NSOpenGLPFADepthSize    , 16                           ,
         NSOpenGLPFADoubleBuffer ,
         NSOpenGLPFAAccelerated  ,
         NSOpenGLPFANoRecovery   ,
@@ -188,6 +178,9 @@ struct VertexData
 
 - (void)loadBufferData
 {
+    mv_location = glGetUniformLocation(self.shaderProgram, "mv_matrix");
+    proj_location = glGetUniformLocation(self.shaderProgram, "proj_matrix");
+    
     glGenVertexArrays(1, &_VAO);
     glBindVertexArray(_VAO);
     
@@ -195,17 +188,49 @@ struct VertexData
     {
         -0.25f,  0.25f, -0.25f,
         -0.25f, -0.25f, -0.25f,
-         0.25f, -0.25f, -0.25f,
-         0.25f, -0.25f, -0.25f,
-         0.25f,  0.25f, -0.25f,
+        0.25f, -0.25f, -0.25f,
+        
+        0.25f, -0.25f, -0.25f,
+        0.25f,  0.25f, -0.25f,
         -0.25f,  0.25f, -0.25f,
         
-        /* MORE DATA HERE */
+        0.25f, -0.25f, -0.25f,
+        0.25f, -0.25f,  0.25f,
+        0.25f,  0.25f, -0.25f,
+        
+        0.25f, -0.25f,  0.25f,
+        0.25f,  0.25f,  0.25f,
+        0.25f,  0.25f, -0.25f,
+        
+        0.25f, -0.25f,  0.25f,
+        -0.25f, -0.25f,  0.25f,
+        0.25f,  0.25f,  0.25f,
+        
+        -0.25f, -0.25f,  0.25f,
+        -0.25f,  0.25f,  0.25f,
+        0.25f,  0.25f,  0.25f,
+        
+        -0.25f, -0.25f,  0.25f,
+        -0.25f, -0.25f, -0.25f,
+        -0.25f,  0.25f,  0.25f,
+        
+        -0.25f, -0.25f, -0.25f,
+        -0.25f,  0.25f, -0.25f,
+        -0.25f,  0.25f,  0.25f,
+        
+        -0.25f, -0.25f,  0.25f,
+        0.25f, -0.25f,  0.25f,
+        0.25f, -0.25f, -0.25f,
+        
+        0.25f, -0.25f, -0.25f,
+        -0.25f, -0.25f, -0.25f,
+        -0.25f, -0.25f,  0.25f,
         
         -0.25f,  0.25f, -0.25f,
-         0.25f,  0.25f, -0.25f,
-         0.25f,  0.25f,  0.25f,
-         0.25f,  0.25f,  0.25f,
+        0.25f,  0.25f, -0.25f,
+        0.25f,  0.25f,  0.25f,
+        
+        0.25f,  0.25f,  0.25f,
         -0.25f,  0.25f,  0.25f,
         -0.25f,  0.25f, -0.25f
     };
@@ -216,27 +241,50 @@ struct VertexData
     
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
     glEnableVertexAttribArray(0);
+    
+    glEnable(GL_CULL_FACE);
+    glFrontFace(GL_CW);
+    
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
 }
 
 - (void)setupCoordinates
 {
+    aspect = self.view.frame.size.width / self.view.frame.size.height;
     
+    proj_matrix = vmath::perspective(50.0f, aspect, 0.1f, 1000.0f);
 }
 
 - (void)renderForTime:(CVTimeStamp)time
 {
     [self.openGLView.openGLContext makeCurrentContext];
     
-    glClearColor(0.0, 0.0, 0.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
+    static const GLfloat green[] = { 0.0f, 0.25f, 0.0f, 1.0f };
+    static const GLfloat one = 1.0f;
+    
+    glViewport(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    glClearBufferfv(GL_COLOR, 0, green);
+    glClearBufferfv(GL_DEPTH, 0, &one);
     
     glUseProgram(self.shaderProgram);
     
-    glBindVertexArray(_VAO);
+    glUniformMatrix4fv(proj_location, 1, GL_FALSE, proj_matrix);
     
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    GLfloat currentTime = (GLfloat)(time.videoTime) / (GLfloat)(time.videoTimeScale);
     
-    glBindVertexArray(0);
+    float f = (float)currentTime * (float)M_PI * 0.1f;
+    vmath::mat4 mv_matrix =
+        vmath::translate(0.0f, 0.0f, -4.0f) *
+        vmath::translate(
+            sinf(2.1f * f) * 0.5f,
+            cosf(1.7f * f) * 0.5f,
+            sinf(1.3f * f) * cosf(1.5f * f) * 2.0f) *
+        vmath::rotate((float)currentTime * 45.0f, 0.0f, 1.0f, 0.0f) *
+        vmath::rotate((float)currentTime * 81.0f, 1.0f, 0.0f, 0.0f);
+    
+    glUniformMatrix4fv(mv_location, 1, GL_FALSE, mv_matrix);
+    glDrawArrays(GL_TRIANGLES, 0, 36);
     
     [self.openGLView.openGLContext flushBuffer];
 }
