@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FED8A8A1FA84479002B8B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8A891FA84479002B8B61 /* AppDelegate.m */; };
+		1FED8A8D1FA84479002B8B61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8A8C1FA84479002B8B61 /* main.m */; };
+		1FED8A901FA84479002B8B61 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FED8A8F1FA84479002B8B61 /* ViewController.mm */; };
+		1FED8A921FA84479002B8B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8A911FA84479002B8B61 /* Assets.xcassets */; };
+		1FED8A951FA84479002B8B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8A931FA84479002B8B61 /* Main.storyboard */; };
+		1FED8A9E1FA844D3002B8B61 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FED8A9D1FA844D3002B8B61 /* OpenGL.framework */; };
+		1FED8AAC1FA84980002B8B61 /* lighting_maps.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8AA61FA84980002B8B61 /* lighting_maps.fs */; };
+		1FED8AAD1FA84980002B8B61 /* lighting_maps.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8AA81FA84980002B8B61 /* lighting_maps.vs */; };
+		1FED8AB01FA849F4002B8B61 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FED8AAE1FA849F4002B8B61 /* texture.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FED8A851FA84479002B8B61 /* SimpleOpenGLExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleOpenGLExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FED8A881FA84479002B8B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FED8A891FA84479002B8B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FED8A8C1FA84479002B8B61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FED8A8E1FA84479002B8B61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FED8A8F1FA84479002B8B61 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1FED8A911FA84479002B8B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FED8A941FA84479002B8B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FED8A961FA84479002B8B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FED8A9D1FA844D3002B8B61 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1FED8A9F1FA8453E002B8B61 /* root_directory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_directory.h; sourceTree = "<group>"; };
+		1FED8AA71FA84980002B8B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Base; path = Base.lproj/lighting_maps.fs; sourceTree = "<group>"; };
+		1FED8AA91FA84980002B8B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Base; path = Base.lproj/lighting_maps.vs; sourceTree = "<group>"; };
+		1FED8AAF1FA849F4002B8B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/texture.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FED8A821FA84479002B8B61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FED8A9E1FA844D3002B8B61 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FED8A7C1FA84479002B8B61 = {
+			isa = PBXGroup;
+			children = (
+				1FED8A871FA84479002B8B61 /* SimpleOpenGLExample */,
+				1FED8A861FA84479002B8B61 /* Products */,
+				1FED8A9C1FA844D3002B8B61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FED8A861FA84479002B8B61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FED8A851FA84479002B8B61 /* SimpleOpenGLExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FED8A871FA84479002B8B61 /* SimpleOpenGLExample */ = {
+			isa = PBXGroup;
+			children = (
+				1FED8AAE1FA849F4002B8B61 /* texture.png */,
+				1FED8AA61FA84980002B8B61 /* lighting_maps.fs */,
+				1FED8AA81FA84980002B8B61 /* lighting_maps.vs */,
+				1FED8A881FA84479002B8B61 /* AppDelegate.h */,
+				1FED8A891FA84479002B8B61 /* AppDelegate.m */,
+				1FED8A8E1FA84479002B8B61 /* ViewController.h */,
+				1FED8A8F1FA84479002B8B61 /* ViewController.mm */,
+				1FED8A911FA84479002B8B61 /* Assets.xcassets */,
+				1FED8A931FA84479002B8B61 /* Main.storyboard */,
+				1FED8A961FA84479002B8B61 /* Info.plist */,
+				1FED8A8B1FA84479002B8B61 /* Supporting Files */,
+			);
+			path = SimpleOpenGLExample;
+			sourceTree = "<group>";
+		};
+		1FED8A8B1FA84479002B8B61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FED8A9F1FA8453E002B8B61 /* root_directory.h */,
+				1FED8A8C1FA84479002B8B61 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FED8A9C1FA844D3002B8B61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FED8A9D1FA844D3002B8B61 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FED8A841FA84479002B8B61 /* SimpleOpenGLExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FED8A991FA84479002B8B61 /* Build configuration list for PBXNativeTarget "SimpleOpenGLExample" */;
+			buildPhases = (
+				1FED8A811FA84479002B8B61 /* Sources */,
+				1FED8A821FA84479002B8B61 /* Frameworks */,
+				1FED8A831FA84479002B8B61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleOpenGLExample;
+			productName = SimpleOpenGLExample;
+			productReference = 1FED8A851FA84479002B8B61 /* SimpleOpenGLExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FED8A7D1FA84479002B8B61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1FED8A841FA84479002B8B61 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1FED8A801FA84479002B8B61 /* Build configuration list for PBXProject "SimpleOpenGLExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FED8A7C1FA84479002B8B61;
+			productRefGroup = 1FED8A861FA84479002B8B61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FED8A841FA84479002B8B61 /* SimpleOpenGLExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FED8A831FA84479002B8B61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FED8AB01FA849F4002B8B61 /* texture.png in Resources */,
+				1FED8A921FA84479002B8B61 /* Assets.xcassets in Resources */,
+				1FED8AAD1FA84980002B8B61 /* lighting_maps.vs in Resources */,
+				1FED8A951FA84479002B8B61 /* Main.storyboard in Resources */,
+				1FED8AAC1FA84980002B8B61 /* lighting_maps.fs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FED8A811FA84479002B8B61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FED8A901FA84479002B8B61 /* ViewController.mm in Sources */,
+				1FED8A8D1FA84479002B8B61 /* main.m in Sources */,
+				1FED8A8A1FA84479002B8B61 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1FED8A931FA84479002B8B61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FED8A941FA84479002B8B61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FED8AA61FA84980002B8B61 /* lighting_maps.fs */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FED8AA71FA84980002B8B61 /* Base */,
+			);
+			name = lighting_maps.fs;
+			sourceTree = "<group>";
+		};
+		1FED8AA81FA84980002B8B61 /* lighting_maps.vs */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FED8AA91FA84980002B8B61 /* Base */,
+			);
+			name = lighting_maps.vs;
+			sourceTree = "<group>";
+		};
+		1FED8AAE1FA849F4002B8B61 /* texture.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FED8AAF1FA849F4002B8B61 /* Base */,
+			);
+			name = texture.png;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FED8A971FA84479002B8B61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1FED8A981FA84479002B8B61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1FED8A9A1FA84479002B8B61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimpleOpenGLExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.SimpleOpenGLExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1FED8A9B1FA84479002B8B61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimpleOpenGLExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.SimpleOpenGLExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FED8A801FA84479002B8B61 /* Build configuration list for PBXProject "SimpleOpenGLExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FED8A971FA84479002B8B61 /* Debug */,
+				1FED8A981FA84479002B8B61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FED8A991FA84479002B8B61 /* Build configuration list for PBXNativeTarget "SimpleOpenGLExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FED8A9A1FA84479002B8B61 /* Debug */,
+				1FED8A9B1FA84479002B8B61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FED8A7D1FA84479002B8B61 /* Project object */;
+}
