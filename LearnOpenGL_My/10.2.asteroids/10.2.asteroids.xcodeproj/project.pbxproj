@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F678EC21FD7B35A002760E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F678EC11FD7B35A002760E1 /* AppDelegate.m */; };
+		1F678EC51FD7B35A002760E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F678EC41FD7B35A002760E1 /* main.m */; };
+		1F678EC81FD7B35A002760E1 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F678EC71FD7B35A002760E1 /* ViewController.mm */; };
+		1F678ECA1FD7B35A002760E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F678EC91FD7B35A002760E1 /* Assets.xcassets */; };
+		1F678ECD1FD7B35A002760E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F678ECB1FD7B35A002760E1 /* Main.storyboard */; };
+		1F678ED61FD7B381002760E1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F678ED51FD7B381002760E1 /* OpenGL.framework */; };
+		1F678ED91FD7B3CA002760E1 /* 10.2.instancing.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F678ED71FD7B3CA002760E1 /* 10.2.instancing.fs */; };
+		1F678EDA1FD7B3CA002760E1 /* 10.2.instancing.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F678ED81FD7B3CA002760E1 /* 10.2.instancing.vs */; };
+		1F678EDC1FD7B401002760E1 /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F678EDB1FD7B401002760E1 /* libassimp.dylib */; };
+		1F678EDF1FD7B439002760E1 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F678EDD1FD7B439002760E1 /* glad.c */; };
+		1F678EE01FD7B439002760E1 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F678EDE1FD7B439002760E1 /* stb_image.cpp */; };
+		1F678EE31FD7B455002760E1 /* objects in Resources */ = {isa = PBXBuildFile; fileRef = 1F678EE11FD7B455002760E1 /* objects */; };
+		1F678EE41FD7B455002760E1 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1F678EE21FD7B455002760E1 /* textures */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F678EBD1FD7B35A002760E1 /* 10.2.asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 10.2.asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F678EC01FD7B35A002760E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F678EC11FD7B35A002760E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F678EC41FD7B35A002760E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F678EC61FD7B35A002760E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F678EC71FD7B35A002760E1 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F678EC91FD7B35A002760E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F678ECC1FD7B35A002760E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F678ECE1FD7B35A002760E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F678ED51FD7B381002760E1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F678ED71FD7B3CA002760E1 /* 10.2.instancing.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 10.2.instancing.fs; path = ../../../../crossplatform/LearnOpenGL/src/4.advanced_opengl/10.2.asteroids/10.2.instancing.fs; sourceTree = "<group>"; };
+		1F678ED81FD7B3CA002760E1 /* 10.2.instancing.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 10.2.instancing.vs; path = ../../../../crossplatform/LearnOpenGL/src/4.advanced_opengl/10.2.asteroids/10.2.instancing.vs; sourceTree = "<group>"; };
+		1F678EDB1FD7B401002760E1 /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.dylib; path = ../../../../../../usr/local/Cellar/assimp/4.0.1/lib/libassimp.dylib; sourceTree = "<group>"; };
+		1F678EDD1FD7B439002760E1 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../crossplatform/LearnOpenGL/src/glad.c; sourceTree = "<group>"; };
+		1F678EDE1FD7B439002760E1 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = ../../../../crossplatform/LearnOpenGL/src/stb_image.cpp; sourceTree = "<group>"; };
+		1F678EE11FD7B455002760E1 /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objects; path = ../../../../crossplatform/LearnOpenGL/resources/objects; sourceTree = "<group>"; };
+		1F678EE21FD7B455002760E1 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../../../crossplatform/LearnOpenGL/resources/textures; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F678EBA1FD7B35A002760E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F678ED61FD7B381002760E1 /* OpenGL.framework in Frameworks */,
+				1F678EDC1FD7B401002760E1 /* libassimp.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F678EB41FD7B35A002760E1 = {
+			isa = PBXGroup;
+			children = (
+				1F678EBF1FD7B35A002760E1 /* 10.2.asteroids */,
+				1F678EBE1FD7B35A002760E1 /* Products */,
+				1F678ED41FD7B381002760E1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F678EBE1FD7B35A002760E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F678EBD1FD7B35A002760E1 /* 10.2.asteroids.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F678EBF1FD7B35A002760E1 /* 10.2.asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				1F678EE11FD7B455002760E1 /* objects */,
+				1F678EE21FD7B455002760E1 /* textures */,
+				1F678ED71FD7B3CA002760E1 /* 10.2.instancing.fs */,
+				1F678ED81FD7B3CA002760E1 /* 10.2.instancing.vs */,
+				1F678EC01FD7B35A002760E1 /* AppDelegate.h */,
+				1F678EC11FD7B35A002760E1 /* AppDelegate.m */,
+				1F678EC61FD7B35A002760E1 /* ViewController.h */,
+				1F678EC71FD7B35A002760E1 /* ViewController.mm */,
+				1F678EC91FD7B35A002760E1 /* Assets.xcassets */,
+				1F678ECB1FD7B35A002760E1 /* Main.storyboard */,
+				1F678ECE1FD7B35A002760E1 /* Info.plist */,
+				1F678EC31FD7B35A002760E1 /* Supporting Files */,
+			);
+			path = 10.2.asteroids;
+			sourceTree = "<group>";
+		};
+		1F678EC31FD7B35A002760E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F678EDD1FD7B439002760E1 /* glad.c */,
+				1F678EDE1FD7B439002760E1 /* stb_image.cpp */,
+				1F678EC41FD7B35A002760E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F678ED41FD7B381002760E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F678EDB1FD7B401002760E1 /* libassimp.dylib */,
+				1F678ED51FD7B381002760E1 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F678EBC1FD7B35A002760E1 /* 10.2.asteroids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F678ED11FD7B35A002760E1 /* Build configuration list for PBXNativeTarget "10.2.asteroids" */;
+			buildPhases = (
+				1F678EB91FD7B35A002760E1 /* Sources */,
+				1F678EBA1FD7B35A002760E1 /* Frameworks */,
+				1F678EBB1FD7B35A002760E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 10.2.asteroids;
+			productName = 10.2.asteroids;
+			productReference = 1F678EBD1FD7B35A002760E1 /* 10.2.asteroids.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F678EB51FD7B35A002760E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F678EBC1FD7B35A002760E1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1F678EB81FD7B35A002760E1 /* Build configuration list for PBXProject "10.2.asteroids" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F678EB41FD7B35A002760E1;
+			productRefGroup = 1F678EBE1FD7B35A002760E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F678EBC1FD7B35A002760E1 /* 10.2.asteroids */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F678EBB1FD7B35A002760E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F678ECA1FD7B35A002760E1 /* Assets.xcassets in Resources */,
+				1F678ED91FD7B3CA002760E1 /* 10.2.instancing.fs in Resources */,
+				1F678EE41FD7B455002760E1 /* textures in Resources */,
+				1F678EDA1FD7B3CA002760E1 /* 10.2.instancing.vs in Resources */,
+				1F678EE31FD7B455002760E1 /* objects in Resources */,
+				1F678ECD1FD7B35A002760E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F678EB91FD7B35A002760E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F678EC81FD7B35A002760E1 /* ViewController.mm in Sources */,
+				1F678EC51FD7B35A002760E1 /* main.m in Sources */,
+				1F678EE01FD7B439002760E1 /* stb_image.cpp in Sources */,
+				1F678EC21FD7B35A002760E1 /* AppDelegate.m in Sources */,
+				1F678EDF1FD7B439002760E1 /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F678ECB1FD7B35A002760E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F678ECC1FD7B35A002760E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F678ECF1FD7B35A002760E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F678ED01FD7B35A002760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F678ED21FD7B35A002760E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 10.2.asteroids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.-0-2-asteroids";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F678ED31FD7B35A002760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 10.2.asteroids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.-0-2-asteroids";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F678EB81FD7B35A002760E1 /* Build configuration list for PBXProject "10.2.asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F678ECF1FD7B35A002760E1 /* Debug */,
+				1F678ED01FD7B35A002760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F678ED11FD7B35A002760E1 /* Build configuration list for PBXNativeTarget "10.2.asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F678ED21FD7B35A002760E1 /* Debug */,
+				1F678ED31FD7B35A002760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F678EB51FD7B35A002760E1 /* Project object */;
+}
