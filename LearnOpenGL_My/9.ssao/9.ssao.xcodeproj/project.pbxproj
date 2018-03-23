@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F5A75BC203BF2F900288639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A75BB203BF2F900288639 /* AppDelegate.m */; };
+		1F5A75BF203BF2F900288639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A75BE203BF2F900288639 /* main.m */; };
+		1F5A75C2203BF2F900288639 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A75C1203BF2F900288639 /* ViewController.mm */; };
+		1F5A75C4203BF2F900288639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75C3203BF2F900288639 /* Assets.xcassets */; };
+		1F5A75C7203BF2F900288639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75C5203BF2F900288639 /* Main.storyboard */; };
+		1F5A75D0203BF31D00288639 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5A75CF203BF31D00288639 /* OpenGL.framework */; };
+		1F5A75D3203BF4F600288639 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A75D1203BF4F600288639 /* glad.c */; };
+		1F5A75D4203BF4F600288639 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A75D2203BF4F600288639 /* stb_image.cpp */; };
+		1F5A75DB203BF69900288639 /* 9.ssao_blur.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75D5203BF69900288639 /* 9.ssao_blur.fs */; };
+		1F5A75DC203BF69900288639 /* 9.ssao_geometry.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75D6203BF69900288639 /* 9.ssao_geometry.fs */; };
+		1F5A75DD203BF69900288639 /* 9.ssao_geometry.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75D7203BF69900288639 /* 9.ssao_geometry.vs */; };
+		1F5A75DE203BF69900288639 /* 9.ssao_lighting.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75D8203BF69900288639 /* 9.ssao_lighting.fs */; };
+		1F5A75DF203BF69900288639 /* 9.ssao.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75D9203BF69900288639 /* 9.ssao.fs */; };
+		1F5A75E0203BF69900288639 /* 9.ssao.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75DA203BF69900288639 /* 9.ssao.vs */; };
+		1F5A75E2203BF6E400288639 /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5A75E1203BF6E400288639 /* libassimp.dylib */; };
+		1F5A75E5203BF74900288639 /* objects in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75E3203BF74800288639 /* objects */; };
+		1F5A75E6203BF74900288639 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A75E4203BF74900288639 /* textures */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F5A75B7203BF2F900288639 /* 9.ssao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9.ssao.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5A75BA203BF2F900288639 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F5A75BB203BF2F900288639 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F5A75BE203BF2F900288639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F5A75C0203BF2F900288639 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F5A75C1203BF2F900288639 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F5A75C3203BF2F900288639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F5A75C6203BF2F900288639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F5A75C8203BF2F900288639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F5A75CF203BF31D00288639 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F5A75D1203BF4F600288639 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../crossplatform/LearnOpenGL/src/glad.c; sourceTree = "<group>"; };
+		1F5A75D2203BF4F600288639 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = ../../../../crossplatform/LearnOpenGL/src/stb_image.cpp; sourceTree = "<group>"; };
+		1F5A75D5203BF69900288639 /* 9.ssao_blur.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 9.ssao_blur.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/9.ssao/9.ssao_blur.fs; sourceTree = "<group>"; };
+		1F5A75D6203BF69900288639 /* 9.ssao_geometry.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 9.ssao_geometry.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/9.ssao/9.ssao_geometry.fs; sourceTree = "<group>"; };
+		1F5A75D7203BF69900288639 /* 9.ssao_geometry.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 9.ssao_geometry.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/9.ssao/9.ssao_geometry.vs; sourceTree = "<group>"; };
+		1F5A75D8203BF69900288639 /* 9.ssao_lighting.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 9.ssao_lighting.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/9.ssao/9.ssao_lighting.fs; sourceTree = "<group>"; };
+		1F5A75D9203BF69900288639 /* 9.ssao.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 9.ssao.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/9.ssao/9.ssao.fs; sourceTree = "<group>"; };
+		1F5A75DA203BF69900288639 /* 9.ssao.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 9.ssao.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/9.ssao/9.ssao.vs; sourceTree = "<group>"; };
+		1F5A75E1203BF6E400288639 /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.dylib; path = ../../../../../../usr/local/Cellar/assimp/4.0.1/lib/libassimp.dylib; sourceTree = "<group>"; };
+		1F5A75E3203BF74800288639 /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objects; path = ../../../../crossplatform/LearnOpenGL/resources/objects; sourceTree = "<group>"; };
+		1F5A75E4203BF74900288639 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../../../crossplatform/LearnOpenGL/resources/textures; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F5A75B4203BF2F900288639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A75D0203BF31D00288639 /* OpenGL.framework in Frameworks */,
+				1F5A75E2203BF6E400288639 /* libassimp.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F5A75AE203BF2F900288639 = {
+			isa = PBXGroup;
+			children = (
+				1F5A75B9203BF2F900288639 /* 9.ssao */,
+				1F5A75B8203BF2F900288639 /* Products */,
+				1F5A75CE203BF31D00288639 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F5A75B8203BF2F900288639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A75B7203BF2F900288639 /* 9.ssao.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F5A75B9203BF2F900288639 /* 9.ssao */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A75E3203BF74800288639 /* objects */,
+				1F5A75E4203BF74900288639 /* textures */,
+				1F5A75D5203BF69900288639 /* 9.ssao_blur.fs */,
+				1F5A75D6203BF69900288639 /* 9.ssao_geometry.fs */,
+				1F5A75D7203BF69900288639 /* 9.ssao_geometry.vs */,
+				1F5A75D8203BF69900288639 /* 9.ssao_lighting.fs */,
+				1F5A75D9203BF69900288639 /* 9.ssao.fs */,
+				1F5A75DA203BF69900288639 /* 9.ssao.vs */,
+				1F5A75BA203BF2F900288639 /* AppDelegate.h */,
+				1F5A75BB203BF2F900288639 /* AppDelegate.m */,
+				1F5A75C0203BF2F900288639 /* ViewController.h */,
+				1F5A75C1203BF2F900288639 /* ViewController.mm */,
+				1F5A75C3203BF2F900288639 /* Assets.xcassets */,
+				1F5A75C5203BF2F900288639 /* Main.storyboard */,
+				1F5A75C8203BF2F900288639 /* Info.plist */,
+				1F5A75BD203BF2F900288639 /* Supporting Files */,
+			);
+			path = 9.ssao;
+			sourceTree = "<group>";
+		};
+		1F5A75BD203BF2F900288639 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A75D1203BF4F600288639 /* glad.c */,
+				1F5A75D2203BF4F600288639 /* stb_image.cpp */,
+				1F5A75BE203BF2F900288639 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F5A75CE203BF31D00288639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A75E1203BF6E400288639 /* libassimp.dylib */,
+				1F5A75CF203BF31D00288639 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F5A75B6203BF2F900288639 /* 9.ssao */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5A75CB203BF2F900288639 /* Build configuration list for PBXNativeTarget "9.ssao" */;
+			buildPhases = (
+				1F5A75B3203BF2F900288639 /* Sources */,
+				1F5A75B4203BF2F900288639 /* Frameworks */,
+				1F5A75B5203BF2F900288639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 9.ssao;
+			productName = 9.ssao;
+			productReference = 1F5A75B7203BF2F900288639 /* 9.ssao.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F5A75AF203BF2F900288639 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F5A75B6203BF2F900288639 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1F5A75B2203BF2F900288639 /* Build configuration list for PBXProject "9.ssao" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F5A75AE203BF2F900288639;
+			productRefGroup = 1F5A75B8203BF2F900288639 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F5A75B6203BF2F900288639 /* 9.ssao */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F5A75B5203BF2F900288639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A75DB203BF69900288639 /* 9.ssao_blur.fs in Resources */,
+				1F5A75DD203BF69900288639 /* 9.ssao_geometry.vs in Resources */,
+				1F5A75DC203BF69900288639 /* 9.ssao_geometry.fs in Resources */,
+				1F5A75DE203BF69900288639 /* 9.ssao_lighting.fs in Resources */,
+				1F5A75DF203BF69900288639 /* 9.ssao.fs in Resources */,
+				1F5A75E0203BF69900288639 /* 9.ssao.vs in Resources */,
+				1F5A75E6203BF74900288639 /* textures in Resources */,
+				1F5A75E5203BF74900288639 /* objects in Resources */,
+				1F5A75C4203BF2F900288639 /* Assets.xcassets in Resources */,
+				1F5A75C7203BF2F900288639 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F5A75B3203BF2F900288639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5A75C2203BF2F900288639 /* ViewController.mm in Sources */,
+				1F5A75BF203BF2F900288639 /* main.m in Sources */,
+				1F5A75D4203BF4F600288639 /* stb_image.cpp in Sources */,
+				1F5A75BC203BF2F900288639 /* AppDelegate.m in Sources */,
+				1F5A75D3203BF4F600288639 /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F5A75C5203BF2F900288639 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F5A75C6203BF2F900288639 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F5A75C9203BF2F900288639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F5A75CA203BF2F900288639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F5A75CC203BF2F900288639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 9.ssao/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--ssao";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F5A75CD203BF2F900288639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 9.ssao/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--ssao";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F5A75B2203BF2F900288639 /* Build configuration list for PBXProject "9.ssao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5A75C9203BF2F900288639 /* Debug */,
+				1F5A75CA203BF2F900288639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5A75CB203BF2F900288639 /* Build configuration list for PBXNativeTarget "9.ssao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5A75CC203BF2F900288639 /* Debug */,
+				1F5A75CD203BF2F900288639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F5A75AF203BF2F900288639 /* Project object */;
+}

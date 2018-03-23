@@ -26,6 +26,11 @@
     
     _outputPipe = [NSPipe new];
     [_logger setStandardInput:_outputPipe];
+    [_logger setArguments:
+        @[
+            [NSString stringWithFormat:@"output=%@", [self logFileName]]
+         ]
+    ];
     
     [_logger launch];
     
@@ -38,9 +43,20 @@
 
 - (void)windowWillClose:(NSNotification*)notification
 {
-    [[_outputPipe fileHandleForWriting] closeFile];
+    if (_logger.running)
+    {
+        [[_outputPipe fileHandleForWriting] closeFile];
+        
+        [_logger terminate];
+    }
+}
+
+- (NSString *)logFileName
+{
+    NSString *pathToFile = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES)[0];
+    pathToFile = [pathToFile stringByAppendingPathComponent:@"85B97D14-4A5D-49C9-A55A-7513BAFC5E31.log"];
     
-    [_logger terminate];
+    return pathToFile;
 }
 
 - (IBAction)sendMessage:(id)sender
@@ -61,11 +77,21 @@
 //    
 //    self.text.stringValue = @"";
     
-    for (int i = 0; i < 100000; i++)
+    for (int i = 1; i <= 20000; i++)
     {
         NSString *message = [NSString stringWithFormat:@"%d\n", i];
+        
         NSLog(@"APP begin: %@", message);
-        [[_outputPipe fileHandleForWriting] writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        @try
+        {
+            [[_outputPipe fileHandleForWriting] writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+        }
+        @catch (NSException *exception)
+        {
+            
+        }
+        
         NSLog(@"APP end.");
     }
     

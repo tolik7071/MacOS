@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F8636261FDE564200C7E800 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8636251FDE564200C7E800 /* AppDelegate.m */; };
+		1F8636291FDE564200C7E800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8636281FDE564200C7E800 /* main.m */; };
+		1F86362C1FDE564300C7E800 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F86362B1FDE564300C7E800 /* ViewController.mm */; };
+		1F86362E1FDE564300C7E800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F86362D1FDE564300C7E800 /* Assets.xcassets */; };
+		1F8636311FDE564300C7E800 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F86362F1FDE564300C7E800 /* Main.storyboard */; };
+		1F86363A1FDE566500C7E800 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8636391FDE566500C7E800 /* OpenGL.framework */; };
+		1F86363D1FDE56B500C7E800 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F86363B1FDE56B500C7E800 /* glad.c */; };
+		1F86363E1FDE56B500C7E800 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F86363C1FDE56B500C7E800 /* stb_image.cpp */; };
+		1F8636411FDE56C100C7E800 /* 1.advanced_lighting.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F86363F1FDE56C100C7E800 /* 1.advanced_lighting.fs */; };
+		1F8636421FDE56C100C7E800 /* 1.advanced_lighting.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F8636401FDE56C100C7E800 /* 1.advanced_lighting.vs */; };
+		1F8636451FDE5CFF00C7E800 /* objects in Resources */ = {isa = PBXBuildFile; fileRef = 1F8636431FDE5CFF00C7E800 /* objects */; };
+		1F8636461FDE5CFF00C7E800 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1F8636441FDE5CFF00C7E800 /* textures */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F8636211FDE564200C7E800 /* 1.advanced_lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.advanced_lighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8636241FDE564200C7E800 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F8636251FDE564200C7E800 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F8636281FDE564200C7E800 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F86362A1FDE564200C7E800 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F86362B1FDE564300C7E800 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F86362D1FDE564300C7E800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F8636301FDE564300C7E800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F8636321FDE564300C7E800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F8636391FDE566500C7E800 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F86363B1FDE56B500C7E800 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../crossplatform/LearnOpenGL/src/glad.c; sourceTree = "<group>"; };
+		1F86363C1FDE56B500C7E800 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = ../../../../crossplatform/LearnOpenGL/src/stb_image.cpp; sourceTree = "<group>"; };
+		1F86363F1FDE56C100C7E800 /* 1.advanced_lighting.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 1.advanced_lighting.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/1.advanced_lighting/1.advanced_lighting.fs; sourceTree = "<group>"; };
+		1F8636401FDE56C100C7E800 /* 1.advanced_lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 1.advanced_lighting.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/1.advanced_lighting/1.advanced_lighting.vs; sourceTree = "<group>"; };
+		1F8636431FDE5CFF00C7E800 /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objects; path = ../../../../crossplatform/LearnOpenGL/resources/objects; sourceTree = "<group>"; };
+		1F8636441FDE5CFF00C7E800 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../../../crossplatform/LearnOpenGL/resources/textures; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F86361E1FDE564200C7E800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F86363A1FDE566500C7E800 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F8636181FDE564100C7E800 = {
+			isa = PBXGroup;
+			children = (
+				1F8636231FDE564200C7E800 /* 1.advanced_lighting */,
+				1F8636221FDE564200C7E800 /* Products */,
+				1F8636381FDE566500C7E800 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F8636221FDE564200C7E800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F8636211FDE564200C7E800 /* 1.advanced_lighting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F8636231FDE564200C7E800 /* 1.advanced_lighting */ = {
+			isa = PBXGroup;
+			children = (
+				1F8636431FDE5CFF00C7E800 /* objects */,
+				1F8636441FDE5CFF00C7E800 /* textures */,
+				1F86363F1FDE56C100C7E800 /* 1.advanced_lighting.fs */,
+				1F8636401FDE56C100C7E800 /* 1.advanced_lighting.vs */,
+				1F8636241FDE564200C7E800 /* AppDelegate.h */,
+				1F8636251FDE564200C7E800 /* AppDelegate.m */,
+				1F86362A1FDE564200C7E800 /* ViewController.h */,
+				1F86362B1FDE564300C7E800 /* ViewController.mm */,
+				1F86362D1FDE564300C7E800 /* Assets.xcassets */,
+				1F86362F1FDE564300C7E800 /* Main.storyboard */,
+				1F8636321FDE564300C7E800 /* Info.plist */,
+				1F8636271FDE564200C7E800 /* Supporting Files */,
+			);
+			path = 1.advanced_lighting;
+			sourceTree = "<group>";
+		};
+		1F8636271FDE564200C7E800 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F86363B1FDE56B500C7E800 /* glad.c */,
+				1F86363C1FDE56B500C7E800 /* stb_image.cpp */,
+				1F8636281FDE564200C7E800 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F8636381FDE566500C7E800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F8636391FDE566500C7E800 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F8636201FDE564200C7E800 /* 1.advanced_lighting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F8636351FDE564300C7E800 /* Build configuration list for PBXNativeTarget "1.advanced_lighting" */;
+			buildPhases = (
+				1F86361D1FDE564200C7E800 /* Sources */,
+				1F86361E1FDE564200C7E800 /* Frameworks */,
+				1F86361F1FDE564200C7E800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 1.advanced_lighting;
+			productName = 1.advanced_lighting;
+			productReference = 1F8636211FDE564200C7E800 /* 1.advanced_lighting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F8636191FDE564100C7E800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F8636201FDE564200C7E800 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1F86361C1FDE564100C7E800 /* Build configuration list for PBXProject "1.advanced_lighting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F8636181FDE564100C7E800;
+			productRefGroup = 1F8636221FDE564200C7E800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F8636201FDE564200C7E800 /* 1.advanced_lighting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F86361F1FDE564200C7E800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F86362E1FDE564300C7E800 /* Assets.xcassets in Resources */,
+				1F8636311FDE564300C7E800 /* Main.storyboard in Resources */,
+				1F8636461FDE5CFF00C7E800 /* textures in Resources */,
+				1F8636411FDE56C100C7E800 /* 1.advanced_lighting.fs in Resources */,
+				1F8636451FDE5CFF00C7E800 /* objects in Resources */,
+				1F8636421FDE56C100C7E800 /* 1.advanced_lighting.vs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F86361D1FDE564200C7E800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F86362C1FDE564300C7E800 /* ViewController.mm in Sources */,
+				1F8636291FDE564200C7E800 /* main.m in Sources */,
+				1F86363E1FDE56B500C7E800 /* stb_image.cpp in Sources */,
+				1F8636261FDE564200C7E800 /* AppDelegate.m in Sources */,
+				1F86363D1FDE56B500C7E800 /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F86362F1FDE564300C7E800 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F8636301FDE564300C7E800 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F8636331FDE564300C7E800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F8636341FDE564300C7E800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F8636361FDE564300C7E800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 1.advanced_lighting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--advanced-lighting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F8636371FDE564300C7E800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 1.advanced_lighting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--advanced-lighting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F86361C1FDE564100C7E800 /* Build configuration list for PBXProject "1.advanced_lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8636331FDE564300C7E800 /* Debug */,
+				1F8636341FDE564300C7E800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F8636351FDE564300C7E800 /* Build configuration list for PBXNativeTarget "1.advanced_lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8636361FDE564300C7E800 /* Debug */,
+				1F8636371FDE564300C7E800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F8636191FDE564100C7E800 /* Project object */;
+}

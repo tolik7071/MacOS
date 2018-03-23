@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F2DD31D1FEE789D00060FE1 /* example.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = example.c; sourceTree = "<group>"; };
 		1F3E52E71FC0418400274A5D /* 6.1.cubemaps_skybox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6.1.cubemaps_skybox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3E52EA1FC0418400274A5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F3E52EB1FC0418400274A5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 				1F3E52F51FC0418500274A5D /* Main.storyboard */,
 				1F3E52F81FC0418500274A5D /* Info.plist */,
 				1F3E52ED1FC0418400274A5D /* Supporting Files */,
+				1F2DD31D1FEE789D00060FE1 /* example.c */,
 			);
 			path = 6.1.cubemaps_skybox;
 			sourceTree = "<group>";
@@ -360,6 +362,7 @@
 				1F3E52FD1FC0418500274A5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

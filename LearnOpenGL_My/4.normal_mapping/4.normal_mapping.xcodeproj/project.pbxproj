@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FA46CA72005E6050049F683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA46CA62005E6050049F683 /* AppDelegate.m */; };
+		1FA46CAA2005E6050049F683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA46CA92005E6050049F683 /* main.m */; };
+		1FA46CAD2005E6050049F683 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FA46CAC2005E6050049F683 /* ViewController.mm */; };
+		1FA46CAF2005E6050049F683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA46CAE2005E6050049F683 /* Assets.xcassets */; };
+		1FA46CB22005E6050049F683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA46CB02005E6050049F683 /* Main.storyboard */; };
+		1FA46CBB2005E6200049F683 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA46CBA2005E6200049F683 /* OpenGL.framework */; };
+		1FA46CBE2005E6850049F683 /* 4.normal_mapping.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1FA46CBC2005E6850049F683 /* 4.normal_mapping.fs */; };
+		1FA46CBF2005E6850049F683 /* 4.normal_mapping.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1FA46CBD2005E6850049F683 /* 4.normal_mapping.vs */; };
+		1FA46CC22005E68F0049F683 /* objects in Resources */ = {isa = PBXBuildFile; fileRef = 1FA46CC02005E68F0049F683 /* objects */; };
+		1FA46CC32005E68F0049F683 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1FA46CC12005E68F0049F683 /* textures */; };
+		1FA46CC62005E7760049F683 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FA46CC42005E7760049F683 /* glad.c */; };
+		1FA46CC72005E7760049F683 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FA46CC52005E7760049F683 /* stb_image.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FA46CA22005E6050049F683 /* 4.normal_mapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.normal_mapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA46CA52005E6050049F683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FA46CA62005E6050049F683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FA46CA92005E6050049F683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FA46CAB2005E6050049F683 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FA46CAC2005E6050049F683 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1FA46CAE2005E6050049F683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FA46CB12005E6050049F683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FA46CB32005E6050049F683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA46CBA2005E6200049F683 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1FA46CBC2005E6850049F683 /* 4.normal_mapping.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 4.normal_mapping.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/4.normal_mapping/4.normal_mapping.fs; sourceTree = "<group>"; };
+		1FA46CBD2005E6850049F683 /* 4.normal_mapping.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 4.normal_mapping.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/4.normal_mapping/4.normal_mapping.vs; sourceTree = "<group>"; };
+		1FA46CC02005E68F0049F683 /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objects; path = ../../../../crossplatform/LearnOpenGL/resources/objects; sourceTree = "<group>"; };
+		1FA46CC12005E68F0049F683 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../../../crossplatform/LearnOpenGL/resources/textures; sourceTree = "<group>"; };
+		1FA46CC42005E7760049F683 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../crossplatform/LearnOpenGL/src/glad.c; sourceTree = "<group>"; };
+		1FA46CC52005E7760049F683 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = ../../../../crossplatform/LearnOpenGL/src/stb_image.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FA46C9F2005E6050049F683 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA46CBB2005E6200049F683 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FA46C992005E6050049F683 = {
+			isa = PBXGroup;
+			children = (
+				1FA46CA42005E6050049F683 /* 4.normal_mapping */,
+				1FA46CA32005E6050049F683 /* Products */,
+				1FA46CB92005E6200049F683 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FA46CA32005E6050049F683 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FA46CA22005E6050049F683 /* 4.normal_mapping.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FA46CA42005E6050049F683 /* 4.normal_mapping */ = {
+			isa = PBXGroup;
+			children = (
+				1FA46CC02005E68F0049F683 /* objects */,
+				1FA46CC12005E68F0049F683 /* textures */,
+				1FA46CBC2005E6850049F683 /* 4.normal_mapping.fs */,
+				1FA46CBD2005E6850049F683 /* 4.normal_mapping.vs */,
+				1FA46CA52005E6050049F683 /* AppDelegate.h */,
+				1FA46CA62005E6050049F683 /* AppDelegate.m */,
+				1FA46CAB2005E6050049F683 /* ViewController.h */,
+				1FA46CAC2005E6050049F683 /* ViewController.mm */,
+				1FA46CAE2005E6050049F683 /* Assets.xcassets */,
+				1FA46CB02005E6050049F683 /* Main.storyboard */,
+				1FA46CB32005E6050049F683 /* Info.plist */,
+				1FA46CA82005E6050049F683 /* Supporting Files */,
+			);
+			path = 4.normal_mapping;
+			sourceTree = "<group>";
+		};
+		1FA46CA82005E6050049F683 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FA46CC42005E7760049F683 /* glad.c */,
+				1FA46CC52005E7760049F683 /* stb_image.cpp */,
+				1FA46CA92005E6050049F683 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FA46CB92005E6200049F683 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FA46CBA2005E6200049F683 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FA46CA12005E6050049F683 /* 4.normal_mapping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FA46CB62005E6050049F683 /* Build configuration list for PBXNativeTarget "4.normal_mapping" */;
+			buildPhases = (
+				1FA46C9E2005E6050049F683 /* Sources */,
+				1FA46C9F2005E6050049F683 /* Frameworks */,
+				1FA46CA02005E6050049F683 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4.normal_mapping;
+			productName = 4.normal_mapping;
+			productReference = 1FA46CA22005E6050049F683 /* 4.normal_mapping.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FA46C9A2005E6050049F683 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1FA46CA12005E6050049F683 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1FA46C9D2005E6050049F683 /* Build configuration list for PBXProject "4.normal_mapping" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FA46C992005E6050049F683;
+			productRefGroup = 1FA46CA32005E6050049F683 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FA46CA12005E6050049F683 /* 4.normal_mapping */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FA46CA02005E6050049F683 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA46CBF2005E6850049F683 /* 4.normal_mapping.vs in Resources */,
+				1FA46CAF2005E6050049F683 /* Assets.xcassets in Resources */,
+				1FA46CC32005E68F0049F683 /* textures in Resources */,
+				1FA46CBE2005E6850049F683 /* 4.normal_mapping.fs in Resources */,
+				1FA46CC22005E68F0049F683 /* objects in Resources */,
+				1FA46CB22005E6050049F683 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FA46C9E2005E6050049F683 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA46CAD2005E6050049F683 /* ViewController.mm in Sources */,
+				1FA46CAA2005E6050049F683 /* main.m in Sources */,
+				1FA46CC72005E7760049F683 /* stb_image.cpp in Sources */,
+				1FA46CA72005E6050049F683 /* AppDelegate.m in Sources */,
+				1FA46CC62005E7760049F683 /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1FA46CB02005E6050049F683 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FA46CB12005E6050049F683 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FA46CB42005E6050049F683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1FA46CB52005E6050049F683 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1FA46CB72005E6050049F683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 4.normal_mapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--normal-mapping";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1FA46CB82005E6050049F683 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 4.normal_mapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--normal-mapping";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FA46C9D2005E6050049F683 /* Build configuration list for PBXProject "4.normal_mapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FA46CB42005E6050049F683 /* Debug */,
+				1FA46CB52005E6050049F683 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FA46CB62005E6050049F683 /* Build configuration list for PBXNativeTarget "4.normal_mapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FA46CB72005E6050049F683 /* Debug */,
+				1FA46CB82005E6050049F683 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FA46C9A2005E6050049F683 /* Project object */;
+}

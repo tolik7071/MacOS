@@ -64,6 +64,9 @@ CVReturn DisplayCallback(CVDisplayLinkRef, const CVTimeStamp*, const CVTimeStamp
         NSOpenGLPFADoubleBuffer ,
         NSOpenGLPFAAccelerated  ,
         NSOpenGLPFANoRecovery   ,
+        NSOpenGLPFAMultisample  ,
+        NSOpenGLPFASampleBuffers, 1                            ,
+        NSOpenGLPFASamples      , 4                            ,
         0
     };
     
@@ -128,6 +131,7 @@ CVReturn DisplayCallback(CVDisplayLinkRef, const CVTimeStamp*, const CVTimeStamp
     [self.openGLView.openGLContext makeCurrentContext];
     
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_MULTISAMPLE);
     
     NSURL *shader_vs = [self findResourceWithName:@"9.1.geometry_shader.vs"];
     NSAssert(shader_vs, @"Cannot to find out a shader");
@@ -194,7 +198,7 @@ CVReturn DisplayCallback(CVDisplayLinkRef, const CVTimeStamp*, const CVTimeStamp
     
     [self.openGLView.openGLContext makeCurrentContext];
     
-    glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     if (NULL != _shader)

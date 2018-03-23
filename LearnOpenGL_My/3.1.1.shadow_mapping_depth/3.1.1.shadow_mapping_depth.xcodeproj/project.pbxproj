@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F871AE61FE546BB00D4A2BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F871AE51FE546BB00D4A2BF /* AppDelegate.m */; };
+		1F871AE91FE546BB00D4A2BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F871AE81FE546BB00D4A2BF /* main.m */; };
+		1F871AEC1FE546BB00D4A2BF /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F871AEB1FE546BB00D4A2BF /* ViewController.mm */; };
+		1F871AEE1FE546BB00D4A2BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F871AED1FE546BB00D4A2BF /* Assets.xcassets */; };
+		1F871AF11FE546BB00D4A2BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F871AEF1FE546BB00D4A2BF /* Main.storyboard */; };
+		1F871AFA1FE546DC00D4A2BF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F871AF91FE546DC00D4A2BF /* OpenGL.framework */; };
+		1F871AFD1FE5471E00D4A2BF /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F871AFB1FE5471E00D4A2BF /* glad.c */; };
+		1F871AFE1FE5471E00D4A2BF /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F871AFC1FE5471E00D4A2BF /* stb_image.cpp */; };
+		1F871B031FE5472D00D4A2BF /* 3.1.1.debug_quad_depth.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F871AFF1FE5472D00D4A2BF /* 3.1.1.debug_quad_depth.fs */; };
+		1F871B041FE5472D00D4A2BF /* 3.1.1.debug_quad.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F871B001FE5472D00D4A2BF /* 3.1.1.debug_quad.vs */; };
+		1F871B051FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F871B011FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.fs */; };
+		1F871B061FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F871B021FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.vs */; };
+		1F871B091FE54A6B00D4A2BF /* objects in Resources */ = {isa = PBXBuildFile; fileRef = 1F871B071FE54A6B00D4A2BF /* objects */; };
+		1F871B0A1FE54A6B00D4A2BF /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1F871B081FE54A6B00D4A2BF /* textures */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F871AE11FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3.1.1.shadow_mapping_depth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F871AE41FE546BB00D4A2BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F871AE51FE546BB00D4A2BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F871AE81FE546BB00D4A2BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F871AEA1FE546BB00D4A2BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F871AEB1FE546BB00D4A2BF /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F871AED1FE546BB00D4A2BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F871AF01FE546BB00D4A2BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F871AF21FE546BB00D4A2BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F871AF91FE546DC00D4A2BF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F871AFB1FE5471E00D4A2BF /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../crossplatform/LearnOpenGL/src/glad.c; sourceTree = "<group>"; };
+		1F871AFC1FE5471E00D4A2BF /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = ../../../../crossplatform/LearnOpenGL/src/stb_image.cpp; sourceTree = "<group>"; };
+		1F871AFF1FE5472D00D4A2BF /* 3.1.1.debug_quad_depth.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.1.1.debug_quad_depth.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.1.1.shadow_mapping_depth/3.1.1.debug_quad_depth.fs; sourceTree = "<group>"; };
+		1F871B001FE5472D00D4A2BF /* 3.1.1.debug_quad.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.1.1.debug_quad.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.1.1.shadow_mapping_depth/3.1.1.debug_quad.vs; sourceTree = "<group>"; };
+		1F871B011FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.1.1.shadow_mapping_depth.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.1.1.shadow_mapping_depth/3.1.1.shadow_mapping_depth.fs; sourceTree = "<group>"; };
+		1F871B021FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.1.1.shadow_mapping_depth.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.1.1.shadow_mapping_depth/3.1.1.shadow_mapping_depth.vs; sourceTree = "<group>"; };
+		1F871B071FE54A6B00D4A2BF /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objects; path = ../../../../crossplatform/LearnOpenGL/resources/objects; sourceTree = "<group>"; };
+		1F871B081FE54A6B00D4A2BF /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../../../crossplatform/LearnOpenGL/resources/textures; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F871ADE1FE546BB00D4A2BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F871AFA1FE546DC00D4A2BF /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F871AD81FE546BB00D4A2BF = {
+			isa = PBXGroup;
+			children = (
+				1F871AE31FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth */,
+				1F871AE21FE546BB00D4A2BF /* Products */,
+				1F871AF81FE546DC00D4A2BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F871AE21FE546BB00D4A2BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F871AE11FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F871AE31FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth */ = {
+			isa = PBXGroup;
+			children = (
+				1F871B071FE54A6B00D4A2BF /* objects */,
+				1F871B081FE54A6B00D4A2BF /* textures */,
+				1F871AFF1FE5472D00D4A2BF /* 3.1.1.debug_quad_depth.fs */,
+				1F871B001FE5472D00D4A2BF /* 3.1.1.debug_quad.vs */,
+				1F871B011FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.fs */,
+				1F871B021FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.vs */,
+				1F871AE41FE546BB00D4A2BF /* AppDelegate.h */,
+				1F871AE51FE546BB00D4A2BF /* AppDelegate.m */,
+				1F871AEA1FE546BB00D4A2BF /* ViewController.h */,
+				1F871AEB1FE546BB00D4A2BF /* ViewController.mm */,
+				1F871AED1FE546BB00D4A2BF /* Assets.xcassets */,
+				1F871AEF1FE546BB00D4A2BF /* Main.storyboard */,
+				1F871AF21FE546BB00D4A2BF /* Info.plist */,
+				1F871AE71FE546BB00D4A2BF /* Supporting Files */,
+			);
+			path = 3.1.1.shadow_mapping_depth;
+			sourceTree = "<group>";
+		};
+		1F871AE71FE546BB00D4A2BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F871AFB1FE5471E00D4A2BF /* glad.c */,
+				1F871AFC1FE5471E00D4A2BF /* stb_image.cpp */,
+				1F871AE81FE546BB00D4A2BF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F871AF81FE546DC00D4A2BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F871AF91FE546DC00D4A2BF /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F871AE01FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F871AF51FE546BB00D4A2BF /* Build configuration list for PBXNativeTarget "3.1.1.shadow_mapping_depth" */;
+			buildPhases = (
+				1F871ADD1FE546BB00D4A2BF /* Sources */,
+				1F871ADE1FE546BB00D4A2BF /* Frameworks */,
+				1F871ADF1FE546BB00D4A2BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3.1.1.shadow_mapping_depth;
+			productName = 3.1.1.shadow_mapping_depth;
+			productReference = 1F871AE11FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F871AD91FE546BB00D4A2BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F871AE01FE546BB00D4A2BF = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1F871ADC1FE546BB00D4A2BF /* Build configuration list for PBXProject "3.1.1.shadow_mapping_depth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F871AD81FE546BB00D4A2BF;
+			productRefGroup = 1F871AE21FE546BB00D4A2BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F871AE01FE546BB00D4A2BF /* 3.1.1.shadow_mapping_depth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F871ADF1FE546BB00D4A2BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F871AEE1FE546BB00D4A2BF /* Assets.xcassets in Resources */,
+				1F871B051FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.fs in Resources */,
+				1F871B061FE5472D00D4A2BF /* 3.1.1.shadow_mapping_depth.vs in Resources */,
+				1F871AF11FE546BB00D4A2BF /* Main.storyboard in Resources */,
+				1F871B0A1FE54A6B00D4A2BF /* textures in Resources */,
+				1F871B041FE5472D00D4A2BF /* 3.1.1.debug_quad.vs in Resources */,
+				1F871B091FE54A6B00D4A2BF /* objects in Resources */,
+				1F871B031FE5472D00D4A2BF /* 3.1.1.debug_quad_depth.fs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F871ADD1FE546BB00D4A2BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F871AEC1FE546BB00D4A2BF /* ViewController.mm in Sources */,
+				1F871AE91FE546BB00D4A2BF /* main.m in Sources */,
+				1F871AFE1FE5471E00D4A2BF /* stb_image.cpp in Sources */,
+				1F871AE61FE546BB00D4A2BF /* AppDelegate.m in Sources */,
+				1F871AFD1FE5471E00D4A2BF /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F871AEF1FE546BB00D4A2BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F871AF01FE546BB00D4A2BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F871AF31FE546BB00D4A2BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F871AF41FE546BB00D4A2BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F871AF61FE546BB00D4A2BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 3.1.1.shadow_mapping_depth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--1-1-shadow-mapping-depth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F871AF71FE546BB00D4A2BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 3.1.1.shadow_mapping_depth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--1-1-shadow-mapping-depth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F871ADC1FE546BB00D4A2BF /* Build configuration list for PBXProject "3.1.1.shadow_mapping_depth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F871AF31FE546BB00D4A2BF /* Debug */,
+				1F871AF41FE546BB00D4A2BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F871AF51FE546BB00D4A2BF /* Build configuration list for PBXNativeTarget "3.1.1.shadow_mapping_depth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F871AF61FE546BB00D4A2BF /* Debug */,
+				1F871AF71FE546BB00D4A2BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F871AD91FE546BB00D4A2BF /* Project object */;
+}

@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F2A5DD21FF3785B009F726E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A5DD11FF3785B009F726E /* AppDelegate.m */; };
+		1F2A5DD51FF3785B009F726E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A5DD41FF3785B009F726E /* main.m */; };
+		1F2A5DD81FF3785B009F726E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A5DD71FF3785B009F726E /* ViewController.mm */; };
+		1F2A5DDA1FF3785B009F726E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DD91FF3785B009F726E /* Assets.xcassets */; };
+		1F2A5DDD1FF3785B009F726E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DDB1FF3785B009F726E /* Main.storyboard */; };
+		1F2A5DE61FF3787D009F726E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2A5DE51FF3787D009F726E /* OpenGL.framework */; };
+		1F2A5DE91FF378C3009F726E /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A5DE71FF378C3009F726E /* glad.c */; };
+		1F2A5DEA1FF378C3009F726E /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A5DE81FF378C3009F726E /* stb_image.cpp */; };
+		1F2A5DED1FF378CC009F726E /* objects in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DEB1FF378CC009F726E /* objects */; };
+		1F2A5DEE1FF378CC009F726E /* textures in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DEC1FF378CC009F726E /* textures */; };
+		1F2A5DFC1FF37911009F726E /* 3.2.1.point_shadows_depth.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DF71FF37911009F726E /* 3.2.1.point_shadows_depth.fs */; };
+		1F2A5DFD1FF37911009F726E /* 3.2.1.point_shadows_depth.gs in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DF81FF37911009F726E /* 3.2.1.point_shadows_depth.gs */; };
+		1F2A5DFE1FF37911009F726E /* 3.2.1.point_shadows_depth.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DF91FF37911009F726E /* 3.2.1.point_shadows_depth.vs */; };
+		1F2A5DFF1FF37911009F726E /* 3.2.1.point_shadows.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DFA1FF37911009F726E /* 3.2.1.point_shadows.fs */; };
+		1F2A5E001FF37911009F726E /* 3.2.1.point_shadows.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1F2A5DFB1FF37911009F726E /* 3.2.1.point_shadows.vs */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F2A5DCD1FF3785B009F726E /* 3.2.1.point_shadows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3.2.1.point_shadows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2A5DD01FF3785B009F726E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F2A5DD11FF3785B009F726E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F2A5DD41FF3785B009F726E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F2A5DD61FF3785B009F726E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F2A5DD71FF3785B009F726E /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F2A5DD91FF3785B009F726E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F2A5DDC1FF3785B009F726E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F2A5DDE1FF3785B009F726E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2A5DE51FF3787D009F726E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F2A5DE71FF378C3009F726E /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../crossplatform/LearnOpenGL/src/glad.c; sourceTree = "<group>"; };
+		1F2A5DE81FF378C3009F726E /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stb_image.cpp; path = ../../../../crossplatform/LearnOpenGL/src/stb_image.cpp; sourceTree = "<group>"; };
+		1F2A5DEB1FF378CC009F726E /* objects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objects; path = ../../../../crossplatform/LearnOpenGL/resources/objects; sourceTree = "<group>"; };
+		1F2A5DEC1FF378CC009F726E /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = textures; path = ../../../../crossplatform/LearnOpenGL/resources/textures; sourceTree = "<group>"; };
+		1F2A5DF71FF37911009F726E /* 3.2.1.point_shadows_depth.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.2.1.point_shadows_depth.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.2.1.point_shadows/3.2.1.point_shadows_depth.fs; sourceTree = "<group>"; };
+		1F2A5DF81FF37911009F726E /* 3.2.1.point_shadows_depth.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.2.1.point_shadows_depth.gs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.2.1.point_shadows/3.2.1.point_shadows_depth.gs; sourceTree = "<group>"; };
+		1F2A5DF91FF37911009F726E /* 3.2.1.point_shadows_depth.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.2.1.point_shadows_depth.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.2.1.point_shadows/3.2.1.point_shadows_depth.vs; sourceTree = "<group>"; };
+		1F2A5DFA1FF37911009F726E /* 3.2.1.point_shadows.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.2.1.point_shadows.fs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.2.1.point_shadows/3.2.1.point_shadows.fs; sourceTree = "<group>"; };
+		1F2A5DFB1FF37911009F726E /* 3.2.1.point_shadows.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = 3.2.1.point_shadows.vs; path = ../../../../crossplatform/LearnOpenGL/src/5.advanced_lighting/3.2.1.point_shadows/3.2.1.point_shadows.vs; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F2A5DCA1FF3785B009F726E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F2A5DE61FF3787D009F726E /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F2A5DC41FF3785A009F726E = {
+			isa = PBXGroup;
+			children = (
+				1F2A5DCF1FF3785B009F726E /* 3.2.1.point_shadows */,
+				1F2A5DCE1FF3785B009F726E /* Products */,
+				1F2A5DE41FF3787D009F726E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F2A5DCE1FF3785B009F726E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A5DCD1FF3785B009F726E /* 3.2.1.point_shadows.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F2A5DCF1FF3785B009F726E /* 3.2.1.point_shadows */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A5DEB1FF378CC009F726E /* objects */,
+				1F2A5DEC1FF378CC009F726E /* textures */,
+				1F2A5DF71FF37911009F726E /* 3.2.1.point_shadows_depth.fs */,
+				1F2A5DF81FF37911009F726E /* 3.2.1.point_shadows_depth.gs */,
+				1F2A5DF91FF37911009F726E /* 3.2.1.point_shadows_depth.vs */,
+				1F2A5DFA1FF37911009F726E /* 3.2.1.point_shadows.fs */,
+				1F2A5DFB1FF37911009F726E /* 3.2.1.point_shadows.vs */,
+				1F2A5DD01FF3785B009F726E /* AppDelegate.h */,
+				1F2A5DD11FF3785B009F726E /* AppDelegate.m */,
+				1F2A5DD61FF3785B009F726E /* ViewController.h */,
+				1F2A5DD71FF3785B009F726E /* ViewController.mm */,
+				1F2A5DD91FF3785B009F726E /* Assets.xcassets */,
+				1F2A5DDB1FF3785B009F726E /* Main.storyboard */,
+				1F2A5DDE1FF3785B009F726E /* Info.plist */,
+				1F2A5DD31FF3785B009F726E /* Supporting Files */,
+			);
+			path = 3.2.1.point_shadows;
+			sourceTree = "<group>";
+		};
+		1F2A5DD31FF3785B009F726E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A5DE71FF378C3009F726E /* glad.c */,
+				1F2A5DE81FF378C3009F726E /* stb_image.cpp */,
+				1F2A5DD41FF3785B009F726E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F2A5DE41FF3787D009F726E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F2A5DE51FF3787D009F726E /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F2A5DCC1FF3785B009F726E /* 3.2.1.point_shadows */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F2A5DE11FF3785B009F726E /* Build configuration list for PBXNativeTarget "3.2.1.point_shadows" */;
+			buildPhases = (
+				1F2A5DC91FF3785B009F726E /* Sources */,
+				1F2A5DCA1FF3785B009F726E /* Frameworks */,
+				1F2A5DCB1FF3785B009F726E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3.2.1.point_shadows;
+			productName = 3.2.1.point_shadows;
+			productReference = 1F2A5DCD1FF3785B009F726E /* 3.2.1.point_shadows.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F2A5DC51FF3785A009F726E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F2A5DCC1FF3785B009F726E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1F2A5DC81FF3785A009F726E /* Build configuration list for PBXProject "3.2.1.point_shadows" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F2A5DC41FF3785A009F726E;
+			productRefGroup = 1F2A5DCE1FF3785B009F726E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F2A5DCC1FF3785B009F726E /* 3.2.1.point_shadows */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F2A5DCB1FF3785B009F726E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F2A5E001FF37911009F726E /* 3.2.1.point_shadows.vs in Resources */,
+				1F2A5DFD1FF37911009F726E /* 3.2.1.point_shadows_depth.gs in Resources */,
+				1F2A5DFC1FF37911009F726E /* 3.2.1.point_shadows_depth.fs in Resources */,
+				1F2A5DFE1FF37911009F726E /* 3.2.1.point_shadows_depth.vs in Resources */,
+				1F2A5DEE1FF378CC009F726E /* textures in Resources */,
+				1F2A5DED1FF378CC009F726E /* objects in Resources */,
+				1F2A5DDA1FF3785B009F726E /* Assets.xcassets in Resources */,
+				1F2A5DDD1FF3785B009F726E /* Main.storyboard in Resources */,
+				1F2A5DFF1FF37911009F726E /* 3.2.1.point_shadows.fs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F2A5DC91FF3785B009F726E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F2A5DD81FF3785B009F726E /* ViewController.mm in Sources */,
+				1F2A5DD51FF3785B009F726E /* main.m in Sources */,
+				1F2A5DEA1FF378C3009F726E /* stb_image.cpp in Sources */,
+				1F2A5DD21FF3785B009F726E /* AppDelegate.m in Sources */,
+				1F2A5DE91FF378C3009F726E /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F2A5DDB1FF3785B009F726E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F2A5DDC1FF3785B009F726E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F2A5DDF1FF3785B009F726E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F2A5DE01FF3785B009F726E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(COMMON_SDK_PATH)/LearnOpenGL/includes",
+					"$(COMMON_SDK_PATH)/stb_image/stb_image_lib/include",
+					"$(COMMON_SDK_PATH)/glm",
+					/usr/local/Cellar/assimp/4.0.1/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/assimp/4.0.1/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F2A5DE21FF3785B009F726E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 3.2.1.point_shadows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--2-1-point-shadows";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F2A5DE31FF3785B009F726E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = 3.2.1.point_shadows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.--2-1-point-shadows";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F2A5DC81FF3785A009F726E /* Build configuration list for PBXProject "3.2.1.point_shadows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F2A5DDF1FF3785B009F726E /* Debug */,
+				1F2A5DE01FF3785B009F726E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F2A5DE11FF3785B009F726E /* Build configuration list for PBXNativeTarget "3.2.1.point_shadows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F2A5DE21FF3785B009F726E /* Debug */,
+				1F2A5DE31FF3785B009F726E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F2A5DC51FF3785A009F726E /* Project object */;
+}
