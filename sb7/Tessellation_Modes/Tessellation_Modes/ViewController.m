@@ -143,26 +143,15 @@ typedef NS_ENUM(NSUInteger, TessellationModes)
     [self.openGLView.openGLContext makeCurrentContext];
     
     static NSArray<NSString * > *vertexSources;
-    static dispatch_once_t runOnceVertex;
-    dispatch_once(&runOnceVertex, ^{
-        vertexSources = @[@"quad.vert", @"quad.vert", @"quad.vert", @"quad.vert"];
-    });
-    
     static NSArray<NSString * > *fragmentSources;
-    static dispatch_once_t runOnceFragment;
-    dispatch_once(&runOnceFragment, ^{
-        fragmentSources = @[@"quad.frag", @"quad.frag", @"quad.frag", @"quad.frag"];
-    });
-    
     static NSArray<NSString * > *tessellationControlSources;
-    static dispatch_once_t runOnceTessellationControl;
-    dispatch_once(&runOnceTessellationControl, ^{
-        tessellationControlSources = @[@"quads.tesc", @"triangles.tesc", @"triangles.tesc", @"isolines.tesc"];
-    });
-    
     static NSArray<NSString * > *tessellationEvaluationSources;
-    static dispatch_once_t runOnceTessellationEvaluation;
-    dispatch_once(&runOnceTessellationEvaluation, ^{
+    
+    static dispatch_once_t runOnce;
+    dispatch_once(&runOnce, ^{
+        vertexSources = @[@"quad.vert", @"quad.vert", @"quad.vert", @"quad.vert"];
+        fragmentSources = @[@"quad.frag", @"quad.frag", @"quad.frag", @"quad.frag"];
+        tessellationControlSources = @[@"quads.tesc", @"triangles.tesc", @"triangles.tesc", @"isolines.tesc"];
         tessellationEvaluationSources = @[@"quads.tese", @"triangles.tese", @"triangles_as_points.tese", @"isolines.tese"];
     });
     
@@ -198,6 +187,9 @@ typedef NS_ENUM(NSUInteger, TessellationModes)
     
     glGenVertexArrays(1, &_VAO);
     glBindVertexArray(_VAO);
+    
+    glPatchParameteri(GL_PATCH_VERTICES, 4);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
 - (void)renderForTime:(CVTimeStamp)time
@@ -215,6 +207,11 @@ typedef NS_ENUM(NSUInteger, TessellationModes)
     
     const GLfloat backgroundColor[] = { 0.2f, 0.2f, 0.2f, 1.0f };
     glClearBufferfv(GL_COLOR, 0, backgroundColor);
+    
+    glUseProgram(_programIDs[self.tessellationMode]);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glDrawArrays(GL_PATCHES, 0, 4);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     
     [self.openGLView.openGLContext flushBuffer];
 }
