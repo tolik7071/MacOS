@@ -15,6 +15,8 @@
 NSURL* FindResourceWithName(NSString*);
 NSData* ReadFile(NSURL*);
 GLuint CreateProgram(NSData*, NSData*);
+GLuint CreateProgram2(NSData*, NSData*, NSData*, NSData*);
+GLuint CreateShader(NSData*, GLenum);
 #endif // __OBJC__
 
 #endif /* GLUtilities_h */

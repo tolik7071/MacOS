@@ -106,3 +106,67 @@ GLuint CreateProgram(NSData *vertex, NSData *fragment)
     
     return program;
 }
+
+GLuint CreateProgram2(NSData *vertex, NSData *tessellationControl, NSData *tessellationEvaluation, NSData *fragment)
+{
+    GLuint program = 0;
+    
+    GLuint vertex_shader = CreateShader(vertex, GL_VERTEX_SHADER);
+    GLuint tessellation_control_shader = CreateShader(tessellationControl, GL_TESS_CONTROL_SHADER);
+    GLuint tessellation_evaluation_shader = CreateShader(tessellationEvaluation, GL_TESS_CONTROL_SHADER);
+    GLuint fragment_shader = CreateShader(fragment, GL_FRAGMENT_SHADER);
+    
+    // Create program, attach shaders to it, and link it
+    
+    program = glCreateProgram();
+    glAttachShader(program, vertex_shader);
+    glAttachShader(program, tessellation_control_shader);
+    glAttachShader(program, tessellation_evaluation_shader);
+    glAttachShader(program, fragment_shader);
+    
+    glLinkProgram(program);
+    
+    // Delete the shaders as the program has them now
+    
+    if (vertex_shader != 0)
+    {
+        glDeleteShader(vertex_shader);
+    }
+    
+    if (tessellation_control_shader != 0)
+    {
+        glDeleteShader(tessellation_control_shader);
+    }
+    
+    if (tessellation_evaluation_shader != 0)
+    {
+        glDeleteShader(tessellation_evaluation_shader);
+    }
+    
+    if (fragment_shader != 0)
+    {
+        glDeleteShader(fragment_shader);
+    }
+    
+    return program;
+}
+
+GLuint CreateShader(NSData* shaderContent, GLenum shaderType)
+{
+    GLuint shaderID = 0;
+    
+    GLint length = (GLint)shaderContent.length;
+    GLchar *buffer = (GLchar *)malloc(length);
+    if (buffer)
+    {
+        [shaderContent getBytes:buffer length:length];
+        
+        shaderID = glCreateShader(shaderType);
+        glShaderSource(shaderID, 1, (const GLchar **)&buffer, &length);
+        glCompileShader(shaderID);
+        
+        free(buffer);
+    }
+    
+    return shaderID;
+}

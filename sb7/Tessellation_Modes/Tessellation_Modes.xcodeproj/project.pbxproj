@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F4CEDA0207499D200469ECF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CED9F207499D200469ECF /* AppDelegate.m */; };
+		1F4CEDA3207499D200469ECF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CEDA2207499D200469ECF /* main.m */; };
+		1F4CEDA6207499D200469ECF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CEDA5207499D200469ECF /* ViewController.m */; };
+		1F4CEDA8207499D200469ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4CEDA7207499D200469ECF /* Assets.xcassets */; };
+		1F4CEDAB207499D200469ECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4CEDA9207499D200469ECF /* Main.storyboard */; };
+		1F4CEDB4207499EC00469ECF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4CEDB3207499EC00469ECF /* OpenGL.framework */; };
+		1F4CEDB720749F5300469ECF /* GLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4CEDB620749F5300469ECF /* GLUtilities.m */; };
+		1F66598E2077428D00A75131 /* quad.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1F66598C2077428D00A75131 /* quad.frag */; };
+		1F66598F2077428D00A75131 /* quad.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1F66598D2077428D00A75131 /* quad.vert */; };
+		1F665992207743D800A75131 /* triangles.tese in Resources */ = {isa = PBXBuildFile; fileRef = 1F665990207743D800A75131 /* triangles.tese */; };
+		1F665993207743D800A75131 /* triangles.tesc in Resources */ = {isa = PBXBuildFile; fileRef = 1F665991207743D800A75131 /* triangles.tesc */; };
+		1F665996207744FB00A75131 /* quads.tesc in Resources */ = {isa = PBXBuildFile; fileRef = 1F665994207744FB00A75131 /* quads.tesc */; };
+		1F665997207744FB00A75131 /* quads.tese in Resources */ = {isa = PBXBuildFile; fileRef = 1F665995207744FB00A75131 /* quads.tese */; };
+		1F66599A2077459D00A75131 /* isolines.tesc in Resources */ = {isa = PBXBuildFile; fileRef = 1F6659982077459D00A75131 /* isolines.tesc */; };
+		1F66599B2077459D00A75131 /* isolines.tese in Resources */ = {isa = PBXBuildFile; fileRef = 1F6659992077459D00A75131 /* isolines.tese */; };
+		1F66599D20774D3100A75131 /* triangles_as_points.tese in Resources */ = {isa = PBXBuildFile; fileRef = 1F66599C20774D3100A75131 /* triangles_as_points.tese */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F4CED9B207499D200469ECF /* Tessellation_Modes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tessellation_Modes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F4CED9E207499D200469ECF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F4CED9F207499D200469ECF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F4CEDA2207499D200469ECF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F4CEDA4207499D200469ECF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F4CEDA5207499D200469ECF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1F4CEDA7207499D200469ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F4CEDAA207499D200469ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F4CEDAC207499D200469ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4CEDB3207499EC00469ECF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F4CEDB520749F5300469ECF /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1F4CEDB620749F5300469ECF /* GLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUtilities.m; path = ../../Common/GLUtilities.m; sourceTree = "<group>"; };
+		1F66598C2077428D00A75131 /* quad.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = quad.frag; sourceTree = "<group>"; };
+		1F66598D2077428D00A75131 /* quad.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = quad.vert; sourceTree = "<group>"; };
+		1F665990207743D800A75131 /* triangles.tese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = triangles.tese; sourceTree = "<group>"; };
+		1F665991207743D800A75131 /* triangles.tesc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = triangles.tesc; sourceTree = "<group>"; };
+		1F665994207744FB00A75131 /* quads.tesc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quads.tesc; sourceTree = "<group>"; };
+		1F665995207744FB00A75131 /* quads.tese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quads.tese; sourceTree = "<group>"; };
+		1F6659982077459D00A75131 /* isolines.tesc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = isolines.tesc; sourceTree = "<group>"; };
+		1F6659992077459D00A75131 /* isolines.tese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = isolines.tese; sourceTree = "<group>"; };
+		1F66599C20774D3100A75131 /* triangles_as_points.tese */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = triangles_as_points.tese; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F4CED98207499D200469ECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4CEDB4207499EC00469ECF /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F4CED92207499D200469ECF = {
+			isa = PBXGroup;
+			children = (
+				1F4CED9D207499D200469ECF /* Tessellation_Modes */,
+				1F4CED9C207499D200469ECF /* Products */,
+				1F4CEDB2207499EC00469ECF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F4CED9C207499D200469ECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F4CED9B207499D200469ECF /* Tessellation_Modes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F4CED9D207499D200469ECF /* Tessellation_Modes */ = {
+			isa = PBXGroup;
+			children = (
+				1F66598D2077428D00A75131 /* quad.vert */,
+				1F66598C2077428D00A75131 /* quad.frag */,
+				1F665991207743D800A75131 /* triangles.tesc */,
+				1F665990207743D800A75131 /* triangles.tese */,
+				1F66599C20774D3100A75131 /* triangles_as_points.tese */,
+				1F665994207744FB00A75131 /* quads.tesc */,
+				1F665995207744FB00A75131 /* quads.tese */,
+				1F6659982077459D00A75131 /* isolines.tesc */,
+				1F6659992077459D00A75131 /* isolines.tese */,
+				1F4CED9E207499D200469ECF /* AppDelegate.h */,
+				1F4CED9F207499D200469ECF /* AppDelegate.m */,
+				1F4CEDA4207499D200469ECF /* ViewController.h */,
+				1F4CEDA5207499D200469ECF /* ViewController.m */,
+				1F4CEDA7207499D200469ECF /* Assets.xcassets */,
+				1F4CEDA9207499D200469ECF /* Main.storyboard */,
+				1F4CEDAC207499D200469ECF /* Info.plist */,
+				1F4CEDA1207499D200469ECF /* Supporting Files */,
+			);
+			path = Tessellation_Modes;
+			sourceTree = "<group>";
+		};
+		1F4CEDA1207499D200469ECF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F4CEDB520749F5300469ECF /* GLUtilities.h */,
+				1F4CEDB620749F5300469ECF /* GLUtilities.m */,
+				1F4CEDA2207499D200469ECF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F4CEDB2207499EC00469ECF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F4CEDB3207499EC00469ECF /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F4CED9A207499D200469ECF /* Tessellation_Modes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F4CEDAF207499D200469ECF /* Build configuration list for PBXNativeTarget "Tessellation_Modes" */;
+			buildPhases = (
+				1F4CED97207499D200469ECF /* Sources */,
+				1F4CED98207499D200469ECF /* Frameworks */,
+				1F4CED99207499D200469ECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tessellation_Modes;
+			productName = Tessellation_Modes;
+			productReference = 1F4CED9B207499D200469ECF /* Tessellation_Modes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F4CED93207499D200469ECF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F4CED9A207499D200469ECF = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1F4CED96207499D200469ECF /* Build configuration list for PBXProject "Tessellation_Modes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F4CED92207499D200469ECF;
+			productRefGroup = 1F4CED9C207499D200469ECF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F4CED9A207499D200469ECF /* Tessellation_Modes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F4CED99207499D200469ECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F66599D20774D3100A75131 /* triangles_as_points.tese in Resources */,
+				1F4CEDA8207499D200469ECF /* Assets.xcassets in Resources */,
+				1F665996207744FB00A75131 /* quads.tesc in Resources */,
+				1F66599B2077459D00A75131 /* isolines.tese in Resources */,
+				1F66598E2077428D00A75131 /* quad.frag in Resources */,
+				1F665993207743D800A75131 /* triangles.tesc in Resources */,
+				1F665992207743D800A75131 /* triangles.tese in Resources */,
+				1F66598F2077428D00A75131 /* quad.vert in Resources */,
+				1F4CEDAB207499D200469ECF /* Main.storyboard in Resources */,
+				1F665997207744FB00A75131 /* quads.tese in Resources */,
+				1F66599A2077459D00A75131 /* isolines.tesc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F4CED97207499D200469ECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4CEDA6207499D200469ECF /* ViewController.m in Sources */,
+				1F4CEDA3207499D200469ECF /* main.m in Sources */,
+				1F4CEDA0207499D200469ECF /* AppDelegate.m in Sources */,
+				1F4CEDB720749F5300469ECF /* GLUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F4CEDA9207499D200469ECF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4CEDAA207499D200469ECF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F4CEDAD207499D200469ECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F4CEDAE207499D200469ECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F4CEDB0207499D200469ECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tessellation_Modes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.Tessellation-Modes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F4CEDB1207499D200469ECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tessellation_Modes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tolik.home.Tessellation-Modes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F4CED96207499D200469ECF /* Build configuration list for PBXProject "Tessellation_Modes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4CEDAD207499D200469ECF /* Debug */,
+				1F4CEDAE207499D200469ECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F4CEDAF207499D200469ECF /* Build configuration list for PBXNativeTarget "Tessellation_Modes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4CEDB0207499D200469ECF /* Debug */,
+				1F4CEDB1207499D200469ECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F4CED93207499D200469ECF /* Project object */;
+}
