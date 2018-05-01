@@ -6,11 +6,9 @@
 //  Copyright © 2018 tolik7071. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "SBViewControllerBase.h"
 
-@interface ViewController : NSViewController
-
-@property (nonatomic, weak) IBOutlet NSOpenGLView * openGLView;
+@interface ViewController : SBViewControllerBase
 
 @end
 

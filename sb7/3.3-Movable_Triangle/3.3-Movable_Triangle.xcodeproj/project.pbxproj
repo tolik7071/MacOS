@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FA4863C2073493900EEAB50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4863B2073493900EEAB50 /* AppDelegate.m */; };
 		1FA4863F2073493900EEAB50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4863E2073493900EEAB50 /* main.m */; };
 		1FA486422073493900EEAB50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA486412073493900EEAB50 /* ViewController.m */; };
 		1FA486442073493900EEAB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA486432073493900EEAB50 /* Assets.xcassets */; };
@@ -16,12 +15,14 @@
 		1FA486532073494F00EEAB50 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA486522073494F00EEAB50 /* OpenGL.framework */; };
 		1FA48656207349B100EEAB50 /* triangle.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1FA48654207349B100EEAB50 /* triangle.frag */; };
 		1FA48657207349B100EEAB50 /* triangle.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1FA48655207349B100EEAB50 /* triangle.vert */; };
+		5A0B471B2098B92B00E05F0E /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B471A2098B92B00E05F0E /* SBAppDelegateBase.m */; };
+		5A0B471E2098BA3700E05F0E /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B471D2098BA3700E05F0E /* SBViewControllerBase.m */; };
+		5A0B47212098BBE000E05F0E /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B47202098BBE000E05F0E /* MyTimeStamp.m */; };
+		5A2A3854208CE66300B87A30 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A3853208CE66300B87A30 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1FA486372073493900EEAB50 /* 3.3-Movable_Triangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3.3-Movable_Triangle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FA4863A2073493900EEAB50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1FA4863B2073493900EEAB50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1FA4863E2073493900EEAB50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FA486402073493900EEAB50 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1FA486412073493900EEAB50 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -33,6 +34,13 @@
 		1FA486522073494F00EEAB50 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1FA48654207349B100EEAB50 /* triangle.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
 		1FA48655207349B100EEAB50 /* triangle.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
+		5A0B47192098B92A00E05F0E /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		5A0B471A2098B92B00E05F0E /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		5A0B471C2098BA3700E05F0E /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		5A0B471D2098BA3700E05F0E /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		5A0B471F2098BBE000E05F0E /* MyTimeStamp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTimeStamp.h; sourceTree = "<group>"; };
+		5A0B47202098BBE000E05F0E /* MyTimeStamp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTimeStamp.m; sourceTree = "<group>"; };
+		5A2A3853208CE66300B87A30 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2A3854208CE66300B87A30 /* CoreVideo.framework in Frameworks */,
 				1FA486532073494F00EEAB50 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,8 +78,12 @@
 			children = (
 				1FA48655207349B100EEAB50 /* triangle.vert */,
 				1FA48654207349B100EEAB50 /* triangle.frag */,
-				1FA4863A2073493900EEAB50 /* AppDelegate.h */,
-				1FA4863B2073493900EEAB50 /* AppDelegate.m */,
+				5A0B471F2098BBE000E05F0E /* MyTimeStamp.h */,
+				5A0B47202098BBE000E05F0E /* MyTimeStamp.m */,
+				5A0B47192098B92A00E05F0E /* SBAppDelegateBase.h */,
+				5A0B471A2098B92B00E05F0E /* SBAppDelegateBase.m */,
+				5A0B471C2098BA3700E05F0E /* SBViewControllerBase.h */,
+				5A0B471D2098BA3700E05F0E /* SBViewControllerBase.m */,
 				1FA486402073493900EEAB50 /* ViewController.h */,
 				1FA486412073493900EEAB50 /* ViewController.m */,
 				1FA486432073493900EEAB50 /* Assets.xcassets */,
@@ -94,6 +107,7 @@
 		1FA486512073494F00EEAB50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A2A3853208CE66300B87A30 /* CoreVideo.framework */,
 				1FA486522073494F00EEAB50 /* OpenGL.framework */,
 			);
 			name = Frameworks;
@@ -125,7 +139,7 @@
 		1FA4862F2073493900EEAB50 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = tolik7071;
 				TargetAttributes = {
 					1FA486362073493900EEAB50 = {
@@ -171,9 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0B471E2098BA3700E05F0E /* SBViewControllerBase.m in Sources */,
 				1FA486422073493900EEAB50 /* ViewController.m in Sources */,
 				1FA4863F2073493900EEAB50 /* main.m in Sources */,
-				1FA4863C2073493900EEAB50 /* AppDelegate.m in Sources */,
+				5A0B471B2098B92B00E05F0E /* SBAppDelegateBase.m in Sources */,
+				5A0B47212098BBE000E05F0E /* MyTimeStamp.m in Sources */,
 				1FA486502073494300EEAB50 /* GLUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,15 +218,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -250,15 +274,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -324,6 +356,7 @@
 				1FA4864D2073493900EEAB50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

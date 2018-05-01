@@ -1,6 +1,6 @@
 //
-//  GLUtilities.c
-//  First_Triangle
+//  GLUtilities.m
+//  OpenGL SB Tests
 //
 //  Created by tolik7071 on 3/30/18.
 //  Copyright © 2018 tolik7071. All rights reserved.
