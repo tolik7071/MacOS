@@ -1,4 +1,4 @@
-#version 330
+#version 410
 
 layout (vertices = 3) out;
 
