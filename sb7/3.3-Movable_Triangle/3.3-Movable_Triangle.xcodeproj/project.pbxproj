@@ -15,9 +15,9 @@
 		1FA486532073494F00EEAB50 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA486522073494F00EEAB50 /* OpenGL.framework */; };
 		1FA48656207349B100EEAB50 /* triangle.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1FA48654207349B100EEAB50 /* triangle.frag */; };
 		1FA48657207349B100EEAB50 /* triangle.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1FA48655207349B100EEAB50 /* triangle.vert */; };
+		1FF64134209AC0F000145475 /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64133209AC0F000145475 /* MyTimeStamp.m */; };
 		5A0B471B2098B92B00E05F0E /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B471A2098B92B00E05F0E /* SBAppDelegateBase.m */; };
 		5A0B471E2098BA3700E05F0E /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B471D2098BA3700E05F0E /* SBViewControllerBase.m */; };
-		5A0B47212098BBE000E05F0E /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B47202098BBE000E05F0E /* MyTimeStamp.m */; };
 		5A2A3854208CE66300B87A30 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2A3853208CE66300B87A30 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,12 +34,12 @@
 		1FA486522073494F00EEAB50 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1FA48654207349B100EEAB50 /* triangle.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
 		1FA48655207349B100EEAB50 /* triangle.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
+		1FF64132209AC0F000145475 /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1FF64133209AC0F000145475 /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
 		5A0B47192098B92A00E05F0E /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
 		5A0B471A2098B92B00E05F0E /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
 		5A0B471C2098BA3700E05F0E /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
 		5A0B471D2098BA3700E05F0E /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
-		5A0B471F2098BBE000E05F0E /* MyTimeStamp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTimeStamp.h; sourceTree = "<group>"; };
-		5A0B47202098BBE000E05F0E /* MyTimeStamp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTimeStamp.m; sourceTree = "<group>"; };
 		5A2A3853208CE66300B87A30 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -78,8 +78,8 @@
 			children = (
 				1FA48655207349B100EEAB50 /* triangle.vert */,
 				1FA48654207349B100EEAB50 /* triangle.frag */,
-				5A0B471F2098BBE000E05F0E /* MyTimeStamp.h */,
-				5A0B47202098BBE000E05F0E /* MyTimeStamp.m */,
+				1FF64132209AC0F000145475 /* MyTimeStamp.h */,
+				1FF64133209AC0F000145475 /* MyTimeStamp.m */,
 				5A0B47192098B92A00E05F0E /* SBAppDelegateBase.h */,
 				5A0B471A2098B92B00E05F0E /* SBAppDelegateBase.m */,
 				5A0B471C2098BA3700E05F0E /* SBViewControllerBase.h */,
@@ -189,7 +189,7 @@
 				1FA486422073493900EEAB50 /* ViewController.m in Sources */,
 				1FA4863F2073493900EEAB50 /* main.m in Sources */,
 				5A0B471B2098B92B00E05F0E /* SBAppDelegateBase.m in Sources */,
-				5A0B47212098BBE000E05F0E /* MyTimeStamp.m in Sources */,
+				1FF64134209AC0F000145475 /* MyTimeStamp.m in Sources */,
 				1FA486502073494300EEAB50 /* GLUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

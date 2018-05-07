@@ -9,6 +9,36 @@
 #include "GLUtilities.h"
 #import <OpenGL/gl3.h>
 
+BOOL CheckCompilingStatus(GLint shaderId)
+{
+    GLint success;
+    GLchar infoLog[512];
+    memset(infoLog, 0, sizeof(infoLog));
+    glGetShaderiv(shaderId, GL_COMPILE_STATUS, &success);
+    if (GL_TRUE != success)
+    {
+        glGetShaderInfoLog(shaderId, sizeof(infoLog), NULL, infoLog);
+        NSLog(@"ERROR : %s : %s", __PRETTY_FUNCTION__, infoLog);
+    }
+    
+    return (GL_TRUE == success);
+}
+
+BOOL CheckLinkingStatus(GLint programId)
+{
+    GLint success;
+    GLchar infoLog[512];
+    memset(infoLog, 0, sizeof(infoLog));
+    glGetProgramiv(programId, GL_LINK_STATUS, &success);
+    if (GL_TRUE != success)
+    {
+        glGetProgramInfoLog(programId, sizeof(infoLog), NULL, infoLog);
+        NSLog(@"ERROR : %s : %s", __PRETTY_FUNCTION__, infoLog);
+    }
+    
+    return (GL_TRUE == success);
+}
+
 NSURL* FindResourceWithName(NSString* aName)
 {
     NSURL *result = [[NSBundle mainBundle]
@@ -56,6 +86,7 @@ GLuint CreateProgram(NSData *vertex, NSData *fragment)
         vertex_shader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertex_shader, 1, (const GLchar **)&vertexBuffer, &length);
         glCompileShader(vertex_shader);
+        CheckCompilingStatus(vertex_shader);
         
         // Create and compile fragment shader
         
@@ -70,6 +101,7 @@ GLuint CreateProgram(NSData *vertex, NSData *fragment)
         fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
         glShaderSource(fragment_shader, 1, (const GLchar **)&fragmentBuffer, &length);
         glCompileShader(fragment_shader);
+        CheckCompilingStatus(fragment_shader);
         
         // Create program, attach shaders to it, and link it
         
@@ -77,6 +109,7 @@ GLuint CreateProgram(NSData *vertex, NSData *fragment)
         glAttachShader(program, vertex_shader);
         glAttachShader(program, fragment_shader);
         glLinkProgram(program);
+        CheckLinkingStatus(program);
         
     } while (NO);
     

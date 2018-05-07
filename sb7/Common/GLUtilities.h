@@ -17,6 +17,19 @@ NSData* ReadFile(NSURL*);
 GLuint CreateProgram(NSData*, NSData*);
 GLuint CreateProgram2(NSData*, NSData*, NSData*, NSData*);
 GLuint CreateShader(NSData*, GLenum);
+
 #endif // __OBJC__
+
+#ifdef __cplusplus
+#include <string>
+
+//std::string FindResourceWithName(const std::string& name);
+
+extern "C" {
+#endif
+    
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* GLUtilities_h */

@@ -1,35 +1,40 @@
 //
 //  ViewController.m
-//  3.3-Movable_Triangle
+//  UsingData
 //
-//  Created by tolik7071 on 4/3/18.
+//  Created by tolik7071 on 5/3/18.
 //  Copyright © 2018 tolik7071. All rights reserved.
 //
 
 #import "ViewController.h"
 #import <OpenGL/gl3.h>
-#import <CoreVideo/CoreVideo.h>
 #import "GLUtilities.h"
 
 @implementation ViewController
 {
     GLuint  _programID;
     GLuint  _VAO;
+    GLuint  _VBO;
 }
 
 - (void)cleanup
 {
-   [super cleanup];
-
-   if (0 != _programID)
-   {
-      glDeleteProgram(_programID);
-   }
-
-   if (0 != _VAO)
-   {
-      glDeleteVertexArrays(1, &_VAO);
-   }
+    [super cleanup];
+    
+    if (0 != _programID)
+    {
+        glDeleteProgram(_programID);
+    }
+    
+    if (0 != _VAO)
+    {
+        glDeleteVertexArrays(1, &_VAO);
+    }
+    
+    if (0 != _VBO)
+    {
+        glDeleteBuffers(1, &_VBO);
+    }
 }
 
 - (void)configOpenGLEnvironment
@@ -37,6 +42,8 @@
     NSAssert(self.openGLView != nil, @"ERROR: openGLView is NULL");
     
     [self.openGLView.openGLContext makeCurrentContext];
+    
+    glEnable(GL_DEPTH_TEST);
     
     NSURL *vertexShader = FindResourceWithName(@"triangle.vert");
     NSAssert(vertexShader, @"Cannot find shader.");
@@ -51,7 +58,31 @@
     _programID = CreateProgram(vertexShaderContent, fragmentShaderContent);
     NSAssert(_programID != 0, @"Cannot compile program.");
     
+    glUseProgram(_programID);
+    
+    GLfloat vertices[] =
+    {
+        // verteces           // colors
+        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
+         0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,
+         0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f
+    };
+    
     glGenVertexArrays(1, &_VAO);
+    glGenBuffers(1, &_VBO);
+    
+    glBindVertexArray(_VAO);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    assert(0 == glGetAttribLocation(_programID, "position"));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    assert(1 == glGetAttribLocation(_programID, "color"));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (void*)(3 * sizeof(GLfloat)));
+    glEnableVertexAttribArray(1);
 }
 
 - (void)renderForTime:(MyTimeStamp *)time
@@ -69,42 +100,12 @@
     
     if (0 != _programID)
     {
-        const GLfloat backgroundColor[] = { 0.0f, 0.2f, 0.0f, 1.0f };
-        glClearBufferfv(GL_COLOR, 0, backgroundColor);
-        
-        glBindVertexArray(_VAO);
-        
-        // Use the program object we created earlier for rendering
-        
         glUseProgram(_programID);
         
-        // Draw one triangle
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-        // Update the value of input attribute 0
-        {
-            GLfloat offset[] =
-            {
-                (float)sin(currentTime) * 0.5f,
-                (float)cos(currentTime) * 0.6f,
-                0.0f,
-                0.0f
-            };
-        
-            glVertexAttrib4fv(0, offset);
-        }
-        
-        // Update the value of input attribute 1
-        {
-            GLfloat color[] =
-            {
-                (float)sin(currentTime) * 0.5f + 0.5f,
-                (float)cos(currentTime) * 0.5f + 0.5f,
-                0.0f,
-                1.0f
-            };
-            
-            glVertexAttrib4fv(1, color);
-        }
+        glBindVertexArray(_VAO);
         
         glDrawArrays(GL_TRIANGLES, 0, 3);
     }
