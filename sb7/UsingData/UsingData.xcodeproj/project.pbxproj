@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0BB79E20A4118E00386C1F /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BB79D20A4118E00386C1F /* GLUtilities.mm */; };
 		1F6959E8209D82C600595C74 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6959E7209D82C600595C74 /* OpenGL.framework */; };
-		1FF64117209ABE0D00145475 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64116209ABE0D00145475 /* ViewController.m */; };
+		1FF64117209ABE0D00145475 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64116209ABE0D00145475 /* ViewController.mm */; };
 		1FF64119209ABE1000145475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF64118209ABE1000145475 /* Assets.xcassets */; };
 		1FF6411C209ABE1000145475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF6411A209ABE1000145475 /* Main.storyboard */; };
 		1FF6411F209ABE1000145475 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6411E209ABE1000145475 /* main.m */; };
-		1FF6412C209ABE2F00145475 /* GLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64127209ABE2E00145475 /* GLUtilities.m */; };
 		1FF6412D209ABE2F00145475 /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6412A209ABE2F00145475 /* SBViewControllerBase.m */; };
 		1FF6412E209ABE2F00145475 /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6412B209ABE2F00145475 /* SBAppDelegateBase.m */; };
 		1FF64131209ABEE600145475 /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64130209ABEE600145475 /* MyTimeStamp.m */; };
@@ -21,17 +21,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0BB79D20A4118E00386C1F /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
 		1F6959E7209D82C600595C74 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1FF6410F209ABE0D00145475 /* UsingData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsingData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF64115209ABE0D00145475 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1FF64116209ABE0D00145475 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FF64116209ABE0D00145475 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		1FF64118209ABE1000145475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FF6411B209ABE1000145475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FF6411D209ABE1000145475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF6411E209ABE1000145475 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FF64120209ABE1000145475 /* UsingData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UsingData.entitlements; sourceTree = "<group>"; };
 		1FF64126209ABE2E00145475 /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
-		1FF64127209ABE2E00145475 /* GLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLUtilities.m; path = ../../Common/GLUtilities.m; sourceTree = "<group>"; };
 		1FF64128209ABE2E00145475 /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
 		1FF64129209ABE2E00145475 /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
 		1FF6412A209ABE2F00145475 /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
@@ -82,18 +82,18 @@
 		1FF64111209ABE0D00145475 /* UsingData */ = {
 			isa = PBXGroup;
 			children = (
+				1F0BB79D20A4118E00386C1F /* GLUtilities.mm */,
 				1FF64135209AC14400145475 /* triangle.vert */,
 				1FF64136209AC14400145475 /* triangle.frag */,
 				1FF6412F209ABEE600145475 /* MyTimeStamp.h */,
 				1FF64130209ABEE600145475 /* MyTimeStamp.m */,
 				1FF64126209ABE2E00145475 /* GLUtilities.h */,
-				1FF64127209ABE2E00145475 /* GLUtilities.m */,
 				1FF64128209ABE2E00145475 /* SBAppDelegateBase.h */,
 				1FF6412B209ABE2F00145475 /* SBAppDelegateBase.m */,
 				1FF64129209ABE2E00145475 /* SBViewControllerBase.h */,
 				1FF6412A209ABE2F00145475 /* SBViewControllerBase.m */,
 				1FF64115209ABE0D00145475 /* ViewController.h */,
-				1FF64116209ABE0D00145475 /* ViewController.m */,
+				1FF64116209ABE0D00145475 /* ViewController.mm */,
 				1FF64118209ABE1000145475 /* Assets.xcassets */,
 				1FF6411A209ABE1000145475 /* Main.storyboard */,
 				1FF6411D209ABE1000145475 /* Info.plist */,
@@ -176,10 +176,10 @@
 			files = (
 				1FF6412E209ABE2F00145475 /* SBAppDelegateBase.m in Sources */,
 				1FF6412D209ABE2F00145475 /* SBViewControllerBase.m in Sources */,
-				1FF64117209ABE0D00145475 /* ViewController.m in Sources */,
+				1FF64117209ABE0D00145475 /* ViewController.mm in Sources */,
+				1F0BB79E20A4118E00386C1F /* GLUtilities.mm in Sources */,
 				1FF6411F209ABE1000145475 /* main.m in Sources */,
 				1FF64131209ABEE600145475 /* MyTimeStamp.m in Sources */,
-				1FF6412C209ABE2F00145475 /* GLUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

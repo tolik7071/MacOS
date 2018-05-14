@@ -1,5 +1,14 @@
 #version 330
 
+// LAYPUT TEST
+layout(std140) uniform TransformBlock
+{
+    float   scale;
+    vec3    translation;
+    float   rotation[3];
+    mat4    projection_matrix;
+} transform;
+
 // 'position' and 'color' are input vertex attributes
 layout (location = 0) in vec3 position;
 layout (location = 1) in vec3 color;
