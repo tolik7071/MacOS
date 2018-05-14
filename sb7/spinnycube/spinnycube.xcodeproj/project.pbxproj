@@ -7,24 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F20E07420A9545D001EC683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E07320A9545D001EC683 /* AppDelegate.m */; };
-		1F20E07720A9545D001EC683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E07620A9545D001EC683 /* ViewController.m */; };
+		1F20E07720A9545D001EC683 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E07620A9545D001EC683 /* ViewController.mm */; };
 		1F20E07920A95460001EC683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F20E07820A95460001EC683 /* Assets.xcassets */; };
 		1F20E07C20A95460001EC683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F20E07A20A95460001EC683 /* Main.storyboard */; };
 		1F20E07F20A95460001EC683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E07E20A95460001EC683 /* main.m */; };
+		1F20E08820A9546F001EC683 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F20E08720A9546F001EC683 /* OpenGL.framework */; };
+		1F20E09120A9547F001EC683 /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E08920A9547E001EC683 /* GLUtilities.mm */; };
+		1F20E09220A9547F001EC683 /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E08C20A9547E001EC683 /* MyTimeStamp.m */; };
+		1F20E09320A9547F001EC683 /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E08E20A9547E001EC683 /* SBViewControllerBase.m */; };
+		1F20E09420A9547F001EC683 /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F20E09020A9547F001EC683 /* SBAppDelegateBase.m */; };
+		1F20E09720A956CE001EC683 /* cube.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1F20E09520A956CE001EC683 /* cube.vert */; };
+		1F20E09820A956CE001EC683 /* cube.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1F20E09620A956CE001EC683 /* cube.frag */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F20E06F20A9545D001EC683 /* spinnycube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spinnycube.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F20E07220A9545D001EC683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1F20E07320A9545D001EC683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1F20E07520A9545D001EC683 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F20E07620A9545D001EC683 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1F20E07620A9545D001EC683 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		1F20E07820A95460001EC683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F20E07B20A95460001EC683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F20E07D20A95460001EC683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F20E07E20A95460001EC683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F20E08020A95460001EC683 /* spinnycube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = spinnycube.entitlements; sourceTree = "<group>"; };
+		1F20E08720A9546F001EC683 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F20E08920A9547E001EC683 /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
+		1F20E08A20A9547E001EC683 /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		1F20E08B20A9547E001EC683 /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1F20E08C20A9547E001EC683 /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
+		1F20E08D20A9547E001EC683 /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		1F20E08E20A9547E001EC683 /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		1F20E08F20A9547E001EC683 /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1F20E09020A9547F001EC683 /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		1F20E09520A956CE001EC683 /* cube.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cube.vert; sourceTree = "<group>"; };
+		1F20E09620A956CE001EC683 /* cube.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cube.frag; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F20E08820A9546F001EC683 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +59,7 @@
 			children = (
 				1F20E07120A9545D001EC683 /* spinnycube */,
 				1F20E07020A9545D001EC683 /* Products */,
+				1F20E08620A9546F001EC683 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,10 +74,18 @@
 		1F20E07120A9545D001EC683 /* spinnycube */ = {
 			isa = PBXGroup;
 			children = (
-				1F20E07220A9545D001EC683 /* AppDelegate.h */,
-				1F20E07320A9545D001EC683 /* AppDelegate.m */,
+				1F20E09520A956CE001EC683 /* cube.vert */,
+				1F20E09620A956CE001EC683 /* cube.frag */,
+				1F20E08B20A9547E001EC683 /* GLUtilities.h */,
+				1F20E08920A9547E001EC683 /* GLUtilities.mm */,
+				1F20E08F20A9547E001EC683 /* MyTimeStamp.h */,
+				1F20E08C20A9547E001EC683 /* MyTimeStamp.m */,
+				1F20E08A20A9547E001EC683 /* SBAppDelegateBase.h */,
+				1F20E09020A9547F001EC683 /* SBAppDelegateBase.m */,
+				1F20E08D20A9547E001EC683 /* SBViewControllerBase.h */,
+				1F20E08E20A9547E001EC683 /* SBViewControllerBase.m */,
 				1F20E07520A9545D001EC683 /* ViewController.h */,
-				1F20E07620A9545D001EC683 /* ViewController.m */,
+				1F20E07620A9545D001EC683 /* ViewController.mm */,
 				1F20E07820A95460001EC683 /* Assets.xcassets */,
 				1F20E07A20A95460001EC683 /* Main.storyboard */,
 				1F20E07D20A95460001EC683 /* Info.plist */,
@@ -68,6 +93,14 @@
 				1F20E08020A95460001EC683 /* spinnycube.entitlements */,
 			);
 			path = spinnycube;
+			sourceTree = "<group>";
+		};
+		1F20E08620A9546F001EC683 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F20E08720A9546F001EC683 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F20E07920A95460001EC683 /* Assets.xcassets in Resources */,
+				1F20E09820A956CE001EC683 /* cube.frag in Resources */,
+				1F20E09720A956CE001EC683 /* cube.vert in Resources */,
 				1F20E07C20A95460001EC683 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F20E07720A9545D001EC683 /* ViewController.m in Sources */,
+				1F20E07720A9545D001EC683 /* ViewController.mm in Sources */,
+				1F20E09120A9547F001EC683 /* GLUtilities.mm in Sources */,
+				1F20E09220A9547F001EC683 /* MyTimeStamp.m in Sources */,
 				1F20E07F20A95460001EC683 /* main.m in Sources */,
-				1F20E07420A9545D001EC683 /* AppDelegate.m in Sources */,
+				1F20E09320A9547F001EC683 /* SBViewControllerBase.m in Sources */,
+				1F20E09420A9547F001EC683 /* SBAppDelegateBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +230,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -210,6 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -250,6 +290,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -262,6 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;

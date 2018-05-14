@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SBViewControllerBase.h"
 
-@interface ViewController : NSViewController
-
+@interface ViewController : SBViewControllerBase
 
 @end
-
