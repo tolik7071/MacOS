@@ -7,6 +7,7 @@
 //
 
 #import "CoreTextView.h"
+#import <Carbon/Carbon.h>
 
 @interface CoreTextView()
 
@@ -102,6 +103,20 @@
     [textStorage drawInRect:self.bounds];
     
 #endif // USE_CORE_GRAPHIC
+}
+
+
+- (BOOL)acceptsFirstResponder
+{
+    return YES;
+}
+
+- (void)keyDown:(NSEvent *)event
+{
+    [super keyDown:event];
+    
+//    TISInputSourceRef inputSource = TISCopyCurrentKeyboardLayoutInputSource();
+//    CFShow(inputSource);
 }
 
 @end

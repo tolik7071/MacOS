@@ -12,7 +12,7 @@
 #include <vmath.h>
 
 // Remove this to draw only a single cube!
-#define MANY_CUBES
+//#define MANY_CUBES
 
 @implementation ViewController
 {
@@ -181,7 +181,9 @@
             vmath::translate(sinf(2.1f * f) * 2.0f,
                              cosf(1.7f * f) * 2.0f,
                              sinf(1.3f * f) * cosf(1.5f * f) * 2.0f);
+            
             glUniformMatrix4fv(_mv_location, 1, GL_FALSE, mv_matrix);
+            
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
 #else
@@ -192,7 +194,9 @@
                          sinf(1.3f * f) * cosf(1.5f * f) * 2.0f) *
         vmath::rotate((float)currentTime * 45.0f, 0.0f, 1.0f, 0.0f) *
         vmath::rotate((float)currentTime * 81.0f, 1.0f, 0.0f, 0.0f);
+        
         glUniformMatrix4fv(_mv_location, 1, GL_FALSE, mv_matrix);
+        
         glDrawArrays(GL_TRIANGLES, 0, 36);
 #endif
     }

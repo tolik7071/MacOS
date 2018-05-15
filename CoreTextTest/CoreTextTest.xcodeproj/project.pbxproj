@@ -13,6 +13,7 @@
 		1F8EB3BA209444C600593092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8EB3B8209444C600593092 /* Main.storyboard */; };
 		1F8EB3BD209444C600593092 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EB3BC209444C600593092 /* main.m */; };
 		1F8EB3C62094451100593092 /* CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8EB3C52094451100593092 /* CoreTextView.m */; };
+		5AA65CCA20A981D500BF014A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA65CC920A981D500BF014A /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1F8EB3BE209444C600593092 /* CoreTextTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreTextTest.entitlements; sourceTree = "<group>"; };
 		1F8EB3C42094451100593092 /* CoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextView.h; sourceTree = "<group>"; };
 		1F8EB3C52094451100593092 /* CoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextView.m; sourceTree = "<group>"; };
+		5AA65CC920A981D500BF014A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA65CCA20A981D500BF014A /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 			children = (
 				1F8EB3AF209444BD00593092 /* CoreTextTest */,
 				1F8EB3AE209444BD00593092 /* Products */,
+				5AA65CC820A981D400BF014A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +77,14 @@
 				1F8EB3BE209444C600593092 /* CoreTextTest.entitlements */,
 			);
 			path = CoreTextTest;
+			sourceTree = "<group>";
+		};
+		5AA65CC820A981D400BF014A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AA65CC920A981D500BF014A /* Carbon.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
