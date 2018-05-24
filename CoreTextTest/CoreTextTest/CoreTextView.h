@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CoreTextView : NSView
+@interface CoreTextView : NSView <NSTextInputClient>
 
 @property (nonatomic) NSFont * font;
 @property (nonatomic) NSDictionary * attributes;

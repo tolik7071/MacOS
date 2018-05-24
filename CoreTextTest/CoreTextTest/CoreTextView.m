@@ -9,6 +9,11 @@
 #import "CoreTextView.h"
 #import <Carbon/Carbon.h>
 
+#define LOG_METHOD() NSLog(@"%p: %s", self, __PRETTY_FUNCTION__)
+
+#define kEmptyRange NSMakeRange(NSNotFound, 0 )
+#define kEmptyRect NSMakeRect(0, 0, 0, 0)
+
 @interface CoreTextView()
 
 @property (nonatomic) NSString * text;
@@ -105,7 +110,6 @@
 #endif // USE_CORE_GRAPHIC
 }
 
-
 - (BOOL)acceptsFirstResponder
 {
     return YES;
@@ -113,10 +117,94 @@
 
 - (void)keyDown:(NSEvent *)event
 {
-    [super keyDown:event];
+    NSLog(@"%u", [event keyCode]);
+    [self interpretKeyEvents:[NSArray arrayWithObject:event]];
+}
+
+#pragma mark - NSTextInputClient -
+
+- (void)insertText:(id)string replacementRange:(NSRange)replacementRange
+{
+    LOG_METHOD();
+    NSLog(@"%@ {%lu, %lu}", string, replacementRange.location, replacementRange.length);
+    _text = [NSString stringWithString:string];
+    [self setNeedsDisplay:YES];
+}
+
+- (void)doCommandBySelector:(SEL)selector
+{
+    LOG_METHOD();
+    NSLog(@"%@", NSStringFromSelector(selector));
     
-//    TISInputSourceRef inputSource = TISCopyCurrentKeyboardLayoutInputSource();
-//    CFShow(inputSource);
+/*    if ([NSStringFromSelector(selector) isEqualToString:@"cancelOperation:"])
+    {
+        self.text = @"";
+        [self setNeedsDisplay:YES];
+    }
+    else */if ([NSStringFromSelector(selector) isEqualToString:@"deleteBackward:"])
+    {
+        
+    }
+    else if ([NSStringFromSelector(selector) isEqualToString:@"deleteForward:"])
+    {
+        
+    }
+    else if ([NSStringFromSelector(selector) isEqualToString:@"insertNewline:"])
+    {
+        
+    }
+}
+
+- (void)setMarkedText:(id)string selectedRange:(NSRange)selectedRange replacementRange:(NSRange)replacementRange
+{
+    LOG_METHOD();
+}
+
+- (void)unmarkText
+{
+    LOG_METHOD();
+}
+
+- (NSRange)selectedRange
+{
+    LOG_METHOD();
+    return kEmptyRange;
+}
+
+- (NSRange)markedRange
+{
+    LOG_METHOD();
+    return kEmptyRange;
+}
+
+- (BOOL)hasMarkedText
+{
+    LOG_METHOD();
+    return NO;
+}
+
+- (nullable NSAttributedString *)attributedSubstringForProposedRange:(NSRange)range actualRange:(nullable NSRangePointer)actualRange
+{
+    LOG_METHOD();
+    return nil;
+}
+
+- (NSArray<NSAttributedStringKey> *)validAttributesForMarkedText
+{
+    LOG_METHOD();
+    return nil;
+}
+
+- (NSRect)firstRectForCharacterRange:(NSRange)range actualRange:(nullable NSRangePointer)actualRange
+{
+    LOG_METHOD();
+    return kEmptyRect;
+}
+
+- (NSUInteger)characterIndexForPoint:(NSPoint)point
+{
+    LOG_METHOD();
+    return NSNotFound;
 }
 
 @end
