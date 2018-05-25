@@ -203,3 +203,24 @@ GLuint CreateShader(NSData* shaderContent, GLenum shaderType)
     
     return shaderID;
 }
+
+GLuint CreateProgram(NSString* vertexShaderFile, NSString* fragmentShaderFile)
+{
+    if (vertexShaderFile.length == 0 || fragmentShaderFile.length == 0)
+    {
+        NSLog(@"No shader file.");
+        return 0;
+    }
+    
+    NSURL *vertexShader = FindResourceWithName(vertexShaderFile);
+    assert(vertexShader);
+    NSData *vertexShaderContent = ReadFile(vertexShader);
+    assert([vertexShaderContent length] > 0);
+    
+    NSURL *fragmentShader = FindResourceWithName(fragmentShaderFile);
+    assert(fragmentShader);
+    NSData *fragmentShaderContent = ReadFile(fragmentShader);
+    assert([fragmentShaderContent length] > 0);
+    
+    return CreateProgram(vertexShaderContent, fragmentShaderContent);
+}

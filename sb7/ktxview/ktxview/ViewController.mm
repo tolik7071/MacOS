@@ -1,16 +1,15 @@
 //
 //  ViewController.m
-//  simpletexture
+//  ktxview
 //
-//  Created by tolik7071 on 5/23/18.
+//  Created by tolik7071 on 5/25/18.
 //  Copyright © 2018 tolik7071. All rights reserved.
 //
 
 #import "ViewController.h"
 #import <OpenGL/gl3.h>
 #import "GLUtilities.h"
-
-void generate_texture(GLfloat* data, int width, int height);
+#import "sb7ktx.h"
 
 @implementation ViewController
 {
@@ -68,15 +67,12 @@ void generate_texture(GLfloat* data, int width, int height);
     glActiveTexture(GL_TEXTURE0);
     
     glGenTextures(1, &_texture);
+    
+    NSURL *textureFileUrl = FindResourceWithName(@"tree.ktx");
+    NSAssert(textureFileUrl, @"Texture file not found.");
+    sb7::ktx::file::load([textureFileUrl fileSystemRepresentation], _texture);
+    
     glBindTexture(GL_TEXTURE_2D, _texture);
-    
-    const size_t kDataSize = 256 * 256 * 4;
-    GLfloat *data = new GLfloat[kDataSize];
-    memset(data, 0, sizeof(GLfloat) * kDataSize);
-    generate_texture(data, 256, 256);
-    
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA32F, 256, 256, 0, GL_RGBA, GL_FLOAT, data);
-    glGenerateMipmap(GL_TEXTURE_2D);
 }
 
 - (void)renderForTime:(MyTimeStamp *)time
@@ -101,26 +97,11 @@ void generate_texture(GLfloat* data, int width, int height);
         glUseProgram(_programID);
         glBindTexture(GL_TEXTURE_2D, _texture);
         glBindVertexArray(_VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glUniform1f(0, (float)(sin(currentTime) * 16.0 + 16.0));
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     }
     
     [self.openGLView.openGLContext flushBuffer];
 }
 
 @end
-
-void generate_texture(GLfloat* data, int width, int height)
-{
-    int x, y;
-    
-    for (y = 0; y < height; y++)
-    {
-        for (x = 0; x < width; x++)
-        {
-            data[(y * width + x) * 4 + 0] = (float)((x & y) & 0xFF) / 255.0f;
-            data[(y * width + x) * 4 + 1] = (float)((x | y) & 0xFF) / 255.0f;
-            data[(y * width + x) * 4 + 2] = (float)((x ^ y) & 0xFF) / 255.0f;
-            data[(y * width + x) * 4 + 3] = 1.0f;
-        }
-    }
-}
