@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F15E94F20BE6A3000D1DE55 /* pattern1.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F15E94E20BE69D100D1DE55 /* pattern1.ktx */; };
+		1F15E95120BE6A6000D1DE55 /* torus_nrms_tc.sbm in Resources */ = {isa = PBXBuildFile; fileRef = 1F15E95020BE6A6000D1DE55 /* torus_nrms_tc.sbm */; };
+		1F15E95820BE6CC700D1DE55 /* render.vs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1F15E95620BE6CC600D1DE55 /* render.vs.glsl */; };
+		1F15E95920BE6CC700D1DE55 /* render.fs.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 1F15E95720BE6CC700D1DE55 /* render.fs.glsl */; };
+		1F18C09520BD1C9E006746A7 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C09420BD1C9E006746A7 /* ViewController.mm */; };
+		1F18C09720BD1CAC006746A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F18C09620BD1CAC006746A7 /* Assets.xcassets */; };
+		1F18C09A20BD1CAC006746A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F18C09820BD1CAC006746A7 /* Main.storyboard */; };
+		1F18C09D20BD1CAC006746A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C09C20BD1CAC006746A7 /* main.m */; };
+		1F18C0A620BD1D39006746A7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F18C0A520BD1D39006746A7 /* OpenGL.framework */; };
+		1F18C0AF20BD1D48006746A7 /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0A720BD1D47006746A7 /* GLUtilities.mm */; };
+		1F18C0B020BD1D48006746A7 /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0AA20BD1D48006746A7 /* MyTimeStamp.m */; };
+		1F18C0B120BD1D48006746A7 /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0AC20BD1D48006746A7 /* SBViewControllerBase.m */; };
+		1F18C0B220BD1D48006746A7 /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0AE20BD1D48006746A7 /* SBAppDelegateBase.m */; };
+		1F18C0B620BD1E47006746A7 /* sb7shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0B320BD1E47006746A7 /* sb7shader.cpp */; };
+		1F18C0B720BD1E47006746A7 /* sb7ktx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0B420BD1E47006746A7 /* sb7ktx.cpp */; };
+		1F18C0B820BD1E47006746A7 /* sb7object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F18C0B520BD1E47006746A7 /* sb7object.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F15E94E20BE69D100D1DE55 /* pattern1.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = pattern1.ktx; path = ../../../../SDKs/sb7/bin/media/textures/pattern1.ktx; sourceTree = "<group>"; };
+		1F15E95020BE6A6000D1DE55 /* torus_nrms_tc.sbm */ = {isa = PBXFileReference; lastKnownFileType = file; name = torus_nrms_tc.sbm; path = ../../../../SDKs/sb7/bin/media/objects/torus_nrms_tc.sbm; sourceTree = "<group>"; };
+		1F15E95620BE6CC600D1DE55 /* render.vs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = render.vs.glsl; sourceTree = "<group>"; };
+		1F15E95720BE6CC700D1DE55 /* render.fs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = render.fs.glsl; sourceTree = "<group>"; };
+		1F18C08D20BD1C9E006746A7 /* simpletexcoords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpletexcoords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F18C09320BD1C9E006746A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F18C09420BD1C9E006746A7 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F18C09620BD1CAC006746A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F18C09920BD1CAC006746A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F18C09B20BD1CAC006746A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F18C09C20BD1CAC006746A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F18C09E20BD1CAC006746A7 /* simpletexcoords.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = simpletexcoords.entitlements; sourceTree = "<group>"; };
+		1F18C0A520BD1D39006746A7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F18C0A720BD1D47006746A7 /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
+		1F18C0A820BD1D47006746A7 /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		1F18C0A920BD1D48006746A7 /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1F18C0AA20BD1D48006746A7 /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
+		1F18C0AB20BD1D48006746A7 /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		1F18C0AC20BD1D48006746A7 /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		1F18C0AD20BD1D48006746A7 /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1F18C0AE20BD1D48006746A7 /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		1F18C0B320BD1E47006746A7 /* sb7shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7shader.cpp; path = ../../../../SDKs/sb7/src/sb7/sb7shader.cpp; sourceTree = "<group>"; };
+		1F18C0B420BD1E47006746A7 /* sb7ktx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7ktx.cpp; path = ../../../../SDKs/sb7/src/sb7/sb7ktx.cpp; sourceTree = "<group>"; };
+		1F18C0B520BD1E47006746A7 /* sb7object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7object.cpp; path = ../../../../SDKs/sb7/src/sb7/sb7object.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F18C08A20BD1C9E006746A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F18C0A620BD1D39006746A7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F18C08420BD1C9E006746A7 = {
+			isa = PBXGroup;
+			children = (
+				1F18C08F20BD1C9E006746A7 /* simpletexcoords */,
+				1F18C08E20BD1C9E006746A7 /* Products */,
+				1F18C0A420BD1D39006746A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F18C08E20BD1C9E006746A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F18C08D20BD1C9E006746A7 /* simpletexcoords.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F18C08F20BD1C9E006746A7 /* simpletexcoords */ = {
+			isa = PBXGroup;
+			children = (
+				1F15E95720BE6CC700D1DE55 /* render.fs.glsl */,
+				1F15E95620BE6CC600D1DE55 /* render.vs.glsl */,
+				1F15E95020BE6A6000D1DE55 /* torus_nrms_tc.sbm */,
+				1F15E94E20BE69D100D1DE55 /* pattern1.ktx */,
+				1F18C09320BD1C9E006746A7 /* ViewController.h */,
+				1F18C09420BD1C9E006746A7 /* ViewController.mm */,
+				1F18C0B420BD1E47006746A7 /* sb7ktx.cpp */,
+				1F18C0B520BD1E47006746A7 /* sb7object.cpp */,
+				1F18C0B320BD1E47006746A7 /* sb7shader.cpp */,
+				1F18C0A920BD1D48006746A7 /* GLUtilities.h */,
+				1F18C0A720BD1D47006746A7 /* GLUtilities.mm */,
+				1F18C0AD20BD1D48006746A7 /* MyTimeStamp.h */,
+				1F18C0AA20BD1D48006746A7 /* MyTimeStamp.m */,
+				1F18C0A820BD1D47006746A7 /* SBAppDelegateBase.h */,
+				1F18C0AE20BD1D48006746A7 /* SBAppDelegateBase.m */,
+				1F18C0AB20BD1D48006746A7 /* SBViewControllerBase.h */,
+				1F18C0AC20BD1D48006746A7 /* SBViewControllerBase.m */,
+				1F18C09620BD1CAC006746A7 /* Assets.xcassets */,
+				1F18C09820BD1CAC006746A7 /* Main.storyboard */,
+				1F18C09B20BD1CAC006746A7 /* Info.plist */,
+				1F18C09C20BD1CAC006746A7 /* main.m */,
+				1F18C09E20BD1CAC006746A7 /* simpletexcoords.entitlements */,
+			);
+			path = simpletexcoords;
+			sourceTree = "<group>";
+		};
+		1F18C0A420BD1D39006746A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F18C0A520BD1D39006746A7 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F18C08C20BD1C9E006746A7 /* simpletexcoords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F18C0A120BD1CAC006746A7 /* Build configuration list for PBXNativeTarget "simpletexcoords" */;
+			buildPhases = (
+				1F18C08920BD1C9E006746A7 /* Sources */,
+				1F18C08A20BD1C9E006746A7 /* Frameworks */,
+				1F18C08B20BD1C9E006746A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = simpletexcoords;
+			productName = simpletexcoords;
+			productReference = 1F18C08D20BD1C9E006746A7 /* simpletexcoords.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F18C08520BD1C9E006746A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F18C08C20BD1C9E006746A7 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 1F18C08820BD1C9E006746A7 /* Build configuration list for PBXProject "simpletexcoords" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F18C08420BD1C9E006746A7;
+			productRefGroup = 1F18C08E20BD1C9E006746A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F18C08C20BD1C9E006746A7 /* simpletexcoords */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F18C08B20BD1C9E006746A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F18C09720BD1CAC006746A7 /* Assets.xcassets in Resources */,
+				1F15E95920BE6CC700D1DE55 /* render.fs.glsl in Resources */,
+				1F18C09A20BD1CAC006746A7 /* Main.storyboard in Resources */,
+				1F15E94F20BE6A3000D1DE55 /* pattern1.ktx in Resources */,
+				1F15E95120BE6A6000D1DE55 /* torus_nrms_tc.sbm in Resources */,
+				1F15E95820BE6CC700D1DE55 /* render.vs.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F18C08920BD1C9E006746A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F18C0B620BD1E47006746A7 /* sb7shader.cpp in Sources */,
+				1F18C0B820BD1E47006746A7 /* sb7object.cpp in Sources */,
+				1F18C09520BD1C9E006746A7 /* ViewController.mm in Sources */,
+				1F18C0AF20BD1D48006746A7 /* GLUtilities.mm in Sources */,
+				1F18C0B020BD1D48006746A7 /* MyTimeStamp.m in Sources */,
+				1F18C09D20BD1CAC006746A7 /* main.m in Sources */,
+				1F18C0B120BD1D48006746A7 /* SBViewControllerBase.m in Sources */,
+				1F18C0B720BD1E47006746A7 /* sb7ktx.cpp in Sources */,
+				1F18C0B220BD1D48006746A7 /* SBAppDelegateBase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F18C09820BD1CAC006746A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F18C09920BD1CAC006746A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F18C09F20BD1CAC006746A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F18C0A020BD1CAC006746A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F18C0A220BD1CAC006746A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = simpletexcoords/simpletexcoords.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = simpletexcoords/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.simpletexcoords;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F18C0A320BD1CAC006746A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = simpletexcoords/simpletexcoords.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = simpletexcoords/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.simpletexcoords;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F18C08820BD1C9E006746A7 /* Build configuration list for PBXProject "simpletexcoords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F18C09F20BD1CAC006746A7 /* Debug */,
+				1F18C0A020BD1CAC006746A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F18C0A120BD1CAC006746A7 /* Build configuration list for PBXNativeTarget "simpletexcoords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F18C0A220BD1CAC006746A7 /* Debug */,
+				1F18C0A320BD1CAC006746A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F18C08520BD1C9E006746A7 /* Project object */;
+}

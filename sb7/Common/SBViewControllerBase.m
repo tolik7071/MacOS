@@ -9,6 +9,8 @@
 #import "SBViewControllerBase.h"
 #import <OpenGL/gl3.h>
 
+#define USE_HARDWARE_ACCELERATED_RENDERS
+
 CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*, CVOptionFlags, CVOptionFlags*, void*);
 
 @implementation SBViewControllerBase
@@ -48,8 +50,13 @@ CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*
         NSOpenGLPFAAlphaSize            , 8                            ,
         NSOpenGLPFADepthSize            , 24                           ,
         NSOpenGLPFADoubleBuffer         ,
+#if defined(USE_HARDWARE_ACCELERATED_RENDERS)
         NSOpenGLPFAAccelerated          ,
         NSOpenGLPFANoRecovery           ,
+#else
+        NSOpenGLPFARendererID           ,
+        kCGLRendererGenericFloatID      ,
+#endif // USE_HARDWARE_ACCELERATED_RENDERS
         NSOpenGLPFAAllowOfflineRenderers,
         0
     };
@@ -105,6 +112,15 @@ CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*
     }
 }
 
+- (void)configEventMonitor
+{
+    _monitor = [NSEvent addLocalMonitorForEventsMatchingMask:
+        (NSEventMaskKeyDown | NSEventMaskScrollWheel | NSEventMaskLeftMouseDragged)handler:^NSEvent* (NSEvent* event)
+        {
+            BOOL processed = [self processEvent:event];
+            return processed ? nil : event;
+        }];
+}
 - (void)windowWillEnterFullScreen:(NSNotification *)notification
 {
     _isInFullScreenMode = YES;
@@ -142,6 +158,8 @@ CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*
     [self configOpenGLEnvironment];
 
     [self configDisplayLink];
+    
+    [self configEventMonitor];
 }
 
 - (void)viewDidLayout
@@ -149,6 +167,56 @@ CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*
    [super viewDidLayout];
 
    [self.openGLView.openGLContext makeCurrentContext];
+}
+
+- (BOOL)processEvent:(NSEvent *)event
+{
+    /*
+     file://Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Headers/Events.h
+     */
+    
+    BOOL processed = NO;
+    
+    if (event.type == NSEventTypeKeyDown)
+    {
+        switch(event.keyCode)
+        {
+            case /*kVK_ANSI_W*/0x0D:
+            {
+                break;
+            }
+                
+            case /*kVK_ANSI_S*/0x01:
+            {
+                break;
+            }
+                
+            case /*kVK_ANSI_A*/0x00:
+            {
+                break;
+            }
+                
+            case /*kVK_ANSI_D*/0x02:
+            {
+                break;
+            }
+        }
+    }
+    else if (event.type == NSEventTypeScrollWheel)
+    {
+        
+    }
+    else if (event.type == NSEventTypeLeftMouseDragged)
+    {
+        NSPoint point = [self.openGLView convertPoint:[event locationInWindow] fromView:nil];
+        
+        if ([self.openGLView hitTest:point])
+        {
+            
+        }
+    }
+    
+    return processed;
 }
 
 @end
