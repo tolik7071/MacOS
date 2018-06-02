@@ -135,9 +135,13 @@ typedef struct _uniforms_tag
     
     if (0 != _programID)
     {
-        glBindTexture(GL_TEXTURE_2D, _tex_object[_tex_index]);
-        
         glUseProgram(_programID);
+#if 1
+        GLint tex_object_location = glGetUniformLocation(_programID, "tex_object");
+        glUniform1i(tex_object_location, 0);
+        glActiveTexture(GL_TEXTURE0 + 0);
+#endif
+        glBindTexture(GL_TEXTURE_2D, _tex_object[_tex_index]);
         
         vmath::mat4 proj_matrix = vmath::perspective(
             60.0f,

@@ -84,8 +84,8 @@
 		1F18C08F20BD1C9E006746A7 /* simpletexcoords */ = {
 			isa = PBXGroup;
 			children = (
-				1F15E95720BE6CC700D1DE55 /* render.fs.glsl */,
 				1F15E95620BE6CC600D1DE55 /* render.vs.glsl */,
+				1F15E95720BE6CC700D1DE55 /* render.fs.glsl */,
 				1F15E95020BE6A6000D1DE55 /* torus_nrms_tc.sbm */,
 				1F15E94E20BE69D100D1DE55 /* pattern1.ktx */,
 				1F18C09320BD1C9E006746A7 /* ViewController.h */,
