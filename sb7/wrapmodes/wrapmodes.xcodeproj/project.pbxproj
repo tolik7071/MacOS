@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F6CC4F820C4FCD80073CCA7 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC4F720C4FCD80073CCA7 /* ViewController.mm */; };
+		1F6CC4FA20C4FCE40073CCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6CC4F920C4FCE40073CCA7 /* Assets.xcassets */; };
+		1F6CC4FD20C4FCE40073CCA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6CC4FB20C4FCE40073CCA7 /* Main.storyboard */; };
+		1F6CC50020C4FCE50073CCA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC4FF20C4FCE50073CCA7 /* main.m */; };
+		1F6CC50920C4FD070073CCA7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6CC50820C4FD070073CCA7 /* OpenGL.framework */; };
+		1F6CC51220C4FD280073CCA7 /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC50A20C4FD260073CCA7 /* GLUtilities.mm */; };
+		1F6CC51320C4FD280073CCA7 /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC50D20C4FD270073CCA7 /* MyTimeStamp.m */; };
+		1F6CC51420C4FD280073CCA7 /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC50F20C4FD270073CCA7 /* SBViewControllerBase.m */; };
+		1F6CC51520C4FD280073CCA7 /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC51120C4FD280073CCA7 /* SBAppDelegateBase.m */; };
+		1F6CC51720C4FD9F0073CCA7 /* sb7ktx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F6CC51620C4FD9F0073CCA7 /* sb7ktx.cpp */; };
+		1F6CC51A20C500EE0073CCA7 /* wrapmodes.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1F6CC51820C500EE0073CCA7 /* wrapmodes.vert */; };
+		1F6CC51B20C500EE0073CCA7 /* wrapmodes.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1F6CC51920C500EE0073CCA7 /* wrapmodes.frag */; };
+		1F6CC51D20C502980073CCA7 /* rightarrows.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F6CC51C20C502980073CCA7 /* rightarrows.ktx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F6CC4F020C4FCD70073CCA7 /* wrapmodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wrapmodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6CC4F620C4FCD80073CCA7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F6CC4F720C4FCD80073CCA7 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F6CC4F920C4FCE40073CCA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F6CC4FC20C4FCE40073CCA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F6CC4FE20C4FCE50073CCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6CC4FF20C4FCE50073CCA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F6CC50120C4FCE50073CCA7 /* wrapmodes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wrapmodes.entitlements; sourceTree = "<group>"; };
+		1F6CC50820C4FD070073CCA7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F6CC50A20C4FD260073CCA7 /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
+		1F6CC50B20C4FD270073CCA7 /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		1F6CC50C20C4FD270073CCA7 /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1F6CC50D20C4FD270073CCA7 /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
+		1F6CC50E20C4FD270073CCA7 /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		1F6CC50F20C4FD270073CCA7 /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		1F6CC51020C4FD270073CCA7 /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1F6CC51120C4FD280073CCA7 /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		1F6CC51620C4FD9F0073CCA7 /* sb7ktx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7ktx.cpp; path = ../../../../SDKs/sb7/src/sb7/sb7ktx.cpp; sourceTree = "<group>"; };
+		1F6CC51820C500EE0073CCA7 /* wrapmodes.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = wrapmodes.vert; sourceTree = "<group>"; };
+		1F6CC51920C500EE0073CCA7 /* wrapmodes.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = wrapmodes.frag; sourceTree = "<group>"; };
+		1F6CC51C20C502980073CCA7 /* rightarrows.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = rightarrows.ktx; path = ../../../../SDKs/sb7/bin/media/textures/rightarrows.ktx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F6CC4ED20C4FCD70073CCA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6CC50920C4FD070073CCA7 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F6CC4E720C4FCD70073CCA7 = {
+			isa = PBXGroup;
+			children = (
+				1F6CC4F220C4FCD70073CCA7 /* wrapmodes */,
+				1F6CC4F120C4FCD70073CCA7 /* Products */,
+				1F6CC50720C4FD060073CCA7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F6CC4F120C4FCD70073CCA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F6CC4F020C4FCD70073CCA7 /* wrapmodes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F6CC4F220C4FCD70073CCA7 /* wrapmodes */ = {
+			isa = PBXGroup;
+			children = (
+				1F6CC51820C500EE0073CCA7 /* wrapmodes.vert */,
+				1F6CC51920C500EE0073CCA7 /* wrapmodes.frag */,
+				1F6CC4F620C4FCD80073CCA7 /* ViewController.h */,
+				1F6CC4F720C4FCD80073CCA7 /* ViewController.mm */,
+				1F6CC51C20C502980073CCA7 /* rightarrows.ktx */,
+				1F6CC51620C4FD9F0073CCA7 /* sb7ktx.cpp */,
+				1F6CC50C20C4FD270073CCA7 /* GLUtilities.h */,
+				1F6CC50A20C4FD260073CCA7 /* GLUtilities.mm */,
+				1F6CC51020C4FD270073CCA7 /* MyTimeStamp.h */,
+				1F6CC50D20C4FD270073CCA7 /* MyTimeStamp.m */,
+				1F6CC50B20C4FD270073CCA7 /* SBAppDelegateBase.h */,
+				1F6CC51120C4FD280073CCA7 /* SBAppDelegateBase.m */,
+				1F6CC50E20C4FD270073CCA7 /* SBViewControllerBase.h */,
+				1F6CC50F20C4FD270073CCA7 /* SBViewControllerBase.m */,
+				1F6CC4F920C4FCE40073CCA7 /* Assets.xcassets */,
+				1F6CC4FB20C4FCE40073CCA7 /* Main.storyboard */,
+				1F6CC4FE20C4FCE50073CCA7 /* Info.plist */,
+				1F6CC4FF20C4FCE50073CCA7 /* main.m */,
+				1F6CC50120C4FCE50073CCA7 /* wrapmodes.entitlements */,
+			);
+			path = wrapmodes;
+			sourceTree = "<group>";
+		};
+		1F6CC50720C4FD060073CCA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F6CC50820C4FD070073CCA7 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F6CC4EF20C4FCD70073CCA7 /* wrapmodes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F6CC50420C4FCE50073CCA7 /* Build configuration list for PBXNativeTarget "wrapmodes" */;
+			buildPhases = (
+				1F6CC4EC20C4FCD70073CCA7 /* Sources */,
+				1F6CC4ED20C4FCD70073CCA7 /* Frameworks */,
+				1F6CC4EE20C4FCD70073CCA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wrapmodes;
+			productName = wrapmodes;
+			productReference = 1F6CC4F020C4FCD70073CCA7 /* wrapmodes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F6CC4E820C4FCD70073CCA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F6CC4EF20C4FCD70073CCA7 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 1F6CC4EB20C4FCD70073CCA7 /* Build configuration list for PBXProject "wrapmodes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F6CC4E720C4FCD70073CCA7;
+			productRefGroup = 1F6CC4F120C4FCD70073CCA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F6CC4EF20C4FCD70073CCA7 /* wrapmodes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F6CC4EE20C4FCD70073CCA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6CC51D20C502980073CCA7 /* rightarrows.ktx in Resources */,
+				1F6CC4FA20C4FCE40073CCA7 /* Assets.xcassets in Resources */,
+				1F6CC4FD20C4FCE40073CCA7 /* Main.storyboard in Resources */,
+				1F6CC51B20C500EE0073CCA7 /* wrapmodes.frag in Resources */,
+				1F6CC51A20C500EE0073CCA7 /* wrapmodes.vert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F6CC4EC20C4FCD70073CCA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6CC4F820C4FCD80073CCA7 /* ViewController.mm in Sources */,
+				1F6CC51220C4FD280073CCA7 /* GLUtilities.mm in Sources */,
+				1F6CC51320C4FD280073CCA7 /* MyTimeStamp.m in Sources */,
+				1F6CC50020C4FCE50073CCA7 /* main.m in Sources */,
+				1F6CC51720C4FD9F0073CCA7 /* sb7ktx.cpp in Sources */,
+				1F6CC51420C4FD280073CCA7 /* SBViewControllerBase.m in Sources */,
+				1F6CC51520C4FD280073CCA7 /* SBAppDelegateBase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F6CC4FB20C4FCE40073CCA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F6CC4FC20C4FCE40073CCA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F6CC50220C4FCE50073CCA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F6CC50320C4FCE50073CCA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F6CC50520C4FCE50073CCA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wrapmodes/wrapmodes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = wrapmodes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.wrapmodes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F6CC50620C4FCE50073CCA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wrapmodes/wrapmodes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = wrapmodes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.wrapmodes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F6CC4EB20C4FCD70073CCA7 /* Build configuration list for PBXProject "wrapmodes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6CC50220C4FCE50073CCA7 /* Debug */,
+				1F6CC50320C4FCE50073CCA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F6CC50420C4FCE50073CCA7 /* Build configuration list for PBXNativeTarget "wrapmodes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6CC50520C4FCE50073CCA7 /* Debug */,
+				1F6CC50620C4FCE50073CCA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F6CC4E820C4FCD70073CCA7 /* Project object */;
+}
