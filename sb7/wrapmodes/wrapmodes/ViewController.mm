@@ -10,6 +10,7 @@
 #import "GLUtilities.h"
 #import <OpenGL/gl3.h>
 #import <OpenGL/gl3ext.h>
+//#import <OpenGL/gl.h>
 #include <sb7ktx.h>
 #include <vmath.h>
 
