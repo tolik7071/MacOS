@@ -14,7 +14,7 @@
 #include <vmath.h>
 #include <cmath>
 
-#define ALIEN_NUMBER 10
+#define ALIEN_NUMBER 500
 
 static unsigned int seed = 0x13371337;
 
