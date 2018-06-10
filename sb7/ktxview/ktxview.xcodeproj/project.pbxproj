@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F7C1FE820B7CCB90049A89A /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C1FE720B7CCB90049A89A /* ViewController.mm */; };
+		1F7C1FEA20B7CCC50049A89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C1FE920B7CCC50049A89A /* Assets.xcassets */; };
+		1F7C1FED20B7CCC50049A89A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C1FEB20B7CCC50049A89A /* Main.storyboard */; };
+		1F7C1FF020B7CCC50049A89A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C1FEF20B7CCC50049A89A /* main.m */; };
+		1F7C1FF920B7CCE40049A89A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7C1FF820B7CCE40049A89A /* OpenGL.framework */; };
+		1F7C200220B7CCF30049A89A /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C1FFA20B7CCF20049A89A /* GLUtilities.mm */; };
+		1F7C200320B7CCF30049A89A /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C1FFD20B7CCF30049A89A /* MyTimeStamp.m */; };
+		1F7C200420B7CCF30049A89A /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C1FFF20B7CCF30049A89A /* SBViewControllerBase.m */; };
+		1F7C200520B7CCF30049A89A /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C200120B7CCF30049A89A /* SBAppDelegateBase.m */; };
+		1F7C200820B7CD7C0049A89A /* triangle.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C200620B7CD7C0049A89A /* triangle.vert */; };
+		1F7C200920B7CD7C0049A89A /* triangle.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C200720B7CD7C0049A89A /* triangle.frag */; };
+		1F7C200B20B7CE610049A89A /* sb7ktx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C200A20B7CE610049A89A /* sb7ktx.cpp */; };
+		1F7C200D20B7D3400049A89A /* tree.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F7C200C20B7D33F0049A89A /* tree.ktx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F7C1FE020B7CCB90049A89A /* ktxview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ktxview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F7C1FE620B7CCB90049A89A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F7C1FE720B7CCB90049A89A /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F7C1FE920B7CCC50049A89A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F7C1FEC20B7CCC50049A89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F7C1FEE20B7CCC50049A89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7C1FEF20B7CCC50049A89A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F7C1FF120B7CCC50049A89A /* ktxview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ktxview.entitlements; sourceTree = "<group>"; };
+		1F7C1FF820B7CCE40049A89A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F7C1FFA20B7CCF20049A89A /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
+		1F7C1FFB20B7CCF20049A89A /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		1F7C1FFC20B7CCF20049A89A /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1F7C1FFD20B7CCF30049A89A /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
+		1F7C1FFE20B7CCF30049A89A /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		1F7C1FFF20B7CCF30049A89A /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		1F7C200020B7CCF30049A89A /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1F7C200120B7CCF30049A89A /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		1F7C200620B7CD7C0049A89A /* triangle.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.vert; sourceTree = "<group>"; };
+		1F7C200720B7CD7C0049A89A /* triangle.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = triangle.frag; sourceTree = "<group>"; };
+		1F7C200A20B7CE610049A89A /* sb7ktx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7ktx.cpp; path = ../../../../SDKs/sb7/src/sb7/sb7ktx.cpp; sourceTree = "<group>"; };
+		1F7C200C20B7D33F0049A89A /* tree.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = tree.ktx; path = ../../../../SDKs/sb7/bin/media/textures/tree.ktx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F7C1FDD20B7CCB90049A89A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F7C1FF920B7CCE40049A89A /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F7C1FD720B7CCB90049A89A = {
+			isa = PBXGroup;
+			children = (
+				1F7C1FE220B7CCB90049A89A /* ktxview */,
+				1F7C1FE120B7CCB90049A89A /* Products */,
+				1F7C1FF720B7CCE40049A89A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F7C1FE120B7CCB90049A89A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F7C1FE020B7CCB90049A89A /* ktxview.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F7C1FE220B7CCB90049A89A /* ktxview */ = {
+			isa = PBXGroup;
+			children = (
+				1F7C200C20B7D33F0049A89A /* tree.ktx */,
+				1F7C200A20B7CE610049A89A /* sb7ktx.cpp */,
+				1F7C200620B7CD7C0049A89A /* triangle.vert */,
+				1F7C200720B7CD7C0049A89A /* triangle.frag */,
+				1F7C1FE620B7CCB90049A89A /* ViewController.h */,
+				1F7C1FE720B7CCB90049A89A /* ViewController.mm */,
+				1F7C1FFC20B7CCF20049A89A /* GLUtilities.h */,
+				1F7C1FFA20B7CCF20049A89A /* GLUtilities.mm */,
+				1F7C200020B7CCF30049A89A /* MyTimeStamp.h */,
+				1F7C1FFD20B7CCF30049A89A /* MyTimeStamp.m */,
+				1F7C1FFB20B7CCF20049A89A /* SBAppDelegateBase.h */,
+				1F7C200120B7CCF30049A89A /* SBAppDelegateBase.m */,
+				1F7C1FFE20B7CCF30049A89A /* SBViewControllerBase.h */,
+				1F7C1FFF20B7CCF30049A89A /* SBViewControllerBase.m */,
+				1F7C1FE920B7CCC50049A89A /* Assets.xcassets */,
+				1F7C1FEB20B7CCC50049A89A /* Main.storyboard */,
+				1F7C1FEE20B7CCC50049A89A /* Info.plist */,
+				1F7C1FEF20B7CCC50049A89A /* main.m */,
+				1F7C1FF120B7CCC50049A89A /* ktxview.entitlements */,
+			);
+			path = ktxview;
+			sourceTree = "<group>";
+		};
+		1F7C1FF720B7CCE40049A89A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F7C1FF820B7CCE40049A89A /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F7C1FDF20B7CCB90049A89A /* ktxview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F7C1FF420B7CCC50049A89A /* Build configuration list for PBXNativeTarget "ktxview" */;
+			buildPhases = (
+				1F7C1FDC20B7CCB90049A89A /* Sources */,
+				1F7C1FDD20B7CCB90049A89A /* Frameworks */,
+				1F7C1FDE20B7CCB90049A89A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ktxview;
+			productName = ktxview;
+			productReference = 1F7C1FE020B7CCB90049A89A /* ktxview.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F7C1FD820B7CCB90049A89A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F7C1FDF20B7CCB90049A89A = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 1F7C1FDB20B7CCB90049A89A /* Build configuration list for PBXProject "ktxview" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F7C1FD720B7CCB90049A89A;
+			productRefGroup = 1F7C1FE120B7CCB90049A89A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F7C1FDF20B7CCB90049A89A /* ktxview */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F7C1FDE20B7CCB90049A89A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F7C1FEA20B7CCC50049A89A /* Assets.xcassets in Resources */,
+				1F7C200920B7CD7C0049A89A /* triangle.frag in Resources */,
+				1F7C200820B7CD7C0049A89A /* triangle.vert in Resources */,
+				1F7C1FED20B7CCC50049A89A /* Main.storyboard in Resources */,
+				1F7C200D20B7D3400049A89A /* tree.ktx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F7C1FDC20B7CCB90049A89A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F7C1FE820B7CCB90049A89A /* ViewController.mm in Sources */,
+				1F7C200220B7CCF30049A89A /* GLUtilities.mm in Sources */,
+				1F7C200320B7CCF30049A89A /* MyTimeStamp.m in Sources */,
+				1F7C1FF020B7CCC50049A89A /* main.m in Sources */,
+				1F7C200B20B7CE610049A89A /* sb7ktx.cpp in Sources */,
+				1F7C200420B7CCF30049A89A /* SBViewControllerBase.m in Sources */,
+				1F7C200520B7CCF30049A89A /* SBAppDelegateBase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F7C1FEB20B7CCC50049A89A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F7C1FEC20B7CCC50049A89A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F7C1FF220B7CCC50049A89A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F7C1FF320B7CCC50049A89A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F7C1FF520B7CCC50049A89A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ktxview/ktxview.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ktxview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.ktxview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F7C1FF620B7CCC50049A89A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ktxview/ktxview.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ktxview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.ktxview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F7C1FDB20B7CCB90049A89A /* Build configuration list for PBXProject "ktxview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F7C1FF220B7CCC50049A89A /* Debug */,
+				1F7C1FF320B7CCC50049A89A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F7C1FF420B7CCC50049A89A /* Build configuration list for PBXNativeTarget "ktxview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F7C1FF520B7CCC50049A89A /* Debug */,
+				1F7C1FF620B7CCC50049A89A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F7C1FD820B7CCB90049A89A /* Project object */;
+}

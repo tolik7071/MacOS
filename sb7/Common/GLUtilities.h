@@ -17,6 +17,7 @@ NSData* ReadFile(NSURL*);
 GLuint CreateProgram(NSData*, NSData*);
 GLuint CreateProgram2(NSData*, NSData*, NSData*, NSData*);
 GLuint CreateShader(NSData*, GLenum);
+GLuint CreateProgram(NSString*, NSString*);
 
 #endif // __OBJC__
 

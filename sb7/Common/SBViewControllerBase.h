@@ -11,11 +11,11 @@
 
 @interface SBViewControllerBase : NSViewController
 {
-   @protected
-   id                  _monitor;
-   CVDisplayLinkRef    _displayLink;
-   GLfloat             _deltaTime;
-   GLfloat             _lastFrame;
+    @protected
+    CVDisplayLinkRef    _displayLink;
+    GLfloat             _deltaTime;
+    GLfloat             _lastFrame;
+    id                  _monitor;
 }
 
 @property (nonatomic, weak) IBOutlet NSOpenGLView * openGLView;
@@ -23,6 +23,9 @@
 - (void)cleanup;
 - (void)configOpenGLView;
 - (void)configDisplayLink;
+- (void)configEventMonitor;
+
+- (BOOL)processEvent:(NSEvent *)event;
 
 // Must be implemented in child class
 - (void)configOpenGLEnvironment;

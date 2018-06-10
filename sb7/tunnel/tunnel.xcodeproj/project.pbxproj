@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F67305620C112740045CDFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F67305520C112740045CDFF /* AppDelegate.m */; };
+		1F67305920C112740045CDFF /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F67305820C112740045CDFF /* ViewController.mm */; };
+		1F67305B20C112950045CDFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F67305A20C112950045CDFF /* Assets.xcassets */; };
+		1F67305E20C112950045CDFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F67305C20C112950045CDFF /* Main.storyboard */; };
+		1F67306120C112950045CDFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F67306020C112950045CDFF /* main.m */; };
+		1F67306A20C112C20045CDFF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F67306920C112C20045CDFF /* OpenGL.framework */; };
+		1F67307320C112D20045CDFF /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F67306B20C112D00045CDFF /* GLUtilities.mm */; };
+		1F67307420C112D20045CDFF /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F67306E20C112D10045CDFF /* MyTimeStamp.m */; };
+		1F67307520C112D20045CDFF /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F67307020C112D10045CDFF /* SBViewControllerBase.m */; };
+		1F67307620C112D20045CDFF /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F67307220C112D10045CDFF /* SBAppDelegateBase.m */; };
+		1F7D7E7120C2633200F50F3A /* tunnel.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1F7D7E6F20C2633200F50F3A /* tunnel.frag */; };
+		1F7D7E7220C2633200F50F3A /* tunnel.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1F7D7E7020C2633200F50F3A /* tunnel.vert */; };
+		1F7D7E7620C267BC00F50F3A /* brick.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F7D7E7320C267BB00F50F3A /* brick.ktx */; };
+		1F7D7E7720C267BC00F50F3A /* floor.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F7D7E7420C267BC00F50F3A /* floor.ktx */; };
+		1F7D7E7820C267BC00F50F3A /* ceiling.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F7D7E7520C267BC00F50F3A /* ceiling.ktx */; };
+		1F7D7E7A20C267F700F50F3A /* sb7ktx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D7E7920C267F700F50F3A /* sb7ktx.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F67305120C112740045CDFF /* tunnel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tunnel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F67305420C112740045CDFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F67305520C112740045CDFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F67305720C112740045CDFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F67305820C112740045CDFF /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1F67305A20C112950045CDFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F67305D20C112950045CDFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F67305F20C112950045CDFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F67306020C112950045CDFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F67306220C112960045CDFF /* tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tunnel.entitlements; sourceTree = "<group>"; };
+		1F67306920C112C20045CDFF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1F67306B20C112D00045CDFF /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
+		1F67306C20C112D10045CDFF /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		1F67306D20C112D10045CDFF /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1F67306E20C112D10045CDFF /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
+		1F67306F20C112D10045CDFF /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		1F67307020C112D10045CDFF /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		1F67307120C112D10045CDFF /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1F67307220C112D10045CDFF /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		1F7D7E6F20C2633200F50F3A /* tunnel.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tunnel.frag; sourceTree = "<group>"; };
+		1F7D7E7020C2633200F50F3A /* tunnel.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = tunnel.vert; sourceTree = "<group>"; };
+		1F7D7E7320C267BB00F50F3A /* brick.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = brick.ktx; path = ../../../../SDKs/sb7/bin/media/textures/brick.ktx; sourceTree = "<group>"; };
+		1F7D7E7420C267BC00F50F3A /* floor.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = floor.ktx; path = ../../../../SDKs/sb7/bin/media/textures/floor.ktx; sourceTree = "<group>"; };
+		1F7D7E7520C267BC00F50F3A /* ceiling.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ceiling.ktx; path = ../../../../SDKs/sb7/bin/media/textures/ceiling.ktx; sourceTree = "<group>"; };
+		1F7D7E7920C267F700F50F3A /* sb7ktx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7ktx.cpp; path = ../../../../SDKs/sb7/src/sb7/sb7ktx.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F67304E20C112740045CDFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F67306A20C112C20045CDFF /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F67304820C112740045CDFF = {
+			isa = PBXGroup;
+			children = (
+				1F67305320C112740045CDFF /* tunnel */,
+				1F67305220C112740045CDFF /* Products */,
+				1F67306820C112C20045CDFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F67305220C112740045CDFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F67305120C112740045CDFF /* tunnel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F67305320C112740045CDFF /* tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				1F7D7E7320C267BB00F50F3A /* brick.ktx */,
+				1F7D7E7520C267BC00F50F3A /* ceiling.ktx */,
+				1F7D7E7420C267BC00F50F3A /* floor.ktx */,
+				1F7D7E7020C2633200F50F3A /* tunnel.vert */,
+				1F7D7E6F20C2633200F50F3A /* tunnel.frag */,
+				1F7D7E7920C267F700F50F3A /* sb7ktx.cpp */,
+				1F67305720C112740045CDFF /* ViewController.h */,
+				1F67305820C112740045CDFF /* ViewController.mm */,
+				1F67306D20C112D10045CDFF /* GLUtilities.h */,
+				1F67306B20C112D00045CDFF /* GLUtilities.mm */,
+				1F67307120C112D10045CDFF /* MyTimeStamp.h */,
+				1F67306E20C112D10045CDFF /* MyTimeStamp.m */,
+				1F67306C20C112D10045CDFF /* SBAppDelegateBase.h */,
+				1F67307220C112D10045CDFF /* SBAppDelegateBase.m */,
+				1F67306F20C112D10045CDFF /* SBViewControllerBase.h */,
+				1F67307020C112D10045CDFF /* SBViewControllerBase.m */,
+				1F67305420C112740045CDFF /* AppDelegate.h */,
+				1F67305520C112740045CDFF /* AppDelegate.m */,
+				1F67305A20C112950045CDFF /* Assets.xcassets */,
+				1F67305C20C112950045CDFF /* Main.storyboard */,
+				1F67305F20C112950045CDFF /* Info.plist */,
+				1F67306020C112950045CDFF /* main.m */,
+				1F67306220C112960045CDFF /* tunnel.entitlements */,
+			);
+			path = tunnel;
+			sourceTree = "<group>";
+		};
+		1F67306820C112C20045CDFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F67306920C112C20045CDFF /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F67305020C112740045CDFF /* tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F67306520C112960045CDFF /* Build configuration list for PBXNativeTarget "tunnel" */;
+			buildPhases = (
+				1F67304D20C112740045CDFF /* Sources */,
+				1F67304E20C112740045CDFF /* Frameworks */,
+				1F67304F20C112740045CDFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tunnel;
+			productName = tunnel;
+			productReference = 1F67305120C112740045CDFF /* tunnel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F67304920C112740045CDFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1F67305020C112740045CDFF = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 1F67304C20C112740045CDFF /* Build configuration list for PBXProject "tunnel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F67304820C112740045CDFF;
+			productRefGroup = 1F67305220C112740045CDFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F67305020C112740045CDFF /* tunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F67304F20C112740045CDFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F7D7E7820C267BC00F50F3A /* ceiling.ktx in Resources */,
+				1F7D7E7720C267BC00F50F3A /* floor.ktx in Resources */,
+				1F7D7E7220C2633200F50F3A /* tunnel.vert in Resources */,
+				1F7D7E7620C267BC00F50F3A /* brick.ktx in Resources */,
+				1F67305B20C112950045CDFF /* Assets.xcassets in Resources */,
+				1F7D7E7120C2633200F50F3A /* tunnel.frag in Resources */,
+				1F67305E20C112950045CDFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F67304D20C112740045CDFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F67305920C112740045CDFF /* ViewController.mm in Sources */,
+				1F67307320C112D20045CDFF /* GLUtilities.mm in Sources */,
+				1F67307420C112D20045CDFF /* MyTimeStamp.m in Sources */,
+				1F67306120C112950045CDFF /* main.m in Sources */,
+				1F67307520C112D20045CDFF /* SBViewControllerBase.m in Sources */,
+				1F67307620C112D20045CDFF /* SBAppDelegateBase.m in Sources */,
+				1F7D7E7A20C267F700F50F3A /* sb7ktx.cpp in Sources */,
+				1F67305620C112740045CDFF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F67305C20C112950045CDFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F67305D20C112950045CDFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F67306320C112960045CDFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F67306420C112960045CDFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F67306620C112960045CDFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = tunnel/tunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = tunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F67306720C112960045CDFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = tunnel/tunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = tunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F67304C20C112740045CDFF /* Build configuration list for PBXProject "tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F67306320C112960045CDFF /* Debug */,
+				1F67306420C112960045CDFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F67306520C112960045CDFF /* Build configuration list for PBXNativeTarget "tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F67306620C112960045CDFF /* Debug */,
+				1F67306720C112960045CDFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F67304920C112740045CDFF /* Project object */;
+}

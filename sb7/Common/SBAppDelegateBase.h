@@ -10,6 +10,4 @@
 
 @interface SBAppDelegateBase : NSObject <NSApplicationDelegate>
 
-
 @end
-
