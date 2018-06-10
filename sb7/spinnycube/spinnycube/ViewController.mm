@@ -12,7 +12,7 @@
 #include <vmath.h>
 
 // Remove this to draw only a single cube!
-//#define MANY_CUBES
+#define MANY_CUBES
 
 @implementation ViewController
 {
