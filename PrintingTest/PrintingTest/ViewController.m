@@ -24,11 +24,16 @@
 {
    LOG_METHOD();
 
-   NSInteger result = [[NSPrintPanel printPanel] runModal];
-   if (NSModalResponseOK == result)
-   {
-//      [self.textView print:sender];
-   }
+   [[NSPrintPanel printPanel] beginSheetWithPrintInfo:[NSPrintInfo sharedPrintInfo]
+                                       modalForWindow:self.view.window
+                                             delegate:self
+                                       didEndSelector:@selector(doPrint:)
+                                          contextInfo:NULL];
+}
+
+- (void)doPrint:(id)sender
+{
+
 }
 
 - (IBAction)runPageLayout:(id)sender
