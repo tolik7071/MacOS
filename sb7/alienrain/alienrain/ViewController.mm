@@ -13,8 +13,9 @@
 #include <sb7ktx.h>
 #include <vmath.h>
 #include <cmath>
+#include <chrono>
 
-#define ALIEN_NUMBER 500
+#define ALIEN_NUMBER 50
 
 static unsigned int seed = 0x13371337;
 
@@ -113,6 +114,33 @@ static inline float random_float()
     if ([self.view inLiveResize])
     {
         return;
+    }
+ 
+    {
+        typedef std::chrono::high_resolution_clock TClock;
+        typedef unsigned long long TTicks;
+        
+        static TClock::time_point start;
+        static TTicks ticks = 0;
+        
+        if (0 == ticks)
+        {
+            start = TClock::now();
+        }
+        
+        ticks++;
+        
+        TClock::time_point now = TClock::now();
+        TClock::duration elapsed = now - start;
+        
+        std::chrono::milliseconds::rep milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(elapsed).count();
+        if (1000 <= milliseconds)
+        {
+            double fps = (double)ticks / (double)(milliseconds / 1000);
+            printf("%f\n", fps);
+            start = now;
+            ticks = 0;
+        }
     }
     
     [self.openGLView.openGLContext makeCurrentContext];
