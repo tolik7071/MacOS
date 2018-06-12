@@ -43,7 +43,7 @@
 		1F0D479920C643DC0020FBA1 /* sb7ktx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7ktx.cpp; path = /Users/Shared/projects/SDKs/sb7/src/sb7/sb7ktx.cpp; sourceTree = "<absolute>"; };
 		1F0D479B20C644E30020FBA1 /* alienrain.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alienrain.frag; sourceTree = "<group>"; };
 		1F0D479C20C644E30020FBA1 /* alienrain.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alienrain.vert; sourceTree = "<group>"; };
-		1F0D479F20C645D30020FBA1 /* aliens.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = aliens.ktx; path = "/Users/Shared/projects/SDKs/sb7/bin/media/superbible7-media/textures/aliens.ktx"; sourceTree = "<absolute>"; };
+		1F0D479F20C645D30020FBA1 /* aliens.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = aliens.ktx; path = /Users/Shared/projects/SDKs/sb7/bin/media/textures/aliens.ktx; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -86,8 +86,6 @@ CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*
         CGLPixelFormatObj cglPixelFormat = [self.openGLView.pixelFormat CGLPixelFormatObj];
         CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext(_displayLink, cglContext, cglPixelFormat);
 
-        CVDisplayLinkStart(_displayLink);
-
         [[NSNotificationCenter defaultCenter]
          addObserver:self
          selector:@selector(windowWillClose:)
@@ -105,6 +103,8 @@ CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*
          selector:@selector(windowDidExitFullScreen:)
          name:NSWindowDidExitFullScreenNotification
          object:[self.view window]];
+        
+        CVDisplayLinkStart(_displayLink);
     }
     else
     {
