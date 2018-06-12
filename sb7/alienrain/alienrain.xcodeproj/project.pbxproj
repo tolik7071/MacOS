@@ -20,6 +20,7 @@
 		1F0D479D20C644E40020FBA1 /* alienrain.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1F0D479B20C644E30020FBA1 /* alienrain.frag */; };
 		1F0D479E20C644E40020FBA1 /* alienrain.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1F0D479C20C644E30020FBA1 /* alienrain.vert */; };
 		1F0D47A020C645D40020FBA1 /* aliens.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1F0D479F20C645D30020FBA1 /* aliens.ktx */; };
+		5AD83E0220D01E0F0070A00A /* SB_FPS_Counter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5AD83E0120D01E0F0070A00A /* SB_FPS_Counter.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		1F0D479B20C644E30020FBA1 /* alienrain.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alienrain.frag; sourceTree = "<group>"; };
 		1F0D479C20C644E30020FBA1 /* alienrain.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = alienrain.vert; sourceTree = "<group>"; };
 		1F0D479F20C645D30020FBA1 /* aliens.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = aliens.ktx; path = /Users/Shared/projects/SDKs/sb7/bin/media/textures/aliens.ktx; sourceTree = "<absolute>"; };
+		5AD83E0020D01E0F0070A00A /* SB_FPS_Counter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SB_FPS_Counter.h; path = ../../Common/SB_FPS_Counter.h; sourceTree = "<group>"; };
+		5AD83E0120D01E0F0070A00A /* SB_FPS_Counter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = SB_FPS_Counter.mm; path = ../../Common/SB_FPS_Counter.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				1F0D479920C643DC0020FBA1 /* sb7ktx.cpp */,
 				1F0D477920C642ED0020FBA1 /* ViewController.h */,
 				1F0D477A20C642ED0020FBA1 /* ViewController.mm */,
+				5AD83E0020D01E0F0070A00A /* SB_FPS_Counter.h */,
+				5AD83E0120D01E0F0070A00A /* SB_FPS_Counter.mm */,
 				1F0D478F20C643320020FBA1 /* GLUtilities.h */,
 				1F0D478D20C643320020FBA1 /* GLUtilities.mm */,
 				1F0D479320C643330020FBA1 /* MyTimeStamp.h */,
@@ -188,6 +193,7 @@
 				1F0D479A20C643DC0020FBA1 /* sb7ktx.cpp in Sources */,
 				1F0D479720C643330020FBA1 /* SBViewControllerBase.m in Sources */,
 				1F0D479820C643330020FBA1 /* SBAppDelegateBase.m in Sources */,
+				5AD83E0220D01E0F0070A00A /* SB_FPS_Counter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

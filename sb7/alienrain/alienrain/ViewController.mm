@@ -14,8 +14,9 @@
 #include <vmath.h>
 #include <cmath>
 #include <chrono>
+#import "SB_FPS_Counter.h"
 
-#define ALIEN_NUMBER 50
+#define ALIEN_NUMBER 200
 
 static unsigned int seed = 0x13371337;
 
@@ -35,17 +36,31 @@ static inline float random_float()
 
 @implementation ViewController
 {
-    GLuint      _programID;
-    GLuint      _VAO;
-    GLuint      _tex_alien_array;
-    GLuint      _rain_buffer;
-    
-    float       _droplet_x_offset[ALIEN_NUMBER];
-    float       _droplet_rot_speed[ALIEN_NUMBER];
-    float       _droplet_fall_speed[ALIEN_NUMBER];
+   GLuint      _programID;
+   GLuint      _VAO;
+   GLuint      _tex_alien_array;
+   GLuint      _rain_buffer;
+
+   float       _droplet_x_offset[ALIEN_NUMBER];
+   float       _droplet_rot_speed[ALIEN_NUMBER];
+   float       _droplet_fall_speed[ALIEN_NUMBER];
+
+   SB_FPS_Counter *_counter;
 }
 
-- (void)cleanup
+- (nullable instancetype)initWithCoder:(NSCoder *)coder
+{
+   self = [super initWithCoder:coder];
+
+   if (self)
+   {
+      _counter = [[SB_FPS_Counter alloc] init];
+   }
+
+   return self;
+}
+
+- (void)cleanup 
 {
     [super cleanup];
     
@@ -111,79 +126,55 @@ static inline float random_float()
 
 - (void)renderForTime:(MyTimeStamp *)time
 {
-    if ([self.view inLiveResize])
-    {
-        return;
-    }
- 
-    {
-        typedef std::chrono::high_resolution_clock TClock;
-        typedef unsigned long long TTicks;
-        
-        static TClock::time_point start;
-        static TTicks ticks = 0;
-        
-        if (0 == ticks)
-        {
-            start = TClock::now();
-        }
-        
-        ticks++;
-        
-        TClock::time_point now = TClock::now();
-        TClock::duration elapsed = now - start;
-        
-        std::chrono::milliseconds::rep milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(elapsed).count();
-        if (1000 <= milliseconds)
-        {
-            double fps = (double)ticks / (double)(milliseconds / 1000);
-            printf("%f\n", fps);
-            start = now;
-            ticks = 0;
-        }
-    }
-    
-    [self.openGLView.openGLContext makeCurrentContext];
-    
-    GLfloat currentTime = (GLfloat)(time->_timeStamp.videoTime) / (GLfloat)(time->_timeStamp.videoTimeScale);
-    _deltaTime = currentTime - _lastFrame;
-    _lastFrame = currentTime;
-    
-    static const GLfloat black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
-    glClearBufferfv(GL_COLOR, 0, black);
-    
-    static const GLfloat ones[] = { 1.0f };
-    glClearBufferfv(GL_DEPTH, 0, ones);
-    
-    if (0 != _programID)
-    {
-        glUseProgram(_programID);
-        
-        glBindBufferBase(GL_UNIFORM_BUFFER, 0, _rain_buffer);
-        vmath::vec4 * droplet = (vmath::vec4 *)glMapBufferRange(
-            GL_UNIFORM_BUFFER,
-            0,
-            ALIEN_NUMBER * sizeof(vmath::vec4),
-            GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
-        
-        for (int i = 0; i < ALIEN_NUMBER; i++)
-        {
-            droplet[i][0] = _droplet_x_offset[i];
-            droplet[i][1] = 2.0f - fmodf((currentTime + float(i)) * _droplet_fall_speed[i], 4.31f);
-            droplet[i][2] = currentTime * _droplet_rot_speed[i];
-            droplet[i][3] = 0.0f;
-        }
-        glUnmapBuffer(GL_UNIFORM_BUFFER);
-        
-        int alien_index;
-        for (alien_index = 0; alien_index < ALIEN_NUMBER; alien_index++)
-        {
-            glVertexAttribI1i(0, alien_index);
-            glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-        }
-    }
-    
-    [self.openGLView.openGLContext flushBuffer];
+   if ([self.view inLiveResize])
+   {
+     return;
+   }
+
+   [_counter increase];
+   [self.fps setStringValue:[NSString stringWithFormat:@"%.02f", [_counter fps]]];
+
+   [self.openGLView.openGLContext makeCurrentContext];
+
+   GLfloat currentTime = (GLfloat)(time->_timeStamp.videoTime) / (GLfloat)(time->_timeStamp.videoTimeScale);
+   _deltaTime = currentTime - _lastFrame;
+   _lastFrame = currentTime;
+
+   static const GLfloat black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
+   glClearBufferfv(GL_COLOR, 0, black);
+
+   static const GLfloat ones[] = { 1.0f };
+   glClearBufferfv(GL_DEPTH, 0, ones);
+
+   if (0 != _programID)
+   {
+     glUseProgram(_programID);
+
+     glBindBufferBase(GL_UNIFORM_BUFFER, 0, _rain_buffer);
+     vmath::vec4 * droplet = (vmath::vec4 *)glMapBufferRange(
+         GL_UNIFORM_BUFFER,
+         0,
+         ALIEN_NUMBER * sizeof(vmath::vec4),
+         GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+
+     for (int i = 0; i < ALIEN_NUMBER; i++)
+     {
+         droplet[i][0] = _droplet_x_offset[i];
+         droplet[i][1] = 2.0f - fmodf((currentTime + float(i)) * _droplet_fall_speed[i], 4.31f);
+         droplet[i][2] = currentTime * _droplet_rot_speed[i];
+         droplet[i][3] = 0.0f;
+     }
+     glUnmapBuffer(GL_UNIFORM_BUFFER);
+
+     int alien_index;
+     for (alien_index = 0; alien_index < ALIEN_NUMBER; alien_index++)
+     {
+         glVertexAttribI1i(0, alien_index);
+         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+     }
+   }
+
+   [self.openGLView.openGLContext flushBuffer];
 }
 
 @end

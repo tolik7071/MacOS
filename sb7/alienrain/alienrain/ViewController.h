@@ -11,4 +11,6 @@
 
 @interface ViewController : SBViewControllerBase
 
+@property (nonatomic, weak) IBOutlet NSTextField * fps;
+
 @end

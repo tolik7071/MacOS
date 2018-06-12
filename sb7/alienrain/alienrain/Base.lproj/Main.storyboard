@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -712,15 +712,27 @@
                             <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOh-mZ-qdl">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                             </openGLView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KHQ-SN-gI2">
+                                <rect key="frame" x="18" y="221" width="59" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1234" id="6Kp-bX-PGy">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zOh-mZ-qdl" secondAttribute="trailing" id="CtJ-fa-MXu"/>
+                            <constraint firstItem="KHQ-SN-gI2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="E6b-By-Sgo"/>
                             <constraint firstItem="zOh-mZ-qdl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="SNu-cd-AIW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KHQ-SN-gI2" secondAttribute="trailing" constant="20" symbolic="YES" id="VZi-gm-RSQ"/>
+                            <constraint firstItem="KHQ-SN-gI2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="tms-XB-s9n"/>
                             <constraint firstAttribute="bottom" secondItem="zOh-mZ-qdl" secondAttribute="bottom" id="uym-Yw-jlH"/>
                             <constraint firstItem="zOh-mZ-qdl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="yRi-jf-fD9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fps" destination="KHQ-SN-gI2" id="X7k-sS-Jt0"/>
                         <outlet property="openGLView" destination="zOh-mZ-qdl" id="Clw-qp-mnc"/>
                         <outlet property="sourceItemView" destination="zOh-mZ-qdl" id="xBh-mt-PDC"/>
                     </connections>
