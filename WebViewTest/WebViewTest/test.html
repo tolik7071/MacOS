@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8">
+      <title>Test page.</title>
+      <style>
+         @import URL("test.css");
+      </style>
+      <script src="test.js"></script>
+   </head>
+   <body>
+      <div onclick="window.open('about:blank')">
+         Click to open a new windows.
+      </div>
+      <div onclick="show_hi()">
+         Click to see an alert.
+      </div>
+      <div>
+         <a href="#" download="test.js" id="btnDownloadJs">Download JS file.</a>
+      </div>
+      <!--
+      <div id="hi_all" onclick="document.getElementById('hi_all').innerHTML = get_string();">
+         Click to changer text.
+      </div>
+       -->
+      <div onclick="send_message();">
+         Click to send a message.
+      </div>
+   </body>
+</html>
