@@ -11,5 +11,13 @@ function send_message() {
 }
 
 function send_current_date_time() {
-   window.webkit.messageHandlers.observe.postMessage(Date());
+    window.FTM.callme();
+}
+
+//window.FTM.Browse = function(e) {
+//   window.webkit.messageHandlers.browse.postMessage(e);
+//}
+
+function change_color() {
+    document.getElementById('color_changeble').style.backgroundColor = 'red';
 }

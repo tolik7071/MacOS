@@ -14,22 +14,43 @@ import WebKit
 class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler {
 
    @IBOutlet weak var webView : WKWebView!
+    
+//    class override func webScriptName(for selector: Selector!) -> String! {
+//        return ""
+//    }
 
    override func viewDidLoad() {
-      super.viewDidLoad()
+        super.viewDidLoad()
 
-      print(#function)
+        print(#function)
 
-      let url = Bundle.main.url(forResource: "test", withExtension: "html")
-      let request = URLRequest(url: url!)
+        let url = Bundle.main.url(forResource: "test", withExtension: "html")
+        let request = URLRequest(url: url!)
 
-      webView.navigationDelegate = self
-      webView.uiDelegate = self
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
 
-      webView.configuration.userContentController.add(self, name: "observe")
+        webView.configuration.userContentController.add(self, name: "observe")
+        webView.configuration.userContentController.add(self, name: "logtoswift")
 
-      webView.load(request)
-   }
+        let script = WKUserScript(source: "window.change_color = function() {document.getElementById('color_changeble').style.backgroundColor = 'blue';}", injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: true)
+        webView.configuration.userContentController.addUserScript(script);
+
+        let script2 = WKUserScript(source:
+        """
+            if (window.FTM == undefined) {
+                window.FTM = {};
+            }
+            window.FTM.callme = function() {
+                window.webkit.messageHandlers.observe.postMessage('WOW');
+            }
+
+            window.webkit.messageHandlers.logtoswift.postMessage("#3");
+        """, injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: true)
+        webView.configuration.userContentController.addUserScript(script2);
+
+        webView.load(request)
+    }
 
    @IBAction func sendDateTime(sender: NSButton) {
       webView.evaluateJavaScript("send_current_date_time()", completionHandler: nil)
@@ -76,10 +97,13 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, WKSc
       print(#function)
    }
 
-   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
-   {
-      print(#function)
-   }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
+    {
+        print(#function)
+        let script = WKUserScript(source: "window.FTM.callme = function() { window.webkit.messageHandlers.observe.postMessage('WOW'); }", injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: true)
+        webView.configuration.userContentController.addUserScript(script);
+//        webView.evaluateJavaScript("window.FTM.callme = function() { window.webkit.messageHandlers.observe.postMessage('WOW'); }", completionHandler: nil);
+    }
 
    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
    {
@@ -158,7 +182,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, WKSc
    func userContentController(_ userContentController: WKUserContentController,
                               didReceive message: WKScriptMessage)
    {
-      _ = type(of: NSDate.self)
-      print("\(#function) -> \(type(of: NSDate.self)) : \(message.body)")
+      print("\(#function) -> \(message.name) : \(message.body)")
    }
 }

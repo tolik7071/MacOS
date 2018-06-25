@@ -6,6 +6,19 @@
       <style>
          @import URL("test.css");
       </style>
+      <script>
+          function on_load() {
+              window.FTM = {};
+              window.FTM.callme = function() {
+                  window.webkit.messageHandlers.observe.postMessage(Date());
+              }
+              
+              window.webkit.messageHandlers.logtoswift.postMessage("#1");
+          }
+          window.addEventListener('load', on_load, false);
+          
+          window.webkit.messageHandlers.logtoswift.postMessage("#2");
+      </script>
       <script src="test.js"></script>
    </head>
    <body>
@@ -23,7 +36,7 @@
          Click to changer text.
       </div>
        -->
-      <div onclick="send_message();">
+      <div id="color_changeble" onclick="change_color();">
          Click to send a message.
       </div>
    </body>
