@@ -18,6 +18,7 @@
 @property (nonatomic) NSString * title;
 
 + (double)pi;
+- (double)div:(NSNumber *)first to:(NSNumber *)second;
 
 @end
 
@@ -26,6 +27,11 @@
 + (double)pi
 {
     return 3.14;
+}
+
+- (double)div:(NSNumber *)first to:(NSNumber *)second
+{
+    return [first doubleValue] / [second doubleValue];
 }
 
 @end
@@ -66,6 +72,10 @@ int main(int argc, const char * argv[])
         {
             printf("%s\n", [NSStringFromSelector(method_getName(methods[i])) UTF8String]);
         }
+        
+        typedef double(*TDivPtr)(id, SEL, id, id);
+        TDivPtr div = (TDivPtr)[obj methodForSelector:@selector(div:to:)];
+        printf("%f\n", div(obj, @selector(div:to:), [NSNumber numberWithDouble:10], [NSNumber numberWithDouble:3]));
     }
     
     return 0;

@@ -717,12 +717,25 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v1g-uN-gMe">
+                                <rect key="frame" x="377" y="13" width="89" height="32"/>
+                                <buttonCell key="cell" type="push" title="Replace" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mDg-Ry-oTm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="replace:" target="XfG-lQ-9wD" id="VY5-uH-Kfm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bjb-0T-sLD" secondAttribute="trailing" id="VsO-kk-P8y"/>
                             <constraint firstItem="bjb-0T-sLD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="dAP-lA-MnB"/>
                             <constraint firstItem="bjb-0T-sLD" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ekV-Nj-sW9"/>
+                            <constraint firstAttribute="trailing" secondItem="v1g-uN-gMe" secondAttribute="trailing" constant="20" id="goO-Nk-R7f"/>
+                            <constraint firstItem="v1g-uN-gMe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="idm-Ol-zRg"/>
                             <constraint firstAttribute="bottom" secondItem="bjb-0T-sLD" secondAttribute="bottom" id="kXR-oi-tDH"/>
+                            <constraint firstItem="v1g-uN-gMe" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="229" id="y29-ga-mNW"/>
                         </constraints>
                     </view>
                     <connections>

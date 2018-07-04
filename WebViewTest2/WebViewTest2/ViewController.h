@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <WKScriptMessageHandler, WKNavigationDelegate>
 
 @property (nonatomic, weak) IBOutlet WKWebView * webView;
 
