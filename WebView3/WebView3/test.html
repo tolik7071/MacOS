@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8">
+      <title>Test page.</title>
+      <style>
+         @import URL("test.css");
+      </style>
+   </head>
+   <body>
+      <div onclick="window.open('about:blank')">
+         Click to open a new windows.
+      </div>
+      <div>
+         <a href="#" download="test.js" id="btnDownloadJs">Download JS file.</a>
+      </div>
+      <div>
+          <a href="https://Apple.com">Go to Apple.</a>
+      </div>
+      <div onclick="var a = {'lat' : 1, 'lon' : 2}; window.webkit.messageHandlers.get_array.postMessage(a);">
+          Send Message.
+      </div>
+   </body>
+</html>

@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FD49A6A20EC86EA00A6D59A /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A6920EC86EA00A6D59A /* ViewController.mm */; };
+		1FD49A6C20EC86F600A6D59A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A6B20EC86F600A6D59A /* Assets.xcassets */; };
+		1FD49A6F20EC86F600A6D59A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A6D20EC86F600A6D59A /* Main.storyboard */; };
+		1FD49A7220EC86F600A6D59A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A7120EC86F600A6D59A /* main.m */; };
+		1FD49A8320EC870B00A6D59A /* GLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A7920EC870900A6D59A /* GLUtilities.mm */; };
+		1FD49A8420EC870B00A6D59A /* MyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A7C20EC870900A6D59A /* MyTimeStamp.m */; };
+		1FD49A8520EC870B00A6D59A /* SB_FPS_Counter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A7E20EC870A00A6D59A /* SB_FPS_Counter.mm */; };
+		1FD49A8620EC870B00A6D59A /* SBAppDelegateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A8120EC870A00A6D59A /* SBAppDelegateBase.m */; };
+		1FD49A8720EC870B00A6D59A /* SBViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A8220EC870B00A6D59A /* SBViewControllerBase.m */; };
+		1FD49A8A20EC872F00A6D59A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD49A8920EC872E00A6D59A /* OpenGL.framework */; };
+		1FD49A8D20EC898600A6D59A /* grass.vert in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A8B20EC898500A6D59A /* grass.vert */; };
+		1FD49A8E20EC898600A6D59A /* grass.frag in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A8C20EC898600A6D59A /* grass.frag */; };
+		1FD49A9020EC8CBF00A6D59A /* sb7ktx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD49A8F20EC8CBF00A6D59A /* sb7ktx.cpp */; };
+		1FD49A9520EC8D6700A6D59A /* grass_length.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A9120EC8D6700A6D59A /* grass_length.ktx */; };
+		1FD49A9620EC8D6700A6D59A /* grass_color.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A9220EC8D6700A6D59A /* grass_color.ktx */; };
+		1FD49A9720EC8D6700A6D59A /* grass_bend.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A9320EC8D6700A6D59A /* grass_bend.ktx */; };
+		1FD49A9820EC8D6700A6D59A /* grass_orientation.ktx in Resources */ = {isa = PBXBuildFile; fileRef = 1FD49A9420EC8D6700A6D59A /* grass_orientation.ktx */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FD49A6220EC86E900A6D59A /* grass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD49A6820EC86EA00A6D59A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FD49A6920EC86EA00A6D59A /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		1FD49A6B20EC86F600A6D59A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FD49A6E20EC86F600A6D59A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FD49A7020EC86F600A6D59A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD49A7120EC86F600A6D59A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FD49A7320EC86F600A6D59A /* grass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = grass.entitlements; sourceTree = "<group>"; };
+		1FD49A7920EC870900A6D59A /* GLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLUtilities.mm; path = ../../Common/GLUtilities.mm; sourceTree = "<group>"; };
+		1FD49A7A20EC870900A6D59A /* SBAppDelegateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBAppDelegateBase.h; path = ../../Common/SBAppDelegateBase.h; sourceTree = "<group>"; };
+		1FD49A7B20EC870900A6D59A /* GLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLUtilities.h; path = ../../Common/GLUtilities.h; sourceTree = "<group>"; };
+		1FD49A7C20EC870900A6D59A /* MyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTimeStamp.m; path = ../../Common/MyTimeStamp.m; sourceTree = "<group>"; };
+		1FD49A7D20EC870A00A6D59A /* SB_FPS_Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SB_FPS_Counter.h; path = ../../Common/SB_FPS_Counter.h; sourceTree = "<group>"; };
+		1FD49A7E20EC870A00A6D59A /* SB_FPS_Counter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SB_FPS_Counter.mm; path = ../../Common/SB_FPS_Counter.mm; sourceTree = "<group>"; };
+		1FD49A7F20EC870A00A6D59A /* SBViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBViewControllerBase.h; path = ../../Common/SBViewControllerBase.h; sourceTree = "<group>"; };
+		1FD49A8020EC870A00A6D59A /* MyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTimeStamp.h; path = ../../Common/MyTimeStamp.h; sourceTree = "<group>"; };
+		1FD49A8120EC870A00A6D59A /* SBAppDelegateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBAppDelegateBase.m; path = ../../Common/SBAppDelegateBase.m; sourceTree = "<group>"; };
+		1FD49A8220EC870B00A6D59A /* SBViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBViewControllerBase.m; path = ../../Common/SBViewControllerBase.m; sourceTree = "<group>"; };
+		1FD49A8920EC872E00A6D59A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1FD49A8B20EC898500A6D59A /* grass.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = grass.vert; path = grass/grass.vert; sourceTree = SOURCE_ROOT; };
+		1FD49A8C20EC898600A6D59A /* grass.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = grass.frag; sourceTree = "<group>"; };
+		1FD49A8F20EC8CBF00A6D59A /* sb7ktx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sb7ktx.cpp; path = /Users/Shared/projects/MacOS/sb7/grass/grass/../../../../SDKs/sb7/src/sb7/sb7ktx.cpp; sourceTree = "<absolute>"; };
+		1FD49A9120EC8D6700A6D59A /* grass_length.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = grass_length.ktx; path = /Users/Shared/projects/MacOS/sb7/grass/grass/../../../../SDKs/sb7/bin/media/textures/grass_length.ktx; sourceTree = "<absolute>"; };
+		1FD49A9220EC8D6700A6D59A /* grass_color.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = grass_color.ktx; path = /Users/Shared/projects/MacOS/sb7/grass/grass/../../../../SDKs/sb7/bin/media/textures/grass_color.ktx; sourceTree = "<absolute>"; };
+		1FD49A9320EC8D6700A6D59A /* grass_bend.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = grass_bend.ktx; path = /Users/Shared/projects/MacOS/sb7/grass/grass/../../../../SDKs/sb7/bin/media/textures/grass_bend.ktx; sourceTree = "<absolute>"; };
+		1FD49A9420EC8D6700A6D59A /* grass_orientation.ktx */ = {isa = PBXFileReference; lastKnownFileType = file; name = grass_orientation.ktx; path = /Users/Shared/projects/MacOS/sb7/grass/grass/../../../../SDKs/sb7/bin/media/textures/grass_orientation.ktx; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FD49A5F20EC86E900A6D59A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD49A8A20EC872F00A6D59A /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FD49A5920EC86E900A6D59A = {
+			isa = PBXGroup;
+			children = (
+				1FD49A6420EC86E900A6D59A /* grass */,
+				1FD49A6320EC86E900A6D59A /* Products */,
+				1FD49A8820EC872E00A6D59A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FD49A6320EC86E900A6D59A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FD49A6220EC86E900A6D59A /* grass.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FD49A6420EC86E900A6D59A /* grass */ = {
+			isa = PBXGroup;
+			children = (
+				1FD49A9320EC8D6700A6D59A /* grass_bend.ktx */,
+				1FD49A9220EC8D6700A6D59A /* grass_color.ktx */,
+				1FD49A9120EC8D6700A6D59A /* grass_length.ktx */,
+				1FD49A9420EC8D6700A6D59A /* grass_orientation.ktx */,
+				1FD49A8F20EC8CBF00A6D59A /* sb7ktx.cpp */,
+				1FD49A8B20EC898500A6D59A /* grass.vert */,
+				1FD49A8C20EC898600A6D59A /* grass.frag */,
+				1FD49A6820EC86EA00A6D59A /* ViewController.h */,
+				1FD49A6920EC86EA00A6D59A /* ViewController.mm */,
+				1FD49A7B20EC870900A6D59A /* GLUtilities.h */,
+				1FD49A7920EC870900A6D59A /* GLUtilities.mm */,
+				1FD49A8020EC870A00A6D59A /* MyTimeStamp.h */,
+				1FD49A7C20EC870900A6D59A /* MyTimeStamp.m */,
+				1FD49A7D20EC870A00A6D59A /* SB_FPS_Counter.h */,
+				1FD49A7E20EC870A00A6D59A /* SB_FPS_Counter.mm */,
+				1FD49A7A20EC870900A6D59A /* SBAppDelegateBase.h */,
+				1FD49A8120EC870A00A6D59A /* SBAppDelegateBase.m */,
+				1FD49A7F20EC870A00A6D59A /* SBViewControllerBase.h */,
+				1FD49A8220EC870B00A6D59A /* SBViewControllerBase.m */,
+				1FD49A6B20EC86F600A6D59A /* Assets.xcassets */,
+				1FD49A6D20EC86F600A6D59A /* Main.storyboard */,
+				1FD49A7020EC86F600A6D59A /* Info.plist */,
+				1FD49A7120EC86F600A6D59A /* main.m */,
+				1FD49A7320EC86F600A6D59A /* grass.entitlements */,
+			);
+			path = grass;
+			sourceTree = "<group>";
+		};
+		1FD49A8820EC872E00A6D59A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FD49A8920EC872E00A6D59A /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FD49A6120EC86E900A6D59A /* grass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD49A7620EC86F600A6D59A /* Build configuration list for PBXNativeTarget "grass" */;
+			buildPhases = (
+				1FD49A5E20EC86E900A6D59A /* Sources */,
+				1FD49A5F20EC86E900A6D59A /* Frameworks */,
+				1FD49A6020EC86E900A6D59A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = grass;
+			productName = grass;
+			productReference = 1FD49A6220EC86E900A6D59A /* grass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FD49A5A20EC86E900A6D59A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = tolik7071;
+				TargetAttributes = {
+					1FD49A6120EC86E900A6D59A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1FD49A5D20EC86E900A6D59A /* Build configuration list for PBXProject "grass" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FD49A5920EC86E900A6D59A;
+			productRefGroup = 1FD49A6320EC86E900A6D59A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FD49A6120EC86E900A6D59A /* grass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FD49A6020EC86E900A6D59A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD49A8E20EC898600A6D59A /* grass.frag in Resources */,
+				1FD49A9520EC8D6700A6D59A /* grass_length.ktx in Resources */,
+				1FD49A6C20EC86F600A6D59A /* Assets.xcassets in Resources */,
+				1FD49A6F20EC86F600A6D59A /* Main.storyboard in Resources */,
+				1FD49A9720EC8D6700A6D59A /* grass_bend.ktx in Resources */,
+				1FD49A9820EC8D6700A6D59A /* grass_orientation.ktx in Resources */,
+				1FD49A9620EC8D6700A6D59A /* grass_color.ktx in Resources */,
+				1FD49A8D20EC898600A6D59A /* grass.vert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FD49A5E20EC86E900A6D59A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD49A8720EC870B00A6D59A /* SBViewControllerBase.m in Sources */,
+				1FD49A6A20EC86EA00A6D59A /* ViewController.mm in Sources */,
+				1FD49A8520EC870B00A6D59A /* SB_FPS_Counter.mm in Sources */,
+				1FD49A8320EC870B00A6D59A /* GLUtilities.mm in Sources */,
+				1FD49A8420EC870B00A6D59A /* MyTimeStamp.m in Sources */,
+				1FD49A7220EC86F600A6D59A /* main.m in Sources */,
+				1FD49A9020EC8CBF00A6D59A /* sb7ktx.cpp in Sources */,
+				1FD49A8620EC870B00A6D59A /* SBAppDelegateBase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1FD49A6D20EC86F600A6D59A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FD49A6E20EC86F600A6D59A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FD49A7420EC86F600A6D59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1FD49A7520EC86F600A6D59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(COMMON_SDK_PATH)/sb7/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1FD49A7720EC86F600A6D59A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = grass/grass.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = grass/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.grass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1FD49A7820EC86F600A6D59A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = grass/grass.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = grass/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tolik.home.grass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FD49A5D20EC86E900A6D59A /* Build configuration list for PBXProject "grass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD49A7420EC86F600A6D59A /* Debug */,
+				1FD49A7520EC86F600A6D59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD49A7620EC86F600A6D59A /* Build configuration list for PBXNativeTarget "grass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD49A7720EC86F600A6D59A /* Debug */,
+				1FD49A7820EC86F600A6D59A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FD49A5A20EC86E900A6D59A /* Project object */;
+}
