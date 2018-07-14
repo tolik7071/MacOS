@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/objc-runtime.h>
+#import "FTFScriptBuilder.h"
 
 @interface MyClass : NSObject
 {
@@ -32,6 +33,11 @@
 - (double)div:(NSNumber *)first to:(double)second
 {
     return [first doubleValue] / second;
+}
+
++ (double)div:(NSNumber *)first to:(NSNumber *)second
+{
+    return [first doubleValue] / [second doubleValue];
 }
 
 @end
@@ -76,6 +82,30 @@ int main(int argc, const char * argv[])
         typedef double(*TDivPtr)(id, SEL, id, double);
         TDivPtr div = (TDivPtr)[obj methodForSelector:@selector(div:to:)];
         printf("%f\n", div(obj, @selector(div:to:), [NSNumber numberWithDouble:10], (double)3));
+        
+        typedef double(*TDivClassPtr)(Class, SEL, id, id);
+        TDivClassPtr TDivClass = (TDivClassPtr)[[obj class] methodForSelector:@selector(div:to:)];
+        NSLog(@"!! %f", TDivClass([obj class], @selector(div:to:), @(3), @(9)));
+        
+//        NSLog(@"%s", [[NSNumber numberWithBool:YES] objCType]);
+//        NSLog(@"%s", [[NSNumber numberWithInt:10] objCType]);
+//        NSLog(@"%s", [[NSNumber numberWithDouble:0.555] objCType]);
+//        NSLog(@"%s", [[NSNumber numberWithFloat:3.1415] objCType]);
+        
+        BOOL b = NO;
+        NSNumber *number = [NSNumber numberWithBool:b];
+        NSString *format = [NSString stringWithFormat:@"%%%s", [number objCType]];
+        NSLog(format, [number boolValue]);
+        
+        assert([@"def=1" isEqualToString:[FTFScriptBuilder buildAssignmentUsingKey:@"def" value:@1]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def" value:@[@1, @[@"abs", @4]]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def2" value:@[@1, @{@"abs" : @4}]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def3" value:@[@1, @{@"abs" : @[]}]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def4" value:@[@1, @{@"abs" : @[@1, @4, @"sdaldk"]}]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def4" value:@[@1, @{@"abs" : @[@1, @4, @{@1 : @10, @2 : @20}]}, @""]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def5" value:@[]]);
+        NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def5" value:@{}]);
+                    
     }
     
     return 0;

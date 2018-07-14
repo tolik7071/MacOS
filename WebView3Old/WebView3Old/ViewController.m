@@ -49,7 +49,6 @@
     fromDataSource:(WebDataSource *)dataSource
 {
     LOG("WebFrameLoadDelegate");
-    
     return request;
 }
 

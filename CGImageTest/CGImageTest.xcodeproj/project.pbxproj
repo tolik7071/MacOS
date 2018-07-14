@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A42E8A620E37BAA0007D24A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A42E8A520E37BAA0007D24A /* main.m */; };
-		5A50C29F20F72BFA0072013C /* FTFScriptBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50C29E20F72BFA0072013C /* FTFScriptBuilder.m */; };
+		5A6ADA7D20F8A08300BE8946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6ADA7C20F8A08300BE8946 /* main.m */; };
+		5A6ADA8520F8C06100BE8946 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6ADA8420F8C06100BE8946 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5A42E8A020E37BAA0007D24A /* CopyFiles */ = {
+		5A6ADA7720F8A08300BE8946 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,114 +24,120 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5A42E8A220E37BAA0007D24A /* KVCTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KVCTest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A42E8A520E37BAA0007D24A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5A50C29D20F72BFA0072013C /* FTFScriptBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFScriptBuilder.h; sourceTree = "<group>"; };
-		5A50C29E20F72BFA0072013C /* FTFScriptBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFScriptBuilder.m; sourceTree = "<group>"; };
+		5A6ADA7920F8A08300BE8946 /* CGImageTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CGImageTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6ADA7C20F8A08300BE8946 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A6ADA8420F8C06100BE8946 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A42E89F20E37BAA0007D24A /* Frameworks */ = {
+		5A6ADA7620F8A08300BE8946 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6ADA8520F8C06100BE8946 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A42E89920E37BA90007D24A = {
+		5A6ADA7020F8A08200BE8946 = {
 			isa = PBXGroup;
 			children = (
-				5A42E8A420E37BAA0007D24A /* KVCTest */,
-				5A42E8A320E37BAA0007D24A /* Products */,
+				5A6ADA7B20F8A08300BE8946 /* CGImageTest */,
+				5A6ADA7A20F8A08300BE8946 /* Products */,
+				5A6ADA8320F8C06100BE8946 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		5A42E8A320E37BAA0007D24A /* Products */ = {
+		5A6ADA7A20F8A08300BE8946 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A42E8A220E37BAA0007D24A /* KVCTest */,
+				5A6ADA7920F8A08300BE8946 /* CGImageTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A42E8A420E37BAA0007D24A /* KVCTest */ = {
+		5A6ADA7B20F8A08300BE8946 /* CGImageTest */ = {
 			isa = PBXGroup;
 			children = (
-				5A42E8A520E37BAA0007D24A /* main.m */,
-				5A50C29D20F72BFA0072013C /* FTFScriptBuilder.h */,
-				5A50C29E20F72BFA0072013C /* FTFScriptBuilder.m */,
+				5A6ADA7C20F8A08300BE8946 /* main.m */,
 			);
-			path = KVCTest;
+			path = CGImageTest;
+			sourceTree = "<group>";
+		};
+		5A6ADA8320F8C06100BE8946 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A6ADA8420F8C06100BE8946 /* ImageIO.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A42E8A120E37BAA0007D24A /* KVCTest */ = {
+		5A6ADA7820F8A08300BE8946 /* CGImageTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A42E8A920E37BAA0007D24A /* Build configuration list for PBXNativeTarget "KVCTest" */;
+			buildConfigurationList = 5A6ADA8020F8A08300BE8946 /* Build configuration list for PBXNativeTarget "CGImageTest" */;
 			buildPhases = (
-				5A42E89E20E37BAA0007D24A /* Sources */,
-				5A42E89F20E37BAA0007D24A /* Frameworks */,
-				5A42E8A020E37BAA0007D24A /* CopyFiles */,
+				5A6ADA7520F8A08300BE8946 /* Sources */,
+				5A6ADA7620F8A08300BE8946 /* Frameworks */,
+				5A6ADA7720F8A08300BE8946 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KVCTest;
-			productName = KVCTest;
-			productReference = 5A42E8A220E37BAA0007D24A /* KVCTest */;
+			name = CGImageTest;
+			productName = CGImageTest;
+			productReference = 5A6ADA7920F8A08300BE8946 /* CGImageTest */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5A42E89A20E37BA90007D24A /* Project object */ = {
+		5A6ADA7120F8A08200BE8946 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Anatoliy Goodz";
 				TargetAttributes = {
-					5A42E8A120E37BAA0007D24A = {
+					5A6ADA7820F8A08300BE8946 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 5A42E89D20E37BA90007D24A /* Build configuration list for PBXProject "KVCTest" */;
+			buildConfigurationList = 5A6ADA7420F8A08200BE8946 /* Build configuration list for PBXProject "CGImageTest" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5A42E89920E37BA90007D24A;
-			productRefGroup = 5A42E8A320E37BAA0007D24A /* Products */;
+			mainGroup = 5A6ADA7020F8A08200BE8946;
+			productRefGroup = 5A6ADA7A20F8A08300BE8946 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A42E8A120E37BAA0007D24A /* KVCTest */,
+				5A6ADA7820F8A08300BE8946 /* CGImageTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5A42E89E20E37BAA0007D24A /* Sources */ = {
+		5A6ADA7520F8A08300BE8946 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A42E8A620E37BAA0007D24A /* main.m in Sources */,
-				5A50C29F20F72BFA0072013C /* FTFScriptBuilder.m in Sources */,
+				5A6ADA7D20F8A08300BE8946 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5A42E8A720E37BAA0007D24A /* Debug */ = {
+		5A6ADA7E20F8A08300BE8946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -189,7 +195,7 @@
 			};
 			name = Debug;
 		};
-		5A42E8A820E37BAA0007D24A /* Release */ = {
+		5A6ADA7F20F8A08300BE8946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,7 +246,7 @@
 			};
 			name = Release;
 		};
-		5A42E8AA20E37BAA0007D24A /* Debug */ = {
+		5A6ADA8120F8A08300BE8946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -248,7 +254,7 @@
 			};
 			name = Debug;
 		};
-		5A42E8AB20E37BAA0007D24A /* Release */ = {
+		5A6ADA8220F8A08300BE8946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -259,25 +265,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A42E89D20E37BA90007D24A /* Build configuration list for PBXProject "KVCTest" */ = {
+		5A6ADA7420F8A08200BE8946 /* Build configuration list for PBXProject "CGImageTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A42E8A720E37BAA0007D24A /* Debug */,
-				5A42E8A820E37BAA0007D24A /* Release */,
+				5A6ADA7E20F8A08300BE8946 /* Debug */,
+				5A6ADA7F20F8A08300BE8946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A42E8A920E37BAA0007D24A /* Build configuration list for PBXNativeTarget "KVCTest" */ = {
+		5A6ADA8020F8A08300BE8946 /* Build configuration list for PBXNativeTarget "CGImageTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A42E8AA20E37BAA0007D24A /* Debug */,
-				5A42E8AB20E37BAA0007D24A /* Release */,
+				5A6ADA8120F8A08300BE8946 /* Debug */,
+				5A6ADA8220F8A08300BE8946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5A42E89A20E37BA90007D24A /* Project object */;
+	rootObject = 5A6ADA7120F8A08200BE8946 /* Project object */;
 }
