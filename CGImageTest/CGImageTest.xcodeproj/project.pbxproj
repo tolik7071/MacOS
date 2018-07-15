@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A6ADA7D20F8A08300BE8946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6ADA7C20F8A08300BE8946 /* main.m */; };
 		5A6ADA8520F8C06100BE8946 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6ADA8420F8C06100BE8946 /* ImageIO.framework */; };
+		5AE3094720FA306200ADED33 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE3094620FA306200ADED33 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		5A6ADA7920F8A08300BE8946 /* CGImageTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CGImageTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6ADA7C20F8A08300BE8946 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A6ADA8420F8C06100BE8946 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		5AE3094620FA306200ADED33 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE3094720FA306200ADED33 /* CoreServices.framework in Frameworks */,
 				5A6ADA8520F8C06100BE8946 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +72,7 @@
 		5A6ADA8320F8C06100BE8946 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AE3094620FA306200ADED33 /* CoreServices.framework */,
 				5A6ADA8420F8C06100BE8946 /* ImageIO.framework */,
 			);
 			name = Frameworks;
