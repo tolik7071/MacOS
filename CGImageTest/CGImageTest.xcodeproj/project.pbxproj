@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A6ADA7D20F8A08300BE8946 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6ADA7C20F8A08300BE8946 /* main.m */; };
 		5A6ADA8520F8C06100BE8946 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6ADA8420F8C06100BE8946 /* ImageIO.framework */; };
+		5ABE119220FB98FD008FF9CB /* ImageMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE119120FB98FD008FF9CB /* ImageMetadata.m */; };
 		5AE3094720FA306200ADED33 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE3094620FA306200ADED33 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		5A6ADA7920F8A08300BE8946 /* CGImageTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CGImageTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6ADA7C20F8A08300BE8946 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A6ADA8420F8C06100BE8946 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		5ABE119020FB98FD008FF9CB /* ImageMetadata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMetadata.h; sourceTree = "<group>"; };
+		5ABE119120FB98FD008FF9CB /* ImageMetadata.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageMetadata.m; sourceTree = "<group>"; };
 		5AE3094620FA306200ADED33 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				5A6ADA7C20F8A08300BE8946 /* main.m */,
+				5ABE119020FB98FD008FF9CB /* ImageMetadata.h */,
+				5ABE119120FB98FD008FF9CB /* ImageMetadata.m */,
 			);
 			path = CGImageTest;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABE119220FB98FD008FF9CB /* ImageMetadata.m in Sources */,
 				5A6ADA7D20F8A08300BE8946 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
