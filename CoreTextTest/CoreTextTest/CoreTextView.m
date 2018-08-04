@@ -51,6 +51,8 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     [super drawRect:dirtyRect];
+
+#define USE_CORE_GRAPHIC
     
 #if defined(USE_CORE_GRAPHIC)
     

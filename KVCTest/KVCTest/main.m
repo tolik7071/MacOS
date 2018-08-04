@@ -105,7 +105,13 @@ int main(int argc, const char * argv[])
         NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def4" value:@[@1, @{@"abs" : @[@1, @4, @{@1 : @10, @2 : @20}]}, @""]]);
         NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def5" value:@[]]);
         NSLog(@"%@", [FTFScriptBuilder buildAssignmentUsingKey:@"def5" value:@{}]);
-                    
+        
+        CGRect rect = { {-10.0, 20.0}, {100.0, 200.0} };
+        NSValue *decodedRect = [[NSValue alloc] initWithBytes:&rect objCType:@encode(CGRect)];
+        CGRect encodedRect = { {0.0, 0.0},{0.0, 0.0} };
+        [decodedRect getValue:&encodedRect size:sizeof(CGRect)];
+        NSLog(@"%f, %f, %f, %f", encodedRect.origin.x, encodedRect.origin.y,
+              encodedRect.size.width, encodedRect.size.height);
     }
     
     return 0;
