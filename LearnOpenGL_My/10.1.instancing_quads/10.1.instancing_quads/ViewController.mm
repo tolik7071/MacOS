@@ -190,8 +190,9 @@ CVReturn DisplayCallback(CVDisplayLinkRef, const CVTimeStamp*, const CVTimeStamp
     };
     
     glGenVertexArrays(1, &_quadVAO);
-    glGenBuffers(1, &_quadVBO);
     glBindVertexArray(_quadVAO);
+    
+    glGenBuffers(1, &_quadVBO);
     glBindBuffer(GL_ARRAY_BUFFER, _quadVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), quadVertices, GL_STATIC_DRAW);
     

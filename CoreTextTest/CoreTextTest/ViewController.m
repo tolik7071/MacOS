@@ -143,4 +143,11 @@
     LOG_METHOD();
 }
 
+#pragma mark - Zoom -
+
+- (IBAction)zoom:(id)sender
+{
+    [(CoreTextView *)self.view setZoom:[sender doubleValue]];
+}
+
 @end

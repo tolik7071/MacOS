@@ -206,7 +206,7 @@ const unsigned int amount = 10000;
     
     _planet = new Model([planet fileSystemRepresentation]);
     
-    _camera = new Camera(glm::vec3(0.0f, 5.0f, 70.0f));
+    _camera = new Camera(glm::vec3(0.0f, 5.0f, 100.0f));
     
     // generate a large list of semi-random model transformation matrices
     

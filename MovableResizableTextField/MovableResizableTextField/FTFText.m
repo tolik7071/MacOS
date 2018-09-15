@@ -138,8 +138,24 @@ NSString *FTFTextContentsKey = @"contents";
             
             if (glyphRange.length > 0)
             {
+                if (!view.isFlipped)
+                {
+                    [[NSGraphicsContext currentContext] saveGraphicsState];
+                    
+                    NSRect frameRect = bounds;
+                    NSAffineTransform* xform = [NSAffineTransform transform];
+                    [xform translateXBy:0.0 yBy:frameRect.size.height];
+                    [xform scaleXBy:1.0 yBy:-1.0];
+                    [xform concat];
+                }
+                
                 [layoutManager drawBackgroundForGlyphRange:glyphRange atPoint:bounds.origin];
                 [layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:bounds.origin];
+                
+                if (!view.isFlipped)
+                {
+                    [[NSGraphicsContext currentContext] restoreGraphicsState];
+                }
             }
             
             [contents removeLayoutManager:layoutManager];

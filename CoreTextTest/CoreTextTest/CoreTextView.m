@@ -43,6 +43,8 @@
             "from a font descriptor, you can get a descriptor from an NSFont object, and you can "
             "change a descriptor and use it to make a new font object. You can also use a font "
             "descriptor to specify custom fonts provided by an app.";
+        
+        _zoom = 1.0;
     }
     
     return self;
@@ -60,7 +62,9 @@
     
     CGContextSaveGState(context);
     
-    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+//    CGAffineTransform textTransform = CGAffineTransformIdentity;
+//    textTransform = CGAffineTransformScale(textTransform, 1, 1);
+//    CGContextSetTextMatrix(context, textTransform);
     
     // Background
     
@@ -69,12 +73,38 @@
     CGContextSetRGBFillColor(context, 0.6, 0.9, 0.6, 1.0);
     CGContextFillPath(context);
     
+    // Zoom
+    
+    NSFont *font;
+    
+//#define USE_SCALE_FONT
+#if defined(USE_SCALE_FONT)
+    CGFloat fontSize = _font.pointSize * _zoom;
+    font = [NSFont fontWithName:_font.fontName size:fontSize];
+#else
+    font = _font;
+    
+    CGFloat deltaX = self.bounds.size.width - self.bounds.size.width * _zoom;
+    CGFloat deltaY = self.bounds.size.height - self.bounds.size.height * _zoom;
+    
+    CGContextTranslateCTM(context, deltaX, deltaY);
+    
+    printf("%.2f: %.2f %.2f\n", _zoom, deltaX, deltaY);
+    
+    CGContextScaleCTM(context, _zoom, _zoom);
+#endif // USE_SCALE_FONT
+    
     // Text
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text attributes:_attributes];
-    [attributedString addAttribute:NSFontAttributeName value:_font range:NSMakeRange(0, _text.length)];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]
+        initWithString:self.text
+        attributes:_attributes];
+    [attributedString addAttribute:NSFontAttributeName
+        value:font
+        range:NSMakeRange(0, _text.length)];
     
-    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attributedString);
+    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString(
+        (__bridge CFAttributedStringRef)attributedString);
     CGRect frameRect = NSInsetRect(self.bounds, 10.0, 10.0);
     
     CGPathRef framePath = CGPathCreateWithRect(frameRect, NULL);
@@ -121,6 +151,16 @@
 {
     NSLog(@"%u", [event keyCode]);
     [self interpretKeyEvents:[NSArray arrayWithObject:event]];
+}
+
+- (void)setZoom:(CGFloat)zoom
+{
+    if (_zoom != zoom)
+    {
+        _zoom = zoom;
+        
+        [self setNeedsDisplay:YES];
+    }
 }
 
 #pragma mark - NSTextInputClient -

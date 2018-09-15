@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSFont * font;
 @property (nonatomic) NSDictionary * attributes;
+@property (nonatomic) CGFloat zoom;
 
 @end
