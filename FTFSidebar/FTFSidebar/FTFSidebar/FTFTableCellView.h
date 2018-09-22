@@ -18,5 +18,6 @@ extern NSUserInterfaceItemIdentifier kFTFTableCellViewID;
 @property (nonatomic, weak) NSTableView * tableView;
 
 + (CGFloat)heightOfToggleButton;
++ (CGFloat)padding;
 
 @end

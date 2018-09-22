@@ -45,11 +45,11 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-Wu-Ovk">
-                                                <rect key="frame" x="-5" y="152" width="385" height="71"/>
+                                                <rect key="frame" x="0.0" y="160" width="375" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="6bW-za-gtP"/>
+                                                    <constraint firstAttribute="height" constant="60" id="apN-5o-xXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="MbO-jX-B7S">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="MbO-jX-B7S">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -57,21 +57,15 @@
                                                     <action selector="hideOrShowContent:" target="3z4-MH-UUr" id="aNW-i5-LXP"/>
                                                 </connections>
                                             </button>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="kzT-9P-903">
+                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzT-9P-903">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             </customView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="kzT-9P-903" secondAttribute="trailing" id="CoR-uy-pEH"/>
-                                            <constraint firstAttribute="bottom" secondItem="kzT-9P-903" secondAttribute="bottom" id="Ejf-H8-Kew"/>
-                                            <constraint firstAttribute="trailing" secondItem="UIl-Wu-Ovk" secondAttribute="trailing" constant="1" id="SoF-K9-wPZ"/>
-                                            <constraint firstItem="kzT-9P-903" firstAttribute="leading" secondItem="3z4-MH-UUr" secondAttribute="leading" id="Vjk-fc-JMz"/>
-                                            <constraint firstItem="UIl-Wu-Ovk" firstAttribute="leading" secondItem="3z4-MH-UUr" secondAttribute="leading" constant="1" id="dEo-gT-1b5"/>
-                                            <constraint firstItem="UIl-Wu-Ovk" firstAttribute="top" secondItem="3z4-MH-UUr" secondAttribute="top" constant="1" id="rYN-5n-zBu"/>
-                                            <constraint firstItem="kzT-9P-903" firstAttribute="top" secondItem="UIl-Wu-Ovk" secondAttribute="bottom" id="zfO-EB-hdl"/>
+                                            <constraint firstItem="UIl-Wu-Ovk" firstAttribute="leading" secondItem="3z4-MH-UUr" secondAttribute="leading" id="2LM-KB-A4f"/>
+                                            <constraint firstItem="UIl-Wu-Ovk" firstAttribute="top" secondItem="3z4-MH-UUr" secondAttribute="top" id="5qP-F6-Vsj"/>
+                                            <constraint firstAttribute="trailing" secondItem="UIl-Wu-Ovk" secondAttribute="trailing" id="7Hq-nU-USJ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="contentPlaceholder" destination="kzT-9P-903" id="vb8-XF-Ke4"/>

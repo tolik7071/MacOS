@@ -81,6 +81,14 @@
 
 #pragma mark - NSTableViewDelegate
 
+/*
+ 
+    tableView:heightOfRow:
+    tableView:rowViewForRow:
+    tableView:viewForTableColumn:row:
+ 
+ */
+
 - (nullable NSView *)tableView:(NSTableView *)tableView
             viewForTableColumn:(nullable NSTableColumn *)tableColumn
                            row:(NSInteger)row
@@ -96,6 +104,10 @@
         [[self class] addView:view toParentView:cellView.contentPlaceholder];
     }
     
+    [cellView.contentPlaceholder setFrameSize:
+        NSMakeSize(cellView.contentPlaceholder.frame.size.width,
+        NSMaxY(self.items[row].views.lastObject.frame) + [FTFTableCellView padding])];
+    
     return cellView;
 }
 
@@ -106,26 +118,44 @@
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
+    assert([tableView tableColumns].count == 1);
+    
     CGFloat rowHeight = [FTFTableCellView heightOfToggleButton];
+    CGFloat rowWidth = [(NSTableColumn *)[tableView tableColumns][0] width];
+    CGFloat offsetY = [FTFTableCellView padding];
     
     if (self.cellViews.count == 0)
     {
-        for (NSView * view in self.items[row].views)
+        if (self.items[row].views.count > 0)
         {
-//            rowHeight += 20.0;
-            rowHeight += view.frame.size.height;
+            rowHeight += [FTFTableCellView padding] * (self.items[row].views.count + 1);
+        }
+        
+        NSInteger index = self.items[row].views.count - 1;
+        for (; index >= 0; --index)
+        {
+            rowHeight += self.items[row].views[index].frame.size.height;
+            
+            [self.items[row].views[index] setFrameOrigin:
+                NSMakePoint([FTFTableCellView padding], 0/*offsetY*/)];
+            
+            [self.items[row].views[index] setFrameSize:
+                NSMakeSize(rowWidth - [FTFTableCellView padding] * 2,
+                           self.items[row].views[index].frame.size.height)];
+            
+            offsetY += self.items[row].views[index].frame.size.height;
         }
     }
-    else
-    {
-        for (FTFTableCellView * cellView in self.cellViews)
-        {
-            if (cellView.isExpanded)
-            {
-                rowHeight += cellView.contentPlaceholder.frame.size.height;
-            }
-        }
-    }
+//    else
+//    {
+//        for (FTFTableCellView * cellView in self.cellViews)
+//        {
+//            if (cellView.isExpanded)
+//            {
+//                rowHeight += cellView.contentPlaceholder.frame.size.height;
+//            }
+//        }
+//    }
     
     return rowHeight;
 }
