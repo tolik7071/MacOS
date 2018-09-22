@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A6BA12F214F9456006E4E2B /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BA12D214F9456006E4E2B /* DataViewController.m */; };
+		5A6BA130214F9456006E4E2B /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6BA12E214F9456006E4E2B /* DataViewController.xib */; };
+		5A6BA134214FAF97006E4E2B /* FTFSidebarTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BA133214FAF97006E4E2B /* FTFSidebarTableRowView.m */; };
+		5A9BF149214F68EF00CA499B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BF148214F68EF00CA499B /* AppDelegate.m */; };
+		5A9BF14B214F68FD00CA499B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BF14A214F68FD00CA499B /* Assets.xcassets */; };
+		5A9BF14E214F68FD00CA499B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BF14C214F68FD00CA499B /* MainMenu.xib */; };
+		5A9BF151214F68FD00CA499B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BF150214F68FD00CA499B /* main.m */; };
+		5A9BF15B214F6A4300CA499B /* FTFSidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BF159214F6A4300CA499B /* FTFSidebarController.m */; };
+		5A9BF15C214F6A4300CA499B /* FTFSidebarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BF15A214F6A4300CA499B /* FTFSidebarController.xib */; };
+		5A9BF15F214F6BF900CA499B /* FTFTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BF15E214F6BF900CA499B /* FTFTableCellView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A6BA12C214F9456006E4E2B /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		5A6BA12D214F9456006E4E2B /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		5A6BA12E214F9456006E4E2B /* DataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
+		5A6BA132214FAF97006E4E2B /* FTFSidebarTableRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSidebarTableRowView.h; sourceTree = "<group>"; };
+		5A6BA133214FAF97006E4E2B /* FTFSidebarTableRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSidebarTableRowView.m; sourceTree = "<group>"; };
+		5A9BF144214F68EE00CA499B /* FTFSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTFSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9BF147214F68EF00CA499B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A9BF148214F68EF00CA499B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A9BF14A214F68FD00CA499B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A9BF14D214F68FD00CA499B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5A9BF14F214F68FD00CA499B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9BF150214F68FD00CA499B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A9BF152214F68FD00CA499B /* FTFSidebar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FTFSidebar.entitlements; sourceTree = "<group>"; };
+		5A9BF158214F6A4300CA499B /* FTFSidebarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSidebarController.h; sourceTree = "<group>"; };
+		5A9BF159214F6A4300CA499B /* FTFSidebarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSidebarController.m; sourceTree = "<group>"; };
+		5A9BF15A214F6A4300CA499B /* FTFSidebarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTFSidebarController.xib; sourceTree = "<group>"; };
+		5A9BF15D214F6BF900CA499B /* FTFTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFTableCellView.h; sourceTree = "<group>"; };
+		5A9BF15E214F6BF900CA499B /* FTFTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFTableCellView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A9BF141214F68EE00CA499B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A6BA131214F945A006E4E2B /* DataView */ = {
+			isa = PBXGroup;
+			children = (
+				5A6BA12C214F9456006E4E2B /* DataViewController.h */,
+				5A6BA12D214F9456006E4E2B /* DataViewController.m */,
+				5A6BA12E214F9456006E4E2B /* DataViewController.xib */,
+			);
+			path = DataView;
+			sourceTree = "<group>";
+		};
+		5A9BF13B214F68EE00CA499B = {
+			isa = PBXGroup;
+			children = (
+				5A9BF146214F68EE00CA499B /* FTFSidebar */,
+				5A9BF145214F68EE00CA499B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A9BF145214F68EE00CA499B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A9BF144214F68EE00CA499B /* FTFSidebar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A9BF146214F68EE00CA499B /* FTFSidebar */ = {
+			isa = PBXGroup;
+			children = (
+				5A9BF160214F716000CA499B /* FTFSidebar */,
+				5A6BA131214F945A006E4E2B /* DataView */,
+				5A9BF161214F717600CA499B /* App */,
+			);
+			path = FTFSidebar;
+			sourceTree = "<group>";
+		};
+		5A9BF160214F716000CA499B /* FTFSidebar */ = {
+			isa = PBXGroup;
+			children = (
+				5A9BF158214F6A4300CA499B /* FTFSidebarController.h */,
+				5A9BF159214F6A4300CA499B /* FTFSidebarController.m */,
+				5A9BF15D214F6BF900CA499B /* FTFTableCellView.h */,
+				5A9BF15E214F6BF900CA499B /* FTFTableCellView.m */,
+				5A6BA132214FAF97006E4E2B /* FTFSidebarTableRowView.h */,
+				5A6BA133214FAF97006E4E2B /* FTFSidebarTableRowView.m */,
+				5A9BF15A214F6A4300CA499B /* FTFSidebarController.xib */,
+			);
+			path = FTFSidebar;
+			sourceTree = "<group>";
+		};
+		5A9BF161214F717600CA499B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5A9BF147214F68EF00CA499B /* AppDelegate.h */,
+				5A9BF148214F68EF00CA499B /* AppDelegate.m */,
+				5A9BF14A214F68FD00CA499B /* Assets.xcassets */,
+				5A9BF14C214F68FD00CA499B /* MainMenu.xib */,
+				5A9BF14F214F68FD00CA499B /* Info.plist */,
+				5A9BF150214F68FD00CA499B /* main.m */,
+				5A9BF152214F68FD00CA499B /* FTFSidebar.entitlements */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A9BF143214F68EE00CA499B /* FTFSidebar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A9BF155214F68FD00CA499B /* Build configuration list for PBXNativeTarget "FTFSidebar" */;
+			buildPhases = (
+				5A9BF140214F68EE00CA499B /* Sources */,
+				5A9BF141214F68EE00CA499B /* Frameworks */,
+				5A9BF142214F68EE00CA499B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTFSidebar;
+			productName = FTFSidebar;
+			productReference = 5A9BF144214F68EE00CA499B /* FTFSidebar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A9BF13C214F68EE00CA499B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Anatoliy Goodz";
+				TargetAttributes = {
+					5A9BF143214F68EE00CA499B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5A9BF13F214F68EE00CA499B /* Build configuration list for PBXProject "FTFSidebar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A9BF13B214F68EE00CA499B;
+			productRefGroup = 5A9BF145214F68EE00CA499B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A9BF143214F68EE00CA499B /* FTFSidebar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A9BF142214F68EE00CA499B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A6BA130214F9456006E4E2B /* DataViewController.xib in Resources */,
+				5A9BF14B214F68FD00CA499B /* Assets.xcassets in Resources */,
+				5A9BF15C214F6A4300CA499B /* FTFSidebarController.xib in Resources */,
+				5A9BF14E214F68FD00CA499B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A9BF140214F68EE00CA499B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9BF15F214F6BF900CA499B /* FTFTableCellView.m in Sources */,
+				5A9BF151214F68FD00CA499B /* main.m in Sources */,
+				5A9BF149214F68EF00CA499B /* AppDelegate.m in Sources */,
+				5A9BF15B214F6A4300CA499B /* FTFSidebarController.m in Sources */,
+				5A6BA134214FAF97006E4E2B /* FTFSidebarTableRowView.m in Sources */,
+				5A6BA12F214F9456006E4E2B /* DataViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5A9BF14C214F68FD00CA499B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A9BF14D214F68FD00CA499B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A9BF153214F68FD00CA499B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5A9BF154214F68FD00CA499B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5A9BF156214F68FD00CA499B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FTFSidebar/App/FTFSidebar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/FTFSidebar/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Anatoliy-Goodz.FTFSidebar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5A9BF157214F68FD00CA499B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FTFSidebar/App/FTFSidebar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/FTFSidebar/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Anatoliy-Goodz.FTFSidebar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A9BF13F214F68EE00CA499B /* Build configuration list for PBXProject "FTFSidebar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9BF153214F68FD00CA499B /* Debug */,
+				5A9BF154214F68FD00CA499B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A9BF155214F68FD00CA499B /* Build configuration list for PBXNativeTarget "FTFSidebar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9BF156214F68FD00CA499B /* Debug */,
+				5A9BF157214F68FD00CA499B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A9BF13C214F68EE00CA499B /* Project object */;
+}
