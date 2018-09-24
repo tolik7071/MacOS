@@ -17,6 +17,11 @@ NSUserInterfaceItemIdentifier kFTFTableCellViewID = @"FTFTableCellView";
     [super drawRect:dirtyRect];
 }
 
+- (BOOL)isFlipped
+{
+    return YES;
+}
+
 - (BOOL)isExpanded
 {
     return !self.contentPlaceholder.hidden;

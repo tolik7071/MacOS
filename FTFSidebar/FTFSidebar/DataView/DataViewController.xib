@@ -15,20 +15,18 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="325" height="108"/>
-            <autoresizingMask key="autoresizingMask"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <box boxType="custom" borderType="bezel" cornerRadius="4" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Owg-ui-kSK">
+                <box fixedFrame="YES" boxType="custom" borderType="bezel" cornerRadius="4" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Owg-ui-kSK">
                     <rect key="frame" x="0.0" y="0.0" width="325" height="108"/>
-                    <view key="contentView" id="g8Y-AE-Q4U">
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="g8Y-AE-Q4U">
                         <rect key="frame" x="1" y="1" width="323" height="106"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Kcs-Ju-wSf">
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcs-Ju-wSf">
                                 <rect key="frame" x="10" y="16" width="74" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="e2U-Kg-NQT"/>
-                                    <constraint firstAttribute="width" constant="74" id="q8n-QJ-Bo0"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YE6-WR-0OE">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -37,8 +35,9 @@
                                     <action selector="buttonClicked:" target="-2" id="beb-Cx-mjV"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-ad-rNH">
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-ad-rNH">
                                 <rect key="frame" x="92" y="16" width="221" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0op-jG-TYq">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -46,26 +45,12 @@
                                 </textFieldCell>
                             </textField>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="PfF-ad-rNH" firstAttribute="height" secondItem="Kcs-Ju-wSf" secondAttribute="height" id="IE1-jt-iTI"/>
-                            <constraint firstItem="PfF-ad-rNH" firstAttribute="leading" secondItem="Kcs-Ju-wSf" secondAttribute="trailing" constant="8" id="JLH-Cc-h9c"/>
-                            <constraint firstItem="Kcs-Ju-wSf" firstAttribute="leading" secondItem="g8Y-AE-Q4U" secondAttribute="leading" constant="10" id="UXZ-og-wAd"/>
-                            <constraint firstItem="Kcs-Ju-wSf" firstAttribute="top" secondItem="g8Y-AE-Q4U" secondAttribute="top" constant="16" id="WAC-5V-ud6"/>
-                            <constraint firstItem="PfF-ad-rNH" firstAttribute="top" secondItem="g8Y-AE-Q4U" secondAttribute="top" constant="16" id="WCO-vv-BzB"/>
-                            <constraint firstAttribute="trailing" secondItem="PfF-ad-rNH" secondAttribute="trailing" constant="10" id="zkC-c1-d0c"/>
-                        </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </box>
             </subviews>
-            <constraints>
-                <constraint firstItem="Owg-ui-kSK" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="EPf-dF-R8a"/>
-                <constraint firstItem="Owg-ui-kSK" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="KNR-T2-I8p"/>
-                <constraint firstAttribute="bottom" secondItem="Owg-ui-kSK" secondAttribute="bottom" id="RzJ-Sn-prv"/>
-                <constraint firstAttribute="trailing" secondItem="Owg-ui-kSK" secondAttribute="trailing" id="lah-kz-GQ4"/>
-            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
             </userDefinedRuntimeAttributes>

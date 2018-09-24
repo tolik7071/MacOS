@@ -99,14 +99,18 @@
     
     [self.cellViews addObject:cellView];
     
+    NSView *previousView = nil;
+    
     for (NSView * view in self.items[row].views)
     {
+        [view setFrameOrigin:NSMakePoint(
+            cellView.contentPlaceholder.frame.size.width / 2.0 - view.frame.size.width / 2.0,
+            previousView.frame.size.height + [FTFTableCellView padding])];
+        
         [[self class] addView:view toParentView:cellView.contentPlaceholder];
+        
+        previousView = view;
     }
-    
-    [cellView.contentPlaceholder setFrameSize:
-        NSMakeSize(cellView.contentPlaceholder.frame.size.width,
-        NSMaxY(self.items[row].views.lastObject.frame) + [FTFTableCellView padding])];
     
     return cellView;
 }
@@ -121,41 +125,18 @@
     assert([tableView tableColumns].count == 1);
     
     CGFloat rowHeight = [FTFTableCellView heightOfToggleButton];
-    CGFloat rowWidth = [(NSTableColumn *)[tableView tableColumns][0] width];
-    CGFloat offsetY = [FTFTableCellView padding];
     
     if (self.cellViews.count == 0)
     {
-        if (self.items[row].views.count > 0)
+        rowHeight = [self heightOfContentViewForRow:row];
+    }
+    else
+    {
+        if ([self.cellViews[row] isExpanded])
         {
-            rowHeight += [FTFTableCellView padding] * (self.items[row].views.count + 1);
-        }
-        
-        NSInteger index = self.items[row].views.count - 1;
-        for (; index >= 0; --index)
-        {
-            rowHeight += self.items[row].views[index].frame.size.height;
-            
-            [self.items[row].views[index] setFrameOrigin:
-                NSMakePoint([FTFTableCellView padding], 0/*offsetY*/)];
-            
-            [self.items[row].views[index] setFrameSize:
-                NSMakeSize(rowWidth - [FTFTableCellView padding] * 2,
-                           self.items[row].views[index].frame.size.height)];
-            
-            offsetY += self.items[row].views[index].frame.size.height;
+            rowHeight = [self heightOfContentViewForRow:row];
         }
     }
-//    else
-//    {
-//        for (FTFTableCellView * cellView in self.cellViews)
-//        {
-//            if (cellView.isExpanded)
-//            {
-//                rowHeight += cellView.contentPlaceholder.frame.size.height;
-//            }
-//        }
-//    }
     
     return rowHeight;
 }
@@ -164,7 +145,58 @@
 
 + (void)addView:(NSView *)view toParentView:(NSView *)parentView
 {
+/*
+    NSLayoutConstraint *constraint;
+
+    constraint = [NSLayoutConstraint
+        constraintWithItem:view
+        attribute:NSLayoutAttributeWidth
+        relatedBy:NSLayoutRelationEqual
+        toItem:nil
+        attribute:NSLayoutAttributeNotAnAttribute
+        multiplier:view.frame.size.width
+        constant:0.0];
+    [view addConstraint:constraint];
+    
+    constraint = [NSLayoutConstraint
+        constraintWithItem:view
+        attribute:NSLayoutAttributeHeight
+        relatedBy:NSLayoutRelationEqual
+        toItem:nil
+        attribute:NSLayoutAttributeNotAnAttribute
+        multiplier:view.frame.size.height
+        constant:0.0];
+    [view addConstraint:constraint];
+ 
+    constraint = [NSLayoutConstraint
+        constraintWithItem:view
+        attribute:NSLayoutAttributeCenterX
+        relatedBy:NSLayoutRelationEqual
+        toItem:parentView
+        attribute:NSLayoutAttributeCenterX
+        multiplier:1.0
+        constant:0.0];
+    [parentView addConstraint:constraint];
+ */
+    
     [parentView addSubview:view];
+}
+
+- (CGFloat)heightOfContentViewForRow:(NSInteger)row
+{
+    CGFloat rowHeight = [FTFTableCellView heightOfToggleButton];
+    
+    if (self.items[row].views.count > 0)
+    {
+        rowHeight += [FTFTableCellView padding] * (self.items[row].views.count + 1);
+    }
+    
+    for (NSView * view in self.items[row].views)
+    {
+        rowHeight += view.frame.size.height;
+    }
+    
+    return rowHeight;
 }
 
 @end
