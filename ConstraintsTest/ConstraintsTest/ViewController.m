@@ -9,101 +9,129 @@
 #import "ViewController.h"
 #import "ChildView.h"
 
+void DumpAutoresizingMask(NSAutoresizingMaskOptions mask)
+{
+    if ((mask & NSViewNotSizable) != 0)
+        printf("NSViewNotSizable - The view cannot be resized.\n");
+    
+    if ((mask & NSViewMinXMargin) != 0)
+        printf("NSViewMinXMargin - The left margin between the view and its superview is flexible.\n");
+        
+    if ((mask & NSViewWidthSizable) != 0)
+        printf("NSViewWidthSizable - The view’s width is flexible.\n");
+    
+    if ((mask & NSViewMaxXMargin) != 0)
+        printf("NSViewMaxXMargin - The right margin between the view and its superview is flexible.\n");
+    
+    if ((mask & NSViewMinYMargin) != 0)
+        printf("NSViewMinYMargin - The bottom margin between the view and its superview is flexible.\n");
+    
+    if ((mask & NSViewHeightSizable) != 0)
+        printf("NSViewHeightSizable - The view’s height is flexible.\n");
+    
+    if ((mask & NSViewMaxYMargin) != 0)
+        printf("NSViewMaxYMargin - The top margin between the view and its superview is flexible.\n");
+}
+
 @implementation ViewController
 
 - (void)viewDidLoad
 {
-   [super viewDidLoad];
+    [super viewDidLoad];
 
-   assert(self.view);
+    assert(self.view);
 
-/*
+    ChildView *yellowView = [self.view subviews][0];
+    yellowView.backgroundColor = [NSColor yellowColor];
 
- po [yellowView constraints]
- <__NSArrayM 0x60400024ace0>(
- <NSLayoutConstraint:0x60000008ae10 ChildView:0x600000121f40.width == 200   (active)>,
- <NSLayoutConstraint:0x60000008af00 ChildView:0x600000121f40.height == 200   (active)>
- )
+    printf("ROOT VIEW:\n");
+    DumpAutoresizingMask(self.view.autoresizingMask);
+    printf("\n");
+    
+    printf("YELLOW VIEW:\n");
+    DumpAutoresizingMask(yellowView.autoresizingMask);
+    printf("\n");
 
- po [self.view constraints]
- <__NSArrayM 0x60400024ac50>(
- <NSLayoutConstraint:0x60000008ad70 ChildView:0x600000121f40.centerY == NSView:0x600000121ea0.centerY   (active)>,
- <NSLayoutConstraint:0x60000008ac30 ChildView:0x600000121f40.centerX == NSView:0x600000121ea0.centerX   (active)>
- )
-
- */
-
-
-   ChildView *yellowView = [self.view subviews][0];
-   yellowView.backgroundColor = [NSColor yellowColor];
-
-   [self addRedView];
+    [self addRedView];
+    [self addBlueView];
 }
 
 - (void)addRedView
 {
-   ChildView *redView = [[ChildView alloc] initWithFrame:NSMakeRect(0, 0, 200.0, 200.0)];
-   redView.backgroundColor = [NSColor redColor];
+    ChildView *redView = [[ChildView alloc] initWithFrame:NSMakeRect(0, 0, 200.0, 200.0)];
+    redView.backgroundColor = [NSColor redColor];
 
-   NSLayoutConstraint *constraint;
+    NSLayoutConstraint *constraint;
 
-   {
-      // <NSLayoutConstraint:0x6040000888e0 ChildView:0x604000121540.width == 200   (active)>,
-      constraint = [NSLayoutConstraint
-         constraintWithItem:redView
-         attribute:NSLayoutAttributeWidth
-         relatedBy:NSLayoutRelationEqual
-         toItem:nil
-         attribute:NSLayoutAttributeNotAnAttribute
-         multiplier:1.0
-         constant:200.0];
+    {
+        constraint = [NSLayoutConstraint
+            constraintWithItem:redView
+            attribute:NSLayoutAttributeWidth
+            relatedBy:NSLayoutRelationEqual
+            toItem:nil
+            attribute:NSLayoutAttributeNotAnAttribute
+            multiplier:1.0
+            constant:200.0];
 
-      [redView addConstraint:constraint];
-   }
+        [redView addConstraint:constraint];
+    }
 
-   {
-      // <NSLayoutConstraint:0x604000088890 ChildView:0x604000121540.height == 200   (active)>
-      constraint = [NSLayoutConstraint
-         constraintWithItem:redView
-         attribute:NSLayoutAttributeHeight
-         relatedBy:NSLayoutRelationEqual
-         toItem:nil
-         attribute:NSLayoutAttributeNotAnAttribute
-         multiplier:1.0
-         constant:200.0];
+    {
+        constraint = [NSLayoutConstraint
+            constraintWithItem:redView
+            attribute:NSLayoutAttributeHeight
+            relatedBy:NSLayoutRelationEqual
+            toItem:nil
+            attribute:NSLayoutAttributeNotAnAttribute
+            multiplier:1.0
+            constant:200.0];
 
-      [redView addConstraint:constraint];
-   }
+        [redView addConstraint:constraint];
+    }
 
-   {
-      // po [self.view constraints]
-      // <NSLayoutConstraint:0x604000088980 ChildView:0x604000121540.centerX == NSView:0x604000121400.centerX   (active)>
-      constraint = [NSLayoutConstraint
-         constraintWithItem:redView
-         attribute:NSLayoutAttributeCenterX
-         relatedBy:NSLayoutRelationEqual
-         toItem:self.view
-         attribute:NSLayoutAttributeCenterX
-         multiplier:1.0
-         constant:0.0];
+    {
+        constraint = [NSLayoutConstraint
+            constraintWithItem:redView
+            attribute:NSLayoutAttributeLeading
+            relatedBy:NSLayoutRelationEqual
+            toItem:self.view
+            attribute:NSLayoutAttributeLeading
+            multiplier:1.0
+            constant:0.0];
 
-      [self.view addConstraint:constraint];
-   }
+        [self.view addConstraint:constraint];
+    }
 
-   {
-      constraint = [NSLayoutConstraint
-         constraintWithItem:redView
-         attribute:NSLayoutAttributeBottom
-         relatedBy:NSLayoutRelationEqual
-         toItem:self.view
-         attribute:NSLayoutAttributeBottom
-         multiplier:1.0
-         constant:0.0];
+    {
+        constraint = [NSLayoutConstraint
+            constraintWithItem:redView
+            attribute:NSLayoutAttributeBottom
+            relatedBy:NSLayoutRelationEqual
+            toItem:self.view
+            attribute:NSLayoutAttributeBottom
+            multiplier:1.0
+            constant:0.0];
 
-      [self.view addConstraint:constraint];
-   }
+        [self.view addConstraint:constraint];
+    }
+    
+    [self.view addSubview:redView];
+    
+    printf("RED VIEW:\n");
+    DumpAutoresizingMask(redView.autoresizingMask);
+    printf("\n");
+}
 
-   [self.view addSubview:redView];
+- (void)addBlueView
+{
+    ChildView *blueView = [[ChildView alloc] initWithFrame:NSMakeRect(200, 200, 400.0, 200.0)];
+    blueView.backgroundColor = [NSColor blueColor];
+    
+    [self.view addSubview:blueView];
+    
+    printf("BLUE VIEW:\n");
+    DumpAutoresizingMask(blueView.autoresizingMask);
+    printf("\n");
 }
 
 @end
