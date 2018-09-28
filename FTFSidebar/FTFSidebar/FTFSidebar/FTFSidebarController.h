@@ -23,4 +23,12 @@
 
 - (void)reload;
 
+@property (nonatomic, getter=isPrimary) BOOL primary;
+
+@property (nonatomic) NSImage * titleImage;
+@property (nonatomic) NSFont * titleFont;
+@property (nonatomic) NSColor * titleColor;
+
+@property (nonatomic) NSColor * contentBackground;
+
 @end

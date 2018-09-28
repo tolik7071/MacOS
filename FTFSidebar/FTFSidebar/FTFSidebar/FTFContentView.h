@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ContentView : NSView
+@interface FTFContentView : NSView
 
 @end

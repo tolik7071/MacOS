@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,45 +16,59 @@
             <rect key="frame" x="0.0" y="0.0" width="325" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <box fixedFrame="YES" boxType="custom" borderType="bezel" cornerRadius="4" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Owg-ui-kSK">
-                    <rect key="frame" x="0.0" y="0.0" width="325" height="108"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <view key="contentView" ambiguous="YES" id="g8Y-AE-Q4U">
-                        <rect key="frame" x="1" y="1" width="323" height="106"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcs-Ju-wSf">
-                                <rect key="frame" x="10" y="16" width="74" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="YE6-WR-0OE">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="buttonClicked:" target="-2" id="beb-Cx-mjV"/>
-                                </connections>
-                            </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-ad-rNH">
-                                <rect key="frame" x="92" y="16" width="221" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0op-jG-TYq">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                    </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </box>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="vaX-sB-dvA">
+                    <rect key="frame" x="20" y="20" width="68" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="68" id="dtR-0K-gPW"/>
+                        <constraint firstAttribute="height" constant="68" id="eG2-3l-wTP"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="FEL-hU-Iyd">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonClicked:" target="-2" id="2be-jY-00a"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-A5-Bil">
+                    <rect key="frame" x="96" y="20" width="209" height="68"/>
+                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="DrJ-fN-6d3">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="vaX-sB-dvA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="7g0-6L-zeg"/>
+                <constraint firstItem="vaX-sB-dvA" firstAttribute="top" secondItem="IPC-A5-Bil" secondAttribute="top" id="Eju-xO-yaL"/>
+                <constraint firstItem="vaX-sB-dvA" firstAttribute="bottom" secondItem="IPC-A5-Bil" secondAttribute="bottom" id="URM-kK-NQx"/>
+                <constraint firstItem="vaX-sB-dvA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="Ufn-gM-TNN"/>
+                <constraint firstAttribute="trailing" secondItem="IPC-A5-Bil" secondAttribute="trailing" constant="20" symbolic="YES" id="qeE-RL-Gkd"/>
+                <constraint firstItem="IPC-A5-Bil" firstAttribute="leading" secondItem="vaX-sB-dvA" secondAttribute="trailing" constant="8" symbolic="YES" id="ybg-Bc-ZOC"/>
+            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="143.5" y="238"/>
         </customView>
+        <button id="z0f-Ro-ZWq">
+            <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Qcd-QL-xpN">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="system"/>
+            </buttonCell>
+        </button>
+        <textField verticalHuggingPriority="750" id="pEX-PG-crA">
+            <rect key="frame" x="0.0" y="0.0" width="221" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="eiR-Kf-eQp">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
     </objects>
     <resources>
         <image name="NSApplicationIcon" width="128" height="128"/>

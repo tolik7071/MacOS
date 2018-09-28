@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F30E83E2158B85F00AC2DBB /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E83D2158B85F00AC2DBB /* ContentView.m */; };
+		1F30E83E2158B85F00AC2DBB /* FTFContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E83D2158B85F00AC2DBB /* FTFContentView.m */; };
+		1F3CA106215E207300B9F499 /* secondary_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3CA105215E207300B9F499 /* secondary_button_background.png */; };
+		1F733C35215CE03F005E39DD /* primary_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F733C34215CE03F005E39DD /* primary_button_background.png */; };
+		5A226F8B215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A226F8A215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m */; };
 		5A6BA12F214F9456006E4E2B /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BA12D214F9456006E4E2B /* DataViewController.m */; };
 		5A6BA130214F9456006E4E2B /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6BA12E214F9456006E4E2B /* DataViewController.xib */; };
 		5A6BA134214FAF97006E4E2B /* FTFSidebarTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BA133214FAF97006E4E2B /* FTFSidebarTableRowView.m */; };
+		5A7159A6215CB4260024C379 /* FTFSidebarButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7159A5215CB4260024C379 /* FTFSidebarButtonCell.m */; };
 		5A9BF149214F68EF00CA499B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BF148214F68EF00CA499B /* AppDelegate.m */; };
 		5A9BF14B214F68FD00CA499B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BF14A214F68FD00CA499B /* Assets.xcassets */; };
 		5A9BF14E214F68FD00CA499B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BF14C214F68FD00CA499B /* MainMenu.xib */; };
@@ -21,13 +25,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F30E83C2158B85F00AC2DBB /* ContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
-		1F30E83D2158B85F00AC2DBB /* ContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
+		1F30E83C2158B85F00AC2DBB /* FTFContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFContentView.h; sourceTree = "<group>"; };
+		1F30E83D2158B85F00AC2DBB /* FTFContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFContentView.m; sourceTree = "<group>"; };
+		1F3CA105215E207300B9F499 /* secondary_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondary_button_background.png; sourceTree = "<group>"; };
+		1F733C34215CE03F005E39DD /* primary_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = primary_button_background.png; sourceTree = "<group>"; };
+		5A226F89215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSidebarVisualAttributesManager.h; sourceTree = "<group>"; };
+		5A226F8A215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSidebarVisualAttributesManager.m; sourceTree = "<group>"; };
 		5A6BA12C214F9456006E4E2B /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		5A6BA12D214F9456006E4E2B /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		5A6BA12E214F9456006E4E2B /* DataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 		5A6BA132214FAF97006E4E2B /* FTFSidebarTableRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSidebarTableRowView.h; sourceTree = "<group>"; };
 		5A6BA133214FAF97006E4E2B /* FTFSidebarTableRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSidebarTableRowView.m; sourceTree = "<group>"; };
+		5A7159A4215CB4260024C379 /* FTFSidebarButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSidebarButtonCell.h; sourceTree = "<group>"; };
+		5A7159A5215CB4260024C379 /* FTFSidebarButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSidebarButtonCell.m; sourceTree = "<group>"; };
 		5A9BF144214F68EE00CA499B /* FTFSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTFSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9BF147214F68EF00CA499B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A9BF148214F68EF00CA499B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,11 +107,17 @@
 				5A9BF159214F6A4300CA499B /* FTFSidebarController.m */,
 				5A9BF15D214F6BF900CA499B /* FTFTableCellView.h */,
 				5A9BF15E214F6BF900CA499B /* FTFTableCellView.m */,
+				5A7159A4215CB4260024C379 /* FTFSidebarButtonCell.h */,
+				5A7159A5215CB4260024C379 /* FTFSidebarButtonCell.m */,
 				5A6BA132214FAF97006E4E2B /* FTFSidebarTableRowView.h */,
 				5A6BA133214FAF97006E4E2B /* FTFSidebarTableRowView.m */,
 				5A9BF15A214F6A4300CA499B /* FTFSidebarController.xib */,
-				1F30E83C2158B85F00AC2DBB /* ContentView.h */,
-				1F30E83D2158B85F00AC2DBB /* ContentView.m */,
+				1F30E83C2158B85F00AC2DBB /* FTFContentView.h */,
+				1F30E83D2158B85F00AC2DBB /* FTFContentView.m */,
+				1F733C34215CE03F005E39DD /* primary_button_background.png */,
+				1F3CA105215E207300B9F499 /* secondary_button_background.png */,
+				5A226F89215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.h */,
+				5A226F8A215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m */,
 			);
 			path = FTFSidebar;
 			sourceTree = "<group>";
@@ -177,9 +193,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3CA106215E207300B9F499 /* secondary_button_background.png in Resources */,
 				5A6BA130214F9456006E4E2B /* DataViewController.xib in Resources */,
 				5A9BF14B214F68FD00CA499B /* Assets.xcassets in Resources */,
 				5A9BF15C214F6A4300CA499B /* FTFSidebarController.xib in Resources */,
+				1F733C35215CE03F005E39DD /* primary_button_background.png in Resources */,
 				5A9BF14E214F68FD00CA499B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,13 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F30E83E2158B85F00AC2DBB /* ContentView.m in Sources */,
+				1F30E83E2158B85F00AC2DBB /* FTFContentView.m in Sources */,
 				5A9BF15F214F6BF900CA499B /* FTFTableCellView.m in Sources */,
 				5A9BF151214F68FD00CA499B /* main.m in Sources */,
 				5A9BF149214F68EF00CA499B /* AppDelegate.m in Sources */,
+				5A226F8B215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m in Sources */,
 				5A9BF15B214F6A4300CA499B /* FTFSidebarController.m in Sources */,
 				5A6BA134214FAF97006E4E2B /* FTFSidebarTableRowView.m in Sources */,
 				5A6BA12F214F9456006E4E2B /* DataViewController.m in Sources */,
+				5A7159A6215CB4260024C379 /* FTFSidebarButtonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FTFSidebar/App/FTFSidebar.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57FHD3VWGT;
 				INFOPLIST_FILE = "$(SRCROOT)/FTFSidebar/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,6 +360,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Anatoliy-Goodz.FTFSidebar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -346,8 +369,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FTFSidebar/App/FTFSidebar.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 57FHD3VWGT;
 				INFOPLIST_FILE = "$(SRCROOT)/FTFSidebar/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -355,6 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Anatoliy-Goodz.FTFSidebar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

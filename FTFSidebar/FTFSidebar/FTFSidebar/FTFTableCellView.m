@@ -22,6 +22,11 @@ NSUserInterfaceItemIdentifier kFTFTableCellViewID = @"FTFTableCellView";
     return YES;
 }
 
++ (NSSet<NSString *> *)keyPathsForValuesAffectingIsExpanded
+{
+    return [NSSet setWithObjects:@"contentPlaceholder.hidden", nil];
+}
+
 - (BOOL)isExpanded
 {
     return !self.contentPlaceholder.hidden;

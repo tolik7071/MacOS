@@ -6,6 +6,9 @@
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="FTFSidebarController">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="primary" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="tableView" destination="w3w-IS-63h" id="WCl-5g-egK"/>
                 <outlet property="view" destination="jjV-GQ-uPZ" id="u7S-FM-1dL"/>
@@ -50,7 +53,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WhJ-uK-ztN"/>
                                                     <constraint firstAttribute="height" constant="60" id="apN-5o-xXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" id="MbO-jX-B7S">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="axesIndependently" inset="2" id="MbO-jX-B7S" customClass="FTFSidebarButtonCell">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -58,7 +61,7 @@
                                                     <action selector="hideOrShowContent:" target="3z4-MH-UUr" id="aNW-i5-LXP"/>
                                                 </connections>
                                             </button>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="kzT-9P-903" customClass="ContentView">
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="kzT-9P-903" customClass="FTFContentView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>

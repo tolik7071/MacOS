@@ -93,6 +93,7 @@
     {
         _sidebarController = [[FTFSidebarController alloc]
             initWithNibName:@"FTFSidebarController" bundle:nil];
+        _sidebarController.primary = YES;
     }
 }
 
@@ -104,7 +105,7 @@
             initWithNibName:@"DataViewController" bundle:nil];
         assert(_dataViewController.view);
         
-        FTFSidebarItem *item = [[FTFSidebarItem alloc] initWithTitle:@"This is a test."];
+        FTFSidebarItem *item = [[FTFSidebarItem alloc] initWithTitle:@"THIS IS A TEST."];
         item.views = @[_dataViewController.view];
         
         [[self.sidebarController items] addObject:item];
