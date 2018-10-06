@@ -11,13 +11,15 @@
 @interface FTFSidebarItem : NSObject
 
 @property (nonatomic) NSString * title;
-@property (nonatomic) NSArray <NSView *> * views;
+@property (nonatomic) NSArray * items; // FTFSidebarItem or NSView
 
 - (instancetype)initWithTitle:(NSString *)title;
 
 @end
 
 @interface FTFSidebarController : NSViewController
+
+@property (nonatomic, weak) IBOutlet NSTableView * tableView;
 
 @property (nonatomic) NSMutableArray <FTFSidebarItem * > * items;
 

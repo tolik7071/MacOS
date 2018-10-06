@@ -174,7 +174,7 @@
 {
     if (isinf(_secondaryItemPadding))
     {
-        _secondaryItemPadding = 0.0;
+        _secondaryItemPadding = 18.0;
     }
     
     return _secondaryItemPadding;
@@ -203,7 +203,7 @@
 {
     if (!_primaryButtonBorderColor)
     {
-        _primaryButtonBorderColor = [NSColor blackColor];
+        _primaryButtonBorderColor = [NSColor darkGrayColor];
     }
     
     return _primaryButtonBorderColor;
@@ -217,6 +217,20 @@
     }
     
     return _secondaryButtonBorderColor;
+}
+
++ (NSImage *)imageOfSize:(NSSize)size color:(NSColor *)background
+{
+    NSImage *result = [[NSImage alloc] initWithSize:size];
+    
+    [result lockFocus];
+    
+    [background setFill];
+    NSRectFill(NSMakeRect(0, 0, size.width, size.height));
+    
+    [result unlockFocus];
+    
+    return result;
 }
 
 @end

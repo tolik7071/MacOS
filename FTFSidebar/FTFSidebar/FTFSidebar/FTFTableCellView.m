@@ -40,14 +40,14 @@ NSUserInterfaceItemIdentifier kFTFTableCellViewID = @"FTFTableCellView";
         [NSIndexSet indexSetWithIndex:[self.tableView rowForView:self]]];
 }
 
-+ (CGFloat)heightOfToggleButton
-{
-    return 60.0;
-}
-
-+ (CGFloat)padding
-{
-    return 20.0;
-}
+//+ (CGFloat)heightOfToggleButton
+//{
+//    return 60.0;
+//}
+//
+//+ (CGFloat)padding
+//{
+//    return 20.0;
+//}
 
 @end

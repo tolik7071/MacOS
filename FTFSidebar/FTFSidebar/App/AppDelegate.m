@@ -9,12 +9,14 @@
 #import "AppDelegate.h"
 #import "FTFSidebarController.h"
 #import "DataViewController.h"
+#import "DataViewController2.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
 @property (nonatomic, weak) IBOutlet NSView * placeholder;
 @property (nonatomic) DataViewController * dataViewController;
+@property (nonatomic) DataViewController2 * dataViewController2;
 
 @property (nonatomic) FTFSidebarController * sidebarController;
 
@@ -93,7 +95,6 @@
     {
         _sidebarController = [[FTFSidebarController alloc]
             initWithNibName:@"FTFSidebarController" bundle:nil];
-        _sidebarController.primary = YES;
     }
 }
 
@@ -105,8 +106,15 @@
             initWithNibName:@"DataViewController" bundle:nil];
         assert(_dataViewController.view);
         
-        FTFSidebarItem *item = [[FTFSidebarItem alloc] initWithTitle:@"THIS IS A TEST."];
-        item.views = @[_dataViewController.view];
+        _dataViewController2 = [[DataViewController2 alloc]
+            initWithNibName:@"DataViewController2" bundle:nil];
+        assert(_dataViewController.view);
+
+        FTFSidebarItem *innerItem = [[FTFSidebarItem alloc] initWithTitle:@"THIS IS AN INNER ITEM."];
+        innerItem.items = @[_dataViewController2.view];
+        
+        FTFSidebarItem *item = [[FTFSidebarItem alloc] initWithTitle:@"THIS IS A ROOT ITEM #1."];
+        item.items = @[_dataViewController.view, innerItem];
         
         [[self.sidebarController items] addObject:item];
         

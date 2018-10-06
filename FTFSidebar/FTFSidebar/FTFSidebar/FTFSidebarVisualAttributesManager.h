@@ -36,4 +36,6 @@
     foregroundColor:(NSColor *)foregroundColor
     font:(NSFont *)font;
 
++ (NSImage *)imageOfSize:(NSSize)size color:(NSColor *)background;
+
 @end

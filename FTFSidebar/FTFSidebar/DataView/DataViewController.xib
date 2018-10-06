@@ -13,14 +13,14 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="325" height="108"/>
-            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <rect key="frame" x="0.0" y="0.0" width="285" height="68"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="vaX-sB-dvA">
-                    <rect key="frame" x="20" y="20" width="68" height="68"/>
+                    <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="68" id="dtR-0K-gPW"/>
-                        <constraint firstAttribute="height" constant="68" id="eG2-3l-wTP"/>
+                        <constraint firstAttribute="height" constant="68" id="T57-qz-WUx"/>
+                        <constraint firstAttribute="width" constant="68" id="o9j-RB-dqF"/>
                     </constraints>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="FEL-hU-Iyd">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -31,7 +31,7 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-A5-Bil">
-                    <rect key="frame" x="96" y="20" width="209" height="68"/>
+                    <rect key="frame" x="76" y="0.0" width="209" height="68"/>
                     <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="DrJ-fN-6d3">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -40,35 +40,18 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="vaX-sB-dvA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="7g0-6L-zeg"/>
-                <constraint firstItem="vaX-sB-dvA" firstAttribute="top" secondItem="IPC-A5-Bil" secondAttribute="top" id="Eju-xO-yaL"/>
-                <constraint firstItem="vaX-sB-dvA" firstAttribute="bottom" secondItem="IPC-A5-Bil" secondAttribute="bottom" id="URM-kK-NQx"/>
-                <constraint firstItem="vaX-sB-dvA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="Ufn-gM-TNN"/>
-                <constraint firstAttribute="trailing" secondItem="IPC-A5-Bil" secondAttribute="trailing" constant="20" symbolic="YES" id="qeE-RL-Gkd"/>
-                <constraint firstItem="IPC-A5-Bil" firstAttribute="leading" secondItem="vaX-sB-dvA" secondAttribute="trailing" constant="8" symbolic="YES" id="ybg-Bc-ZOC"/>
+                <constraint firstItem="IPC-A5-Bil" firstAttribute="height" secondItem="vaX-sB-dvA" secondAttribute="height" id="0NL-yt-nIU"/>
+                <constraint firstItem="vaX-sB-dvA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="9pZ-ve-Jaf"/>
+                <constraint firstItem="vaX-sB-dvA" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="FJo-qQ-QuD"/>
+                <constraint firstItem="IPC-A5-Bil" firstAttribute="centerY" secondItem="vaX-sB-dvA" secondAttribute="centerY" id="VGy-Pk-Yu8"/>
+                <constraint firstItem="IPC-A5-Bil" firstAttribute="leading" secondItem="vaX-sB-dvA" secondAttribute="trailing" constant="8" id="h6k-R5-6dG"/>
+                <constraint firstAttribute="trailing" secondItem="IPC-A5-Bil" secondAttribute="trailing" id="nXn-pU-GrI"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="143.5" y="238"/>
+            <point key="canvasLocation" x="123.5" y="273"/>
         </customView>
-        <button id="z0f-Ro-ZWq">
-            <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
-            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSApplicationIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Qcd-QL-xpN">
-                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                <font key="font" metaFont="system"/>
-            </buttonCell>
-        </button>
-        <textField verticalHuggingPriority="750" id="pEX-PG-crA">
-            <rect key="frame" x="0.0" y="0.0" width="221" height="74"/>
-            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="eiR-Kf-eQp">
-                <font key="font" metaFont="system"/>
-                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-            </textFieldCell>
-        </textField>
     </objects>
     <resources>
         <image name="NSApplicationIcon" width="128" height="128"/>

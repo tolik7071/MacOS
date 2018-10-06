@@ -11,6 +11,8 @@
 #import "FTFSidebarTableRowView.h"
 #import "FTFSidebarVisualAttributesManager.h"
 #import "FTFSidebarButtonCell.h"
+#import "FTFItemBackgroundView.h"
+#import "FTFSecondaryItemView.h"
 
 @implementation FTFSidebarItem
 
@@ -30,7 +32,6 @@
 
 @interface FTFSidebarController ()
 
-@property (nonatomic, weak) IBOutlet NSTableView * tableView;
 @property (nonatomic) NSMutableArray <FTFTableCellView * > * cellViews;
 
 @end
@@ -99,13 +100,9 @@
     
     FTFSidebarVisualAttributesManager *manager = [FTFSidebarVisualAttributesManager sharedManager];
     
-    NSColor *textColor = self.primary
-        ? [manager textColorOfActivePrimaryItem]
-        : [manager textColorOfSecondaryItem];
+    NSColor *textColor = [manager textColorOfActivePrimaryItem];
     
-    NSFont *textFont = self.primary
-        ? [manager fontOfPrimaryItem]
-        : [manager fontOfSecondaryItem];
+    NSFont *textFont = [manager fontOfPrimaryItem];
     
     NSAttributedString *title = [manager
         attributedStringForString:self.items[row].title
@@ -113,11 +110,7 @@
         font:textFont];
     cellView.toggleButton.attributedTitle = title;
     
-    cellView.toggleButton.image = self.primary
-        ? [manager primaryButtonBackground]
-        : [manager secondaryButtonBackground];
-    
-    [(FTFSidebarButtonCell *)cellView.toggleButton.cell setPrimary:self.isPrimary];
+    cellView.toggleButton.image = [manager primaryButtonBackground];
     
     cellView.tableView = tableView;
     
@@ -125,23 +118,102 @@
     
     NSView *previousView = nil;
     
-    for (NSView * view in self.items[row].views)
+    for (id item in self.items[row].items)
     {
-        NSPoint origin =
+        NSView *itemView = nil;
+        
+        if ([item isKindOfClass:[NSView class]])
         {
-            [self padding],
-            previousView ? NSMaxY(previousView.frame) + [self padding] : [self padding]
-        };
+            itemView = (NSView *)item;
+        }
+        else
+        {
+            FTFSidebarItem *sidebarItem = (FTFSidebarItem *)item;
+            assert(sidebarItem.items.count == 1);
+            
+            NSView *childView = (NSView *)sidebarItem.items.firstObject;
+            
+            FTFSidebarVisualAttributesManager *manager = [FTFSidebarVisualAttributesManager sharedManager];
+            
+            NSRect secondaryViewFrame =
+            {
+                {
+                    [self padding],
+                    previousView ? NSMaxY(previousView.frame) + [self padding] : [self padding]
+                },
+                {
+                    cellView.contentPlaceholder.frame.size.width - [self padding] * 2.0,
+                    childView.frame.size.height
+                        + [manager secondaryItemPadding] * 2.0
+                        + [manager primaryButtonHeight]
+                        + 2.0
+                }
+            };
+            
+            itemView = [[FTFSecondaryItemView alloc] initWithFrame:secondaryViewFrame];
+            [(FTFSecondaryItemView *)itemView setTitle:sidebarItem.title];
+            [(FTFSecondaryItemView *)itemView setParentCellView:cellView];
+            
+            NSRect childViewRect =
+            {
+                {
+                    [manager secondaryItemPadding],
+                    [manager secondaryItemPadding]
+                },
+                {
+                    secondaryViewFrame.size.width - [manager secondaryItemPadding] * 2.0,
+                    childView.frame.size.height
+                }
+            };
+
+            [childView setFrame:childViewRect];
+
+            [[(FTFSecondaryItemView *)itemView contentPlaceholder] addSubview:childView];
+        }
         
-        [view setFrameOrigin:origin];
+        NSView *backgroundView = nil;
         
-        [view setFrameSize:NSMakeSize(
-            cellView.contentPlaceholder.frame.size.width - [self padding] * 2.0,
-            view.frame.size.height)];
+        if ([itemView isKindOfClass:[FTFSecondaryItemView class]])
+        {
+            backgroundView = itemView;
+        }
+        else
+        {
+            NSRect backgroundFrame =
+            {
+                {
+                    [self padding],
+                    previousView ? NSMaxY(previousView.frame) + [self padding] : [self padding]
+                },
+                {
+                    cellView.contentPlaceholder.frame.size.width - [self padding] * 2.0,
+                    itemView.frame.size.height + [self padding] * 2.0
+                }
+            };
+            
+            NSRect itemViewFrame =
+            {
+                {
+                    [self padding],
+                    [self padding]
+                },
+                {
+                    backgroundFrame.size.width - [self padding] * 2,
+                    itemView.frame.size.height
+                }
+            };
+            
+            [itemView setFrame:itemViewFrame];
+            
+            backgroundView = [[FTFItemBackgroundView alloc]
+                initWithFrame:backgroundFrame];
+            
+            [backgroundView addSubview:itemView];
+        }
         
-        [self addView:view toParentView:cellView.contentPlaceholder];
+        [cellView.contentPlaceholder addSubview:backgroundView];
         
-        previousView = view;
+        previousView = backgroundView;
     }
     
     return cellView;
@@ -160,13 +232,13 @@
     
     if (self.cellViews.count == 0)
     {
-        rowHeight = [self heightOfContentViewForRow:row];
+        rowHeight += [self heightOfContentViewForRow:row];
     }
     else
     {
         if ([self.cellViews[row] isExpanded])
         {
-            rowHeight = [self heightOfContentViewForRow:row];
+            rowHeight += [self heightOfContentViewForRow:row];
         }
     }
     
@@ -182,16 +254,27 @@
 
 - (CGFloat)heightOfContentViewForRow:(NSInteger)row
 {
-    CGFloat rowHeight = [self heightOfButton];
+    CGFloat rowHeight = 0;
     
-    if (self.items[row].views.count > 0)
+    if (self.items[row].items.count > 0)
     {
-        rowHeight += [self padding] * (self.items[row].views.count + 1);
+        rowHeight += [self padding] * (3 * self.items[row].items.count + 1);
     }
     
-    for (NSView * view in self.items[row].views)
+    for (id item in self.items[row].items)
     {
-        rowHeight += view.frame.size.height;
+        NSView *itemView = nil;
+        
+        if ([item isKindOfClass:[NSView class]])
+        {
+            itemView = (NSView *)item;
+        }
+        else
+        {
+            itemView = [[(FTFSidebarItem *)item items] firstObject];
+        }
+        
+        rowHeight += itemView.frame.size.height;
     }
     
     return rowHeight;
@@ -199,18 +282,14 @@
 
 - (CGFloat)heightOfButton
 {
-    CGFloat height = self.primary
-        ? [[FTFSidebarVisualAttributesManager sharedManager] primaryButtonHeight]
-        : [[FTFSidebarVisualAttributesManager sharedManager] secondaryButtonHeight];
+    CGFloat height = [[FTFSidebarVisualAttributesManager sharedManager] primaryButtonHeight];
     
     return height;
 }
 
 - (CGFloat)padding
 {
-    CGFloat padding = self.primary
-        ? [[FTFSidebarVisualAttributesManager sharedManager] primaryItemPadding]
-        : [[FTFSidebarVisualAttributesManager sharedManager] secondaryItemPadding];
+    CGFloat padding = [[FTFSidebarVisualAttributesManager sharedManager] primaryItemPadding];
     
     return padding;
 }

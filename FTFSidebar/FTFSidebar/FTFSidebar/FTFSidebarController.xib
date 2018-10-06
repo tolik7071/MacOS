@@ -50,12 +50,14 @@
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-Wu-Ovk">
                                                 <rect key="frame" x="0.0" y="160" width="375" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WhJ-uK-ztN"/>
                                                     <constraint firstAttribute="height" constant="60" id="apN-5o-xXu"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="axesIndependently" inset="2" id="MbO-jX-B7S" customClass="FTFSidebarButtonCell">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="primary" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </buttonCell>
                                                 <connections>
                                                     <action selector="hideOrShowContent:" target="3z4-MH-UUr" id="aNW-i5-LXP"/>
@@ -75,10 +77,7 @@
                                             <constraint firstAttribute="trailing" secondItem="UIl-Wu-Ovk" secondAttribute="trailing" id="7Hq-nU-USJ"/>
                                             <constraint firstItem="kzT-9P-903" firstAttribute="top" secondItem="UIl-Wu-Ovk" secondAttribute="bottom" id="Cxq-8g-WUs"/>
                                             <constraint firstItem="kzT-9P-903" firstAttribute="leading" secondItem="3z4-MH-UUr" secondAttribute="leading" id="HS0-ro-cJ1"/>
-                                            <constraint firstAttribute="trailing" secondItem="UIl-Wu-Ovk" secondAttribute="trailing" id="V9L-ak-4SZ"/>
                                             <constraint firstAttribute="bottom" secondItem="kzT-9P-903" secondAttribute="bottom" id="W4Z-W0-Gs0"/>
-                                            <constraint firstItem="UIl-Wu-Ovk" firstAttribute="top" secondItem="3z4-MH-UUr" secondAttribute="top" id="q5E-Dj-NVi"/>
-                                            <constraint firstItem="UIl-Wu-Ovk" firstAttribute="leading" secondItem="3z4-MH-UUr" secondAttribute="leading" id="rdv-Sz-Ti6"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="contentPlaceholder" destination="kzT-9P-903" id="vb8-XF-Ke4"/>

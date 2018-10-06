@@ -13,16 +13,40 @@ const CGFloat kSinOf60Deg = 0.866;
 
 @implementation FTFSidebarButtonCell
 
-//- (void)drawImage:(NSImage*)image withFrame:(NSRect)frame inView:(NSView*)controlView
-//{
-//    [super drawImage:image withFrame:frame inView:controlView];
-//}
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    
+    if (self)
+    {
+        self.highlightsBy = NSNoCellMask;
+    }
+    
+    return self;
+}
+
+- (instancetype)initImageCell:(NSImage *)image
+{
+    self = [super initImageCell:image];
+    
+    if (self)
+    {
+        self.highlightsBy = NSNoCellMask;
+    }
+    
+    return self;
+}
+
+- (void)drawImage:(NSImage*)image withFrame:(NSRect)frame inView:(NSView*)controlView
+{
+    [super drawImage:image withFrame:frame inView:controlView];
+}
 
 - (NSRect)drawTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView
 {
     NSRect bounds = [super drawTitle:[self fixedAttributesForString:title] withFrame:frame inView:controlView];
     
-    [self drawArrowheadInBounds:[self boundsOfArrowheadUsignFrame:frame]];
+    [self drawArrowheadInBounds:[self boundsOfArrowheadUsignFrame:bounds]];
     
     return bounds;
 }
@@ -39,7 +63,7 @@ const CGFloat kSinOf60Deg = 0.866;
     else
     {
         [[manager secondaryButtonBorderColor] setFill];
-        NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:frame xRadius:5.0 yRadius:5.0];
+        NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:frame xRadius:3.0 yRadius:3.0];
         [path fill];
     }
 }
