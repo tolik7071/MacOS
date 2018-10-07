@@ -84,14 +84,6 @@
 
 #pragma mark - NSTableViewDelegate
 
-/*
- 
-    tableView:heightOfRow:
-    tableView:rowViewForRow:
-    tableView:viewForTableColumn:row:
- 
- */
-
 - (nullable NSView *)tableView:(NSTableView *)tableView
             viewForTableColumn:(nullable NSTableColumn *)tableColumn
                            row:(NSInteger)row
@@ -133,7 +125,8 @@
             
             NSView *childView = (NSView *)sidebarItem.items.firstObject;
             
-            FTFSidebarVisualAttributesManager *manager = [FTFSidebarVisualAttributesManager sharedManager];
+            FTFSidebarVisualAttributesManager *manager =
+                [FTFSidebarVisualAttributesManager sharedManager];
             
             NSRect secondaryViewFrame =
             {
@@ -142,7 +135,7 @@
                     previousView ? NSMaxY(previousView.frame) + [self padding] : [self padding]
                 },
                 {
-                    cellView.contentPlaceholder.frame.size.width - [self padding] * 2.0,
+                    [self rowWidth] - [self padding] * 2.0,
                     childView.frame.size.height
                         + [manager secondaryItemPadding] * 2.0
                         + [manager primaryButtonHeight]
@@ -186,7 +179,7 @@
                     previousView ? NSMaxY(previousView.frame) + [self padding] : [self padding]
                 },
                 {
-                    cellView.contentPlaceholder.frame.size.width - [self padding] * 2.0,
+                    [self rowWidth] - [self padding] * 2.0,
                     itemView.frame.size.height + [self padding] * 2.0
                 }
             };
@@ -247,9 +240,11 @@
 
 #pragma mark -
 
-- (void)addView:(NSView *)view toParentView:(NSView *)parentView
+- (CGFloat)rowWidth
 {
-    [parentView addSubview:view];
+    CGFloat rowWidth = [[self.tableView tableColumns][0] width];
+
+    return rowWidth;
 }
 
 - (CGFloat)heightOfContentViewForRow:(NSInteger)row
