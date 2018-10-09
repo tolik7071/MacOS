@@ -17,4 +17,6 @@ extern NSUserInterfaceItemIdentifier kFTFTableCellViewID;
 @property (nonatomic, readonly) BOOL isExpanded;
 @property (nonatomic, weak) NSTableView * tableView;
 
+- (void)performClick:(nullable id)sender;
+
 @end

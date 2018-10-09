@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DataViewController3">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="465" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0jw-6I-SuS">
+                    <rect key="frame" x="151" y="60" width="164" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="vLv-CM-Nw1"/>
+                    </constraints>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Wff-AJ-Cvg"/>
+                </slider>
+                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SId-BQ-SXd">
+                    <rect key="frame" x="151" y="29" width="164" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="7cx-cl-ejq"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="TL5-66-fIp"/>
+                    </constraints>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="dSu-V0-lEV"/>
+                </slider>
+                <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DAT-HZ-viB">
+                    <rect key="frame" x="150" y="-2" width="164" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="INi-Kf-8Kf"/>
+                        <constraint firstAttribute="width" constant="160" id="Muo-wM-ap3"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="160" id="mwM-SD-Nd9"/>
+                    </constraints>
+                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="gVO-oV-Boa"/>
+                </slider>
+            </subviews>
+            <constraints>
+                <constraint firstItem="0jw-6I-SuS" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="8NW-Mo-NTw"/>
+                <constraint firstItem="SId-BQ-SXd" firstAttribute="top" secondItem="0jw-6I-SuS" secondAttribute="bottom" constant="16" id="F03-ML-o0l"/>
+                <constraint firstItem="SId-BQ-SXd" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="UsF-hK-9NI"/>
+                <constraint firstItem="DAT-HZ-viB" firstAttribute="top" secondItem="SId-BQ-SXd" secondAttribute="bottom" constant="16" id="Whm-VX-SY6"/>
+                <constraint firstItem="0jw-6I-SuS" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ko3-K0-XOE"/>
+                <constraint firstItem="DAT-HZ-viB" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="lup-xa-ebF"/>
+            </constraints>
+            <point key="canvasLocation" x="123.5" y="71.5"/>
+        </customView>
+    </objects>
+</document>

@@ -27,6 +27,8 @@
 		5A9BF15C214F6A4300CA499B /* FTFSidebarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9BF15A214F6A4300CA499B /* FTFSidebarController.xib */; };
 		5A9BF15F214F6BF900CA499B /* FTFTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BF15E214F6BF900CA499B /* FTFTableCellView.m */; };
 		5AA28C0B2164AA7E00E0AAB5 /* FTFSecondaryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA28C0A2164AA7E00E0AAB5 /* FTFSecondaryItemView.m */; };
+		5AFEF2BE216B4B5300AA0EC7 /* DataViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2BC216B4B5300AA0EC7 /* DataViewController3.m */; };
+		5AFEF2BF216B4B5300AA0EC7 /* DataViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEF2BD216B4B5300AA0EC7 /* DataViewController3.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,9 @@
 		5A9BF15E214F6BF900CA499B /* FTFTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFTableCellView.m; sourceTree = "<group>"; };
 		5AA28C092164AA7E00E0AAB5 /* FTFSecondaryItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSecondaryItemView.h; sourceTree = "<group>"; };
 		5AA28C0A2164AA7E00E0AAB5 /* FTFSecondaryItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSecondaryItemView.m; sourceTree = "<group>"; };
+		5AFEF2BB216B4B5300AA0EC7 /* DataViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController3.h; sourceTree = "<group>"; };
+		5AFEF2BC216B4B5300AA0EC7 /* DataViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController3.m; sourceTree = "<group>"; };
+		5AFEF2BD216B4B5300AA0EC7 /* DataViewController3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController3.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,9 @@
 				5A5670E92161EEB4003C0E3C /* DataViewController2.h */,
 				5A5670EA2161EEB4003C0E3C /* DataViewController2.m */,
 				5A5670EB2161EEB4003C0E3C /* DataViewController2.xib */,
+				5AFEF2BB216B4B5300AA0EC7 /* DataViewController3.h */,
+				5AFEF2BC216B4B5300AA0EC7 /* DataViewController3.m */,
+				5AFEF2BD216B4B5300AA0EC7 /* DataViewController3.xib */,
 			);
 			path = DataView;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 				5A6BA130214F9456006E4E2B /* DataViewController.xib in Resources */,
 				5A9BF14B214F68FD00CA499B /* Assets.xcassets in Resources */,
 				5A9BF15C214F6A4300CA499B /* FTFSidebarController.xib in Resources */,
+				5AFEF2BF216B4B5300AA0EC7 /* DataViewController3.xib in Resources */,
 				1F733C35215CE03F005E39DD /* primary_button_background.png in Resources */,
 				5A5670ED2161EEB4003C0E3C /* DataViewController2.xib in Resources */,
 				5A9BF14E214F68FD00CA499B /* MainMenu.xib in Resources */,
@@ -243,6 +252,7 @@
 				5A226F8B215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m in Sources */,
 				5A9BF15B214F6A4300CA499B /* FTFSidebarController.m in Sources */,
 				5A6BA134214FAF97006E4E2B /* FTFSidebarTableRowView.m in Sources */,
+				5AFEF2BE216B4B5300AA0EC7 /* DataViewController3.m in Sources */,
 				5A6BA12F214F9456006E4E2B /* DataViewController.m in Sources */,
 				5A7159A6215CB4260024C379 /* FTFSidebarButtonCell.m in Sources */,
 				5A5670EC2161EEB4003C0E3C /* DataViewController2.m in Sources */,

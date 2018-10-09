@@ -14,9 +14,9 @@
 
 @implementation DataViewController2
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do view setup here.
 }
 
 @end

@@ -31,6 +31,9 @@
 @end
 
 @interface FTFSidebarController ()
+{
+    BOOL _firstCall;
+}
 
 @property (nonatomic) NSMutableArray <FTFTableCellView * > * cellViews;
 
@@ -41,6 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _firstCall = YES;
 }
 
 - (NSMutableArray <FTFTableCellView * > *)cellViews
@@ -125,9 +129,6 @@
             
             NSView *childView = (NSView *)sidebarItem.items.firstObject;
             
-            FTFSidebarVisualAttributesManager *manager =
-                [FTFSidebarVisualAttributesManager sharedManager];
-            
             NSRect secondaryViewFrame =
             {
                 {
@@ -136,10 +137,10 @@
                 },
                 {
                     [self rowWidth] - [self padding] * 2.0,
-                    childView.frame.size.height
-                        + [manager secondaryItemPadding] * 2.0
-                        + [manager primaryButtonHeight]
+                    [self heightOfSecondaryButton]
                         + 2.0
+                        + [self paddingForSecondaryElement] * 2.0
+                        + childView.frame.size.height
                 }
             };
             
@@ -150,11 +151,11 @@
             NSRect childViewRect =
             {
                 {
-                    [manager secondaryItemPadding],
-                    [manager secondaryItemPadding]
+                    [self paddingForSecondaryElement],
+                    [self paddingForSecondaryElement]
                 },
                 {
-                    secondaryViewFrame.size.width - [manager secondaryItemPadding] * 2.0,
+                    secondaryViewFrame.size.width - [self paddingForSecondaryElement] * 2.0,
                     childView.frame.size.height
                 }
             };
@@ -187,11 +188,11 @@
             NSRect itemViewFrame =
             {
                 {
-                    [self padding],
-                    [self padding]
+                    [self paddingForSecondaryElement],
+                    [self paddingForSecondaryElement]
                 },
                 {
-                    backgroundFrame.size.width - [self padding] * 2,
+                    backgroundFrame.size.width - [self paddingForSecondaryElement] * 2,
                     itemView.frame.size.height
                 }
             };
@@ -204,9 +205,18 @@
             [backgroundView addSubview:itemView];
         }
         
-        [cellView.contentPlaceholder addSubview:backgroundView];
+//        [cellView.contentPlaceholder addSubview:backgroundView];
+        [self addView:backgroundView
+            toParentView:cellView.contentPlaceholder
+            usingLastSiblingView:previousView];
         
         previousView = backgroundView;
+    }
+    
+    if (_firstCall)
+    {
+        _firstCall = NO;
+        [cellView performClick:self];
     }
     
     return cellView;
@@ -231,11 +241,69 @@
     {
         if ([self.cellViews[row] isExpanded])
         {
-            rowHeight += [self heightOfContentViewForRow:row];
+            rowHeight += [self heightOfCellView:self.cellViews[row]];
         }
     }
     
+    NSLog(@"%2.f", rowHeight);
+    
     return rowHeight;
+}
+
+- (void)addView:(NSView *)childView
+    toParentView:(NSView *)parentView
+    usingLastSiblingView:(NSView *)siblingView
+{
+    assert(childView && parentView);
+    
+    [parentView addSubview:childView];
+    
+/*
+    NSLayoutConstraint *constraint;
+    
+    constraint = [NSLayoutConstraint
+        constraintWithItem:childView
+        attribute:NSLayoutAttributeTop
+        relatedBy:NSLayoutRelationEqual
+        toItem:(siblingView ? siblingView : parentView)
+        attribute:NSLayoutAttributeTop
+        multiplier:1.0
+        constant:20.0];
+    [parentView addConstraint:constraint];
+ */
+}
+
+- (CGFloat)heightOfCellView:(FTFTableCellView *)cellView
+{
+    assert(cellView);
+    
+    CGFloat height = 0;
+    
+    NSView *previousView = nil;
+    
+    for (NSView *itemView in cellView.contentPlaceholder.subviews)
+    {
+        NSPoint newOrigin =
+        {
+            [self padding],
+            previousView ? NSMaxY(previousView.frame) + [self padding] : [self padding]
+        };
+        
+        [itemView setFrameOrigin:newOrigin];
+        
+        previousView = itemView;
+    }
+    
+    [cellView.contentPlaceholder setFrameSize:
+        NSMakeSize(
+            cellView.contentPlaceholder.frame.size.width,
+            NSMaxY(previousView.frame) + [self padding]
+                  )
+    ];
+    
+    height += cellView.contentPlaceholder.frame.size.height;
+    
+    return height;
 }
 
 #pragma mark -
@@ -253,7 +321,7 @@
     
     if (self.items[row].items.count > 0)
     {
-        rowHeight += [self padding] * (3 * self.items[row].items.count + 1);
+        rowHeight += [self padding] * (self.items[row].items.count + 1);
     }
     
     for (id item in self.items[row].items)
@@ -263,10 +331,16 @@
         if ([item isKindOfClass:[NSView class]])
         {
             itemView = (NSView *)item;
+            rowHeight += [self padding] * 2.0;
         }
         else
         {
+            assert([item isKindOfClass:[FTFSidebarItem class]]);
             itemView = [[(FTFSidebarItem *)item items] firstObject];
+            
+            rowHeight += [self heightOfSecondaryButton];
+            rowHeight += 2.0;
+            rowHeight += [self paddingForSecondaryElement] * 2.0;
         }
         
         rowHeight += itemView.frame.size.height;
@@ -285,6 +359,20 @@
 - (CGFloat)padding
 {
     CGFloat padding = [[FTFSidebarVisualAttributesManager sharedManager] primaryItemPadding];
+    
+    return padding;
+}
+
+- (CGFloat)heightOfSecondaryButton
+{
+    CGFloat padding = [[FTFSidebarVisualAttributesManager sharedManager] secondaryButtonHeight];
+    
+    return padding;
+}
+
+- (CGFloat)paddingForSecondaryElement
+{
+    CGFloat padding = [[FTFSidebarVisualAttributesManager sharedManager] secondaryItemPadding];
     
     return padding;
 }

@@ -683,17 +683,17 @@
         <window title="FTFSidebar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="934" height="504"/>
+            <rect key="contentRect" x="335" y="390" width="934" height="650"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="934" height="504"/>
+                <rect key="frame" x="0.0" y="0.0" width="934" height="650"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7FU-aP-Wbq">
-                        <rect key="frame" x="0.0" y="0.0" width="934" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="934" height="650"/>
                         <subviews>
                             <customView id="mwd-DM-Lvb">
-                                <rect key="frame" x="0.0" y="0.0" width="380" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="650"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="380" id="DUb-wn-7aX"/>
@@ -703,7 +703,7 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView fixedFrame="YES" id="2Dl-Va-h3y">
-                                <rect key="frame" x="381" y="0.0" width="553" height="504"/>
+                                <rect key="frame" x="381" y="0.0" width="553" height="650"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                         </subviews>
@@ -720,7 +720,7 @@
                     <constraint firstAttribute="trailing" secondItem="7FU-aP-Wbq" secondAttribute="trailing" id="sgV-r7-PqM"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="156" y="-177"/>
+            <point key="canvasLocation" x="-30" y="-172"/>
         </window>
     </objects>
 </document>
