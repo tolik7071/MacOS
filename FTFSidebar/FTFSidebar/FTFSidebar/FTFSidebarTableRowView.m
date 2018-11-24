@@ -12,8 +12,7 @@
 
 - (void)drawSelectionInRect:(NSRect)dirtyRect
 {
-    [[NSColor yellowColor] setFill];
-    NSRectFill(dirtyRect);
+    // nothing
 }
 
 @end

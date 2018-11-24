@@ -16,21 +16,21 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <scrollView autohidesScrollers="YES" horizontalLineScroll="222" horizontalPageScroll="10" verticalLineScroll="222" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="jjV-GQ-uPZ">
+        <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="220" horizontalPageScroll="10" verticalLineScroll="220" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="jjV-GQ-uPZ">
             <rect key="frame" x="0.0" y="0.0" width="380" height="461"/>
-            <autoresizingMask key="autoresizingMask"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <clipView key="contentView" id="x6b-gQ-nCn">
-                <rect key="frame" x="1" y="1" width="378" height="459"/>
+                <rect key="frame" x="0.0" y="0.0" width="380" height="461"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="220" rowSizeStyle="automatic" viewBased="YES" id="w3w-IS-63h">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="459"/>
+                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="220" rowSizeStyle="automatic" viewBased="YES" id="w3w-IS-63h" customClass="FTFTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="461"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <size key="intercellSpacing" width="3" height="2"/>
+                        <size key="intercellSpacing" width="3" height="0.0"/>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                         <tableColumns>
-                            <tableColumn identifier="" width="375" minWidth="40" maxWidth="1000" id="5H4-08-NAg">
+                            <tableColumn identifier="" width="377" minWidth="40" maxWidth="1000" id="5H4-08-NAg">
                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -44,15 +44,15 @@
                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                 <prototypeCellViews>
                                     <tableCellView identifier="FTFTableCellView" id="3z4-MH-UUr" customClass="FTFTableCellView">
-                                        <rect key="frame" x="1" y="1" width="375" height="220"/>
+                                        <rect key="frame" x="1" y="0.0" width="377" height="220"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UIl-Wu-Ovk">
-                                                <rect key="frame" x="0.0" y="160" width="375" height="60"/>
+                                                <rect key="frame" x="0.0" y="160" width="377" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="apN-5o-xXu"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="axesIndependently" inset="2" id="MbO-jX-B7S" customClass="FTFSidebarButtonCell">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="axesIndependently" inset="2" id="MbO-jX-B7S" customClass="FTFSidebarButtonCell">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                     <userDefinedRuntimeAttributes>
@@ -64,7 +64,7 @@
                                                 </connections>
                                             </button>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="kzT-9P-903" customClass="FTFContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="160"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="flipped" value="YES"/>
                                                 </userDefinedRuntimeAttributes>

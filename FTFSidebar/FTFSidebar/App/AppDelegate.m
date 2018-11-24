@@ -38,6 +38,11 @@
     [self loadSidebar];
     assert(_sidebarController && _sidebarController.view);
     
+    [self.sidebarController.view setFrameSize:
+         NSMakeSize(
+            self.placeholder.frame.size.width,
+            self.placeholder.frame.size.height)];
+    
     [self.placeholder addSubview:self.sidebarController.view];
     
     {
@@ -88,6 +93,8 @@
         [self.placeholder addConstraint:constraint];
     }
     
+    [self.placeholder layout];
+    
     [self loadData];
 }
 
@@ -120,9 +127,16 @@
         innerItem.items = @[_dataViewController2.view];
         
         FTFSidebarItem *item = [[FTFSidebarItem alloc] initWithTitle:@"THIS IS A ROOT ITEM #1."];
-        item.items = @[_dataViewController.view, innerItem, _dataViewController3.view];
+        item.items = @[_dataViewController.view, innerItem];
+        
+        FTFSidebarItem *item2 = [[FTFSidebarItem alloc] initWithTitle:@"THIS IS A ROOT ITEM #2."];
+        item2.items = @[_dataViewController3.view];
+        
+        FTFSidebarItem *item3 = [[FTFSidebarItem alloc] initWithTitle:@"EMPTY TOOL"];
         
         [[self.sidebarController items] addObject:item];
+        [[self.sidebarController items] addObject:item2];
+        [[self.sidebarController items] addObject:item3];
         
         [self.sidebarController reload];
     }

@@ -76,9 +76,9 @@
 {
     if(!_textColorOfActivePrimaryItem)
     {
-        _textColorOfActivePrimaryItem = [NSColor colorWithRed:(255.0 / 255.0)
-                                                        green:(204.0 / 255.0)
-                                                         blue:(107.0 / 255.0)
+        _textColorOfActivePrimaryItem = [NSColor colorWithRed:(249.0 / 255.0)
+                                                        green:(200.0 / 255.0)
+                                                         blue:(106.0 / 255.0)
                                                         alpha:1.0];
     }
     
@@ -99,9 +99,9 @@
 {
     if (!_textColorOfInactivePrimaryItem)
     {
-        _textColorOfInactivePrimaryItem = [NSColor colorWithRed:(234.0 / 255.0)
-                                                          green:(234.0 / 255.0)
-                                                           blue:(234.0 / 255.0)
+        _textColorOfInactivePrimaryItem = [NSColor colorWithRed:(237.0 / 255.0)
+                                                          green:(237.0 / 255.0)
+                                                           blue:(237.0 / 255.0)
                                                           alpha:1.0];
     }
     
@@ -185,7 +185,8 @@
                                              font:(NSFont *)font
 {
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
-    paragraph.alignment = NSTextAlignmentCenter;
+    paragraph.alignment = NSTextAlignmentLeft;
+    paragraph.firstLineHeadIndent = [self primaryItemPadding];
     
     NSAttributedString *result = [[NSAttributedString alloc] initWithString:string
         attributes:
@@ -203,7 +204,7 @@
 {
     if (!_primaryButtonBorderColor)
     {
-        _primaryButtonBorderColor = [NSColor darkGrayColor];
+        _primaryButtonBorderColor = [NSColor controlDarkShadowColor];
     }
     
     return _primaryButtonBorderColor;

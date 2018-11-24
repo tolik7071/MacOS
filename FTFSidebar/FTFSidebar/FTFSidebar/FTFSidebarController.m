@@ -14,6 +14,8 @@
 #import "FTFItemBackgroundView.h"
 #import "FTFSecondaryItemView.h"
 
+NSString * kIsExpandedKey = @"isExpanded";
+
 @implementation FTFSidebarItem
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -45,6 +47,10 @@
 {
     [super viewDidLoad];
     _firstCall = YES;
+    [(NSScrollView *)self.view setHasVerticalScroller:NO];
+    [(NSScrollView *)self.view setHasHorizontalScroller:NO];
+    
+    [self.tableView setBackgroundColor:[[FTFSidebarVisualAttributesManager sharedManager] background]];
 }
 
 - (NSMutableArray <FTFTableCellView * > *)cellViews
@@ -108,9 +114,51 @@
     
     cellView.toggleButton.image = [manager primaryButtonBackground];
     
+    cellView.toggleButton.state = NSOffState;
+    
+    cellView.contentPlaceholder.hidden = YES;
+    
     cellView.tableView = tableView;
     
     [self.cellViews addObject:cellView];
+    
+    [cellView addObserver:self
+               forKeyPath:kIsExpandedKey
+                  options:NSKeyValueObservingOptionNew
+                  context:nil];
+    
+    return cellView;
+}
+
+- (nullable NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
+{
+    return [[FTFSidebarTableRowView alloc] initWithFrame:NSZeroRect];
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
+{
+    assert([tableView tableColumns].count == 1);
+    
+    CGFloat rowHeight = [self heightOfButton];
+    
+    if (self.cellViews.count > 0)
+    {
+        if ([self.cellViews[row] isExpanded])
+        {
+            rowHeight += [self heightOfCellView:self.cellViews[row]];
+        }
+    }
+    
+    return rowHeight;
+}
+
+#pragma mark -
+
+- (void)addContentForRow:(NSInteger)row
+{
+    assert(self.cellViews.count > 0);
+    
+    FTFTableCellView *cellView = self.cellViews[row];
     
     NSView *previousView = nil;
     
@@ -137,7 +185,7 @@
                 },
                 {
                     [self rowWidth] - [self padding] * 2.0,
-                    [self heightOfSecondaryButton]
+                        [self heightOfSecondaryButton]
                         + 2.0
                         + [self paddingForSecondaryElement] * 2.0
                         + childView.frame.size.height
@@ -159,9 +207,9 @@
                     childView.frame.size.height
                 }
             };
-
+            
             [childView setFrame:childViewRect];
-
+            
             [[(FTFSecondaryItemView *)itemView contentPlaceholder] addSubview:childView];
         }
         
@@ -205,49 +253,12 @@
             [backgroundView addSubview:itemView];
         }
         
-//        [cellView.contentPlaceholder addSubview:backgroundView];
         [self addView:backgroundView
             toParentView:cellView.contentPlaceholder
             usingLastSiblingView:previousView];
         
         previousView = backgroundView;
     }
-    
-    if (_firstCall)
-    {
-        _firstCall = NO;
-        [cellView performClick:self];
-    }
-    
-    return cellView;
-}
-
-- (nullable NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row
-{
-    return [[FTFSidebarTableRowView alloc] initWithFrame:NSZeroRect];
-}
-
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
-{
-    assert([tableView tableColumns].count == 1);
-    
-    CGFloat rowHeight = [self heightOfButton];
-    
-    if (self.cellViews.count == 0)
-    {
-        rowHeight += [self heightOfContentViewForRow:row];
-    }
-    else
-    {
-        if ([self.cellViews[row] isExpanded])
-        {
-            rowHeight += [self heightOfCellView:self.cellViews[row]];
-        }
-    }
-    
-    NSLog(@"%2.f", rowHeight);
-    
-    return rowHeight;
 }
 
 - (void)addView:(NSView *)childView
@@ -257,25 +268,16 @@
     assert(childView && parentView);
     
     [parentView addSubview:childView];
-    
-/*
-    NSLayoutConstraint *constraint;
-    
-    constraint = [NSLayoutConstraint
-        constraintWithItem:childView
-        attribute:NSLayoutAttributeTop
-        relatedBy:NSLayoutRelationEqual
-        toItem:(siblingView ? siblingView : parentView)
-        attribute:NSLayoutAttributeTop
-        multiplier:1.0
-        constant:20.0];
-    [parentView addConstraint:constraint];
- */
 }
 
 - (CGFloat)heightOfCellView:(FTFTableCellView *)cellView
 {
     assert(cellView);
+    
+    if (cellView.contentPlaceholder.subviews.count == 0)
+    {
+        [self addContentForRow:[self.cellViews indexOfObject:cellView]];
+    }
     
     CGFloat height = 0;
     
@@ -306,14 +308,45 @@
     return height;
 }
 
-#pragma mark -
-
 - (CGFloat)rowWidth
 {
     CGFloat rowWidth = [[self.tableView tableColumns][0] width];
 
     return rowWidth;
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+    ofObject:(NSObject *)observedObject
+    change:(NSDictionary *)change
+    context:(void *)context
+{
+    if ([kIsExpandedKey isEqualToString:keyPath])
+    {
+        NSNumber *value = [change objectForKey:NSKeyValueChangeNewKey];
+        if (value.integerValue == NSOnState)
+        {
+            __block FTFTableCellView *cellView = (FTFTableCellView *)observedObject;
+            
+            [self.cellViews enumerateObjectsUsingBlock:
+                ^(FTFTableCellView * _Nonnull view, NSUInteger idx, BOOL * _Nonnull stop)
+            {
+                if (view != cellView && [view isExpanded])
+                {
+                    [view performClick:nil];
+                }
+            }];
+        }
+    }
+    else
+    {
+        [super observeValueForKeyPath:keyPath
+            ofObject:observedObject
+            change:change
+            context:context];
+    }
+}
+
+#pragma mark -
 
 - (CGFloat)heightOfContentViewForRow:(NSInteger)row
 {

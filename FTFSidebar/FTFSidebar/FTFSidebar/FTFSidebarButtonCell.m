@@ -9,7 +9,7 @@
 #import "FTFSidebarButtonCell.h"
 #import "FTFSidebarVisualAttributesManager.h"
 
-const CGFloat kSinOf60Deg = 0.866;
+const CGFloat kSinOf60Deg = 0.6;
 
 @implementation FTFSidebarButtonCell
 
@@ -39,7 +39,8 @@ const CGFloat kSinOf60Deg = 0.866;
 
 - (void)drawImage:(NSImage*)image withFrame:(NSRect)frame inView:(NSView*)controlView
 {
-    [super drawImage:image withFrame:frame inView:controlView];
+    NSRect rectForDraw = NSInsetRect(frame, -2.0, -2.0);
+    [super drawImage:image withFrame:rectForDraw inView:controlView];
 }
 
 - (NSRect)drawTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView
@@ -98,6 +99,8 @@ const CGFloat kSinOf60Deg = 0.866;
         [path lineToPoint:NSMakePoint(NSMaxX(bounds), NSMinY(bounds))];
     }
     
+    [path setLineWidth:2.0];
+    
     [path stroke];
 }
 
@@ -132,11 +135,13 @@ const CGFloat kSinOf60Deg = 0.866;
     
     FTFSidebarVisualAttributesManager *manager = [FTFSidebarVisualAttributesManager sharedManager];
     
-    if (self.state == NSControlStateValueOn && self.isPrimary)
+    if (self.isPrimary)
     {
         [result addAttributes:
             @{
-                NSForegroundColorAttributeName : manager.textColorOfActivePrimaryItem
+              NSForegroundColorAttributeName :
+                  (self.state == NSControlStateValueOn ?
+                       manager.textColorOfActivePrimaryItem : manager.textColorOfInactivePrimaryItem)
              }
         range:NSMakeRange(0, string.length)];
     }
@@ -144,7 +149,7 @@ const CGFloat kSinOf60Deg = 0.866;
     {
         [result addAttributes:
             @{
-                NSForegroundColorAttributeName : manager.textColorOfInactivePrimaryItem
+                NSForegroundColorAttributeName : manager.textColorOfSecondaryItem
              }
         range:NSMakeRange(0, string.length)];
     }

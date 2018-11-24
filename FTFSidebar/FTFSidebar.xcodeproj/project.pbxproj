@@ -11,6 +11,7 @@
 		1F3CA106215E207300B9F499 /* secondary_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3CA105215E207300B9F499 /* secondary_button_background.png */; };
 		1F733C35215CE03F005E39DD /* primary_button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F733C34215CE03F005E39DD /* primary_button_background.png */; };
 		5A226F8B215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A226F8A215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m */; };
+		5A2F9A6F217712EB00BC973F /* FTFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F9A6E217712EB00BC973F /* FTFTableView.m */; };
 		5A5670EC2161EEB4003C0E3C /* DataViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5670EA2161EEB4003C0E3C /* DataViewController2.m */; };
 		5A5670ED2161EEB4003C0E3C /* DataViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5670EB2161EEB4003C0E3C /* DataViewController2.xib */; };
 		5A5670F021620D41003C0E3C /* FTFItemBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5670EF21620D41003C0E3C /* FTFItemBackgroundView.m */; };
@@ -38,6 +39,8 @@
 		1F733C34215CE03F005E39DD /* primary_button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = primary_button_background.png; sourceTree = "<group>"; };
 		5A226F89215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFSidebarVisualAttributesManager.h; sourceTree = "<group>"; };
 		5A226F8A215CFFC100C2A635 /* FTFSidebarVisualAttributesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFSidebarVisualAttributesManager.m; sourceTree = "<group>"; };
+		5A2F9A6D217712EB00BC973F /* FTFTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTFTableView.h; sourceTree = "<group>"; };
+		5A2F9A6E217712EB00BC973F /* FTFTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTFTableView.m; sourceTree = "<group>"; };
 		5A5670E92161EEB4003C0E3C /* DataViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController2.h; sourceTree = "<group>"; };
 		5A5670EA2161EEB4003C0E3C /* DataViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController2.m; sourceTree = "<group>"; };
 		5A5670EB2161EEB4003C0E3C /* DataViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController2.xib; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 		5A9BF160214F716000CA499B /* FTFSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				5A2F9A6D217712EB00BC973F /* FTFTableView.h */,
+				5A2F9A6E217712EB00BC973F /* FTFTableView.m */,
 				5A9BF158214F6A4300CA499B /* FTFSidebarController.h */,
 				5A9BF159214F6A4300CA499B /* FTFSidebarController.m */,
 				5A9BF15D214F6BF900CA499B /* FTFTableCellView.h */,
@@ -242,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2F9A6F217712EB00BC973F /* FTFTableView.m in Sources */,
 				5A72876621677A49004A735E /* FTFSecondaryPlaceholderView.m in Sources */,
 				1F30E83E2158B85F00AC2DBB /* FTFContentView.m in Sources */,
 				5A9BF15F214F6BF900CA499B /* FTFTableCellView.m in Sources */,
