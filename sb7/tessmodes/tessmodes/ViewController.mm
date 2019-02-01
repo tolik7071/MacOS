@@ -52,6 +52,41 @@ typedef NS_ENUM(NSUInteger, TessellationModes)
     }
 }
 
+- (void)configOpenGLView
+{
+    NSAssert(self.openGLView != nil, @"ERROR: openGLView is NULL");
+    
+    NSOpenGLPixelFormatAttribute pixelFormatAttributes[] =
+    {
+        NSOpenGLPFAOpenGLProfile        , NSOpenGLProfileVersion4_1Core,
+        NSOpenGLPFAColorSize            , 32                           ,
+        NSOpenGLPFAAlphaSize            , 8                            ,
+        NSOpenGLPFADepthSize            , 24                           ,
+        NSOpenGLPFADoubleBuffer         ,
+#if defined(USE_HARDWARE_ACCELERATED_RENDERS)
+        NSOpenGLPFAAccelerated          ,
+        NSOpenGLPFANoRecovery           ,
+#else
+        NSOpenGLPFARendererID           ,
+        kCGLRendererGenericFloatID      ,
+#endif // USE_HARDWARE_ACCELERATED_RENDERS
+        NSOpenGLPFAAllowOfflineRenderers,
+        0
+    };
+    
+    NSOpenGLPixelFormat *pixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:pixelFormatAttributes];
+    NSOpenGLContext* context = [[NSOpenGLContext alloc] initWithFormat:pixelFormat shareContext:nil];
+    
+    self.openGLView.pixelFormat = pixelFormat;
+    self.openGLView.openGLContext = context;
+    
+#if defined(DEBUG)
+    CGLEnable([context CGLContextObj], kCGLCECrashOnRemovedFunctions);
+#endif
+    
+    self.openGLView.wantsBestResolutionOpenGLSurface = YES;
+}
+
 - (void)configOpenGLEnvironment
 {
     NSAssert(self.openGLView != nil, @"ERROR: openGLView is NULL");

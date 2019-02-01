@@ -11,7 +11,12 @@
 
 #define USE_HARDWARE_ACCELERATED_RENDERS
 
-CVReturn DisplayCallback(CVDisplayLinkRef,const CVTimeStamp*, const CVTimeStamp*, CVOptionFlags, CVOptionFlags*, void*);
+CVReturn DisplayCallback(CVDisplayLinkRef,
+    const CVTimeStamp*,
+    const CVTimeStamp*,
+    CVOptionFlags,
+    CVOptionFlags*,
+    void*);
 
 @implementation SBViewControllerBase
 {
@@ -231,8 +236,8 @@ CVReturn DisplayCallback(
 {
     SBViewControllerBase *controller = (__bridge SBViewControllerBase *)displayLinkContext;
     [controller performSelectorOnMainThread:@selector(renderForTime:)
-                                withObject:[[MyTimeStamp alloc] initWithTimeStamp:inOutputTime]
-                             waitUntilDone:NO];
+        withObject:[[MyTimeStamp alloc] initWithTimeStamp:inOutputTime]
+        waitUntilDone:NO];
 
     return kCVReturnSuccess;
 }
