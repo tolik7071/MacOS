@@ -184,6 +184,42 @@ GLuint CreateProgram2(NSData *vertex, NSData *tessellationControl, NSData *tesse
     return program;
 }
 
+GLuint CreateProgram3(NSData *vertexShaderData, NSData *geometryShaderData, NSData *fragmentShaderData)
+{
+    GLuint program = 0;
+    
+    GLuint vertexShader = CreateShader(vertexShaderData, GL_VERTEX_SHADER);
+    GLuint geometryShader = CreateShader(geometryShaderData, GL_GEOMETRY_SHADER);
+    GLuint fragmentShader = CreateShader(fragmentShaderData, GL_FRAGMENT_SHADER);
+    
+    program = glCreateProgram();
+    
+    glAttachShader(program, vertexShader);
+    glAttachShader(program, geometryShader);
+    glAttachShader(program, fragmentShader);
+    
+    glLinkProgram(program);
+    
+    if (vertexShader != 0)
+    {
+        glDeleteShader(vertexShader);
+    }
+    
+    if (geometryShader != 0)
+    {
+        glDeleteShader(geometryShader);
+    }
+    
+    if (fragmentShader != 0)
+    {
+        glDeleteShader(fragmentShader);
+    }
+    
+    glLinkProgram(program);
+    
+    return program;
+}
+
 GLuint CreateShader(NSData* shaderContent, GLenum shaderType)
 {
     GLuint shaderID = 0;
