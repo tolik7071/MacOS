@@ -248,6 +248,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
 				COPY_PHASE_STRIP = NO;
+				DEBUG = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -308,6 +309,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMMON_SDK_PATH = /Users/Shared/projects/SDKs;
 				COPY_PHASE_STRIP = NO;
+				DEBUG = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

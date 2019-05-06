@@ -119,7 +119,7 @@
     glBufferData(GL_UNIFORM_BUFFER, 4 * sizeof(vmath::mat4), NULL, GL_DYNAMIC_DRAW);
     
     glEnable(GL_CULL_FACE);
-    // glFrontFace(GL_CW);
+    glFrontFace(GL_CW);
     
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
@@ -144,11 +144,11 @@
     glClearBufferfv(GL_COLOR, 0, black);
     glClearBufferfv(GL_DEPTH, 0, &one);
     
+    // Turn on scissor testing
+    glEnable(GL_SCISSOR_TEST);
+    
     if (0 != _program)
     {
-        // Turn on scissor testing
-        glEnable(GL_SCISSOR_TEST);
-        
         // Each rectangle will be 7/16 of the screen
         int scissor_width = (7 * self.openGLView.frame.size.width) / 16;
         int scissor_height = (7 * self.openGLView.frame.size.height) / 16;
